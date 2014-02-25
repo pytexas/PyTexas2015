@@ -1,2 +1,2 @@
-DEBUG = True
-TEMPLATE_DEBUG = True
+from .dev import *
+
