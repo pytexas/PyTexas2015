@@ -33,6 +33,7 @@ INSTALLED_APPS = (
   'django.contrib.staticfiles',
   'django.contrib.sites',
   
+  'pytx',
   'pizza.kitchen_sink',
   #'pizza.blog',
   #'pizza.calendar',
@@ -45,6 +46,8 @@ MIDDLEWARE_CLASSES = (
   'django.contrib.auth.middleware.AuthenticationMiddleware',
   'django.contrib.messages.middleware.MessageMiddleware',
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
+  'pizza.middleware.Siteware',
+  'pizza.middleware.RememberAdminQuery',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -56,6 +59,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   "django.core.context_processors.tz",
   "django.contrib.messages.context_processors.messages",
   "django.core.context_processors.request",
+  "pytx.context.global_vars",
 )
 
 ROOT_URLCONF = 'pytx.urls'
@@ -89,12 +93,18 @@ USE_L10N = True
 
 USE_TZ = True
 
+SITE_ID = 1
+
+SITE_INFO = {
+  'name': 'PyTexas'
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
 
+from .templates import *
 from .local import *
 
 import sys

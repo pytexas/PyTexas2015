@@ -4,9 +4,14 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'pytx.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
-    url(r'^admin/', include(admin.site.urls)),
+  url(r'^favicon.ico$', 'pytx.views.favicon', name='favicon'),
+  
+  # url(r'^blog/', include('blog.urls')),
+  
+  url(r'^ks/', include('pizza.kitchen_sink.urls', namespace='kitchen_sink', app_name='kitchen_sink')),
+  
+  url('^grappelli/', include('grappelli.urls')),
+  url(r'^admin/', include(admin.site.urls)),
+  
+  (r'.*', 'pizza.kitchen_sink.views.page'),
 )
