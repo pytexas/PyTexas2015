@@ -10,8 +10,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-BASE_DIR = os.path.normpath(os.path.join(BASE_DIR, '..'))
+BASE_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.normpath(os.path.join(BASE_DIR, '..', '..'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -37,6 +37,9 @@ INSTALLED_APPS = (
   'pizza.kitchen_sink',
   #'pizza.blog',
   #'pizza.calendar',
+  
+  'twospaces.conference',
+  'twospaces.profiles',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,6 +106,8 @@ SITE_INFO = {
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'profiles.User'
 
 from .templates import *
 from .local import *

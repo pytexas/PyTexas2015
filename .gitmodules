@@ -1,0 +1,3 @@
+[submodule "TwoSpaces"]
+	path = TwoSpaces
+	url = git@github.com:pizzapanther/TwoSpaces.git

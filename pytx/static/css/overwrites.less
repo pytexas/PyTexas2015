@@ -1,0 +1,46 @@
+body {
+  padding-top: 68px;
+  color: @txtColor;
+  background-color: @bgColor;
+}
+
+a {
+  color: @anchorColor;
+  
+  &:hover {
+    color: @hoverColor;
+  }
+  
+  &:visited {
+    color: darken(@anchorColor, 12%);
+  }
+}
+
+.navbar-brand {
+  height : 68px;
+  padding: 10px 25px 10px 15px;
+  
+  img {
+    height: 48px;
+  }
+}
+
+.navbar-nav>li>a {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: @grey2Color;
+}
+
+.navbar-inverse {
+  background-color: @darkColor;
+  border-color: @darkBorderColor;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus {
+  background-color: @darkStart;
+  background-image: -webkit-linear-gradient(top, @darkStart, @darkEnd);
+  background-image:     -ms-linear-gradient(top, @darkStart, @darkEnd);
+  background-image:         linear-gradient(to bottom, @darkStart, @darkEnd);
+}
