@@ -2,3 +2,37 @@
   padding: 40px 15px;
   text-align: center;
 }
+
+body {
+  font-family: @bodyFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @headerFont;
+}
+
+.navbar-brand {
+  font-family: @headerFont;
+}
+
+.clear {
+  clear: both;
+}
+
+#side-sponsors {
+  padding-top: 20px;
+  
+  > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+      margin: 0 0 20px 0;
+      padding: 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+}

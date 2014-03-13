@@ -1,8 +1,8 @@
 from collections import OrderedDict
 
 PIZZA_TEMPLATES = OrderedDict([
-  ('pages/home.html', {
-    'name': 'Home Page',
+  ('pages/standard-page.html', {
+    'name': 'Standard Page',
     'regions': OrderedDict([
         ('content', ('rich', 'Content')),
     ]),

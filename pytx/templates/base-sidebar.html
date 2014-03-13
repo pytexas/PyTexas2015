@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      {% block content-main %}{% endblock %}
+    </div>
+    <div class="col-xs-12 col-md-4">
+      {% block content-side %}
+      {% include "modules/sponsors.html" %}
+      {% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<div id="side-sponsors">{% load static thumbnail %}
+  <h3>Sponsors</h3>
+  <ul>
+    {% for l in sponsorLevels %}
+    {% for s in l.sponsors %}
+    <li>
+      {% thumbnail s.logo "300x64" format="PNG" as im %}
+      <a href="{{ s.url }}"><img src="{{ im.url }}" alt="{{ s.name }}"></a>
+      {% empty %}
+      <a href="{{ s.url }}">{{ s.name }}</a>
+      {% endthumbnail %}
+    </li>
+    {% endfor %}
+    {% endfor %}
+  </ul>
+</div>

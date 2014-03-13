@@ -25,6 +25,8 @@ ALLOWED_HOSTS = ['.pytexas.org']
 INSTALLED_APPS = (
   'south',
   'grappelli',
+  'sorl.thumbnail',
+  
   'django.contrib.admin',
   'django.contrib.auth',
   'django.contrib.contenttypes',
@@ -51,6 +53,7 @@ MIDDLEWARE_CLASSES = (
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
   'pizza.middleware.Siteware',
   'pizza.middleware.RememberAdminQuery',
+  'twospaces.conference.middleware.ConferenceMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -63,6 +66,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   "django.contrib.messages.context_processors.messages",
   "django.core.context_processors.request",
   "pytx.context.global_vars",
+  "twospaces.conference.context.sponsors",
 )
 
 ROOT_URLCONF = 'pytx.urls'
@@ -98,16 +102,16 @@ USE_TZ = True
 
 SITE_ID = 1
 
-SITE_INFO = {
-  'name': 'PyTexas'
-}
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'profiles.User'
+
+GRAPPELLI_ADMIN_TITLE = 'PyTexas Admin'
+
+THUMBNAIL_PRESERVE_FORMAT = True
 
 from .templates import *
 from .local import *

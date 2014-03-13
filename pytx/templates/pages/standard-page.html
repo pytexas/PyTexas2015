@@ -1,0 +1,9 @@
+{% extends "base-sidebar.html" %}{% load static thumbnail %}
+{% block content-main %}
+<div id="std-page">
+  <h1><div>{{ title }}</div></h1>
+  <div class="content">
+    {{ content|safe }}
+  </div>
+</div>
+{% endblock %}

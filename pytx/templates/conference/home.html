@@ -1,0 +1,35 @@
+{% extends "base.html" %}{% load static thumbnail %}
+{% block content %}
+<div id="home" class="container">
+  <div class="home-img">
+    <h1><span>{{ conference.name }}</span></h1>
+    <img src="{% static "img/banner-msc-4.png" %}" alt="MSC at Texas A&amp;M">
+  </div>
+  <div class="intro">
+    {{ conference.description|safe }}
+  </div>
+</div>
+<div id="sponsors" class="container">
+  <hr>
+  <h2>Sponsors</h2>
+  <ul class="levels">
+    {% for l in sponsorLevels %}
+    <li>
+      <h3>{{ l.name }} Sponsors</h3>
+      <div class="sponsors">
+        {% for s in l.sponsors %}
+        <div>
+          {% thumbnail s.logo "270x110" format="PNG" as im %}
+          <a href="{{ s.url }}"><img src="{{ im.url }}" alt="{{ s.name }}"></a>
+          {% empty %}
+          <h4><a href="{{ s.url }}">{{ s.name }}</a></h4>
+          {% endthumbnail %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="clear"></div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
