@@ -107,7 +107,11 @@ SITE_ID = 1
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
+STATIC_ROOT = '/var/www/static/'
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = '/var/www/static/uploads/'
+MEDIA_URL = '/static/uploads/'
 
 AUTH_USER_MODEL = 'profiles.User'
 
