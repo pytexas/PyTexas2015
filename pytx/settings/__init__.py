@@ -17,7 +17,7 @@ BASE_DIR = os.path.normpath(os.path.join(BASE_DIR, '..', '..'))
 DEBUG = False
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['.pytexas.org']
+ALLOWED_HOSTS = ['.pytexas.org', 'pytexas.org']
 
 
 # Application definition
