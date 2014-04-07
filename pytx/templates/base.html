@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="{% static "favicon.ico" %}">
-    <title>{% block title %}{% endblock %}{{ request.conference.name }}</title>
+    <title>{% block title %}{% if title %}{{ title }} | {% endif %}{% endblock %}{{ request.conference.name }}</title>
     <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
     <link href="{% static "font-awesome/css/font-awesome.min.css" %}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Nova+Square' rel='stylesheet' type='text/css'>
