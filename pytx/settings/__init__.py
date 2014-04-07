@@ -35,7 +35,7 @@ INSTALLED_APPS = (
   'django.contrib.staticfiles',
   'django.contrib.sites',
   
-  'pulsar.apps.pulse',
+  #'pulsar.apps.pulse',
   
   'pytx',
   'pizza.kitchen_sink',
