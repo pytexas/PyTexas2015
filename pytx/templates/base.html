@@ -41,12 +41,14 @@
             <li{% if request.path|contains:'/about/' %} class="active"{% endif %}>
               <a href="/2014/about/">About</a>
             </li>
+            {% comment %}
             <li{% if request.path|contains:'/sponsor/' %} class="active"{% endif %}>
               <a href="{% url "conference-sponsor" request.conference.slug %}">Sponsor</a>
             </li>
             <li{% if request.path|contains:'/speak/' %} class="active"{% endif %}>
               <a href="/speak/">Speak</a>
             </li>
+            {% endcomment %}
             <li{% if request.path|contains:'/venue/' %} class="active"{% endif %}>
               <a href="/2014/venue/">Venue</a>
             </li>
