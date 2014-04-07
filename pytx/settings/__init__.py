@@ -35,6 +35,8 @@ INSTALLED_APPS = (
   'django.contrib.staticfiles',
   'django.contrib.sites',
   
+  'pulsar.apps.pulse',
+  
   'pytx',
   'pizza.kitchen_sink',
   #'pizza.blog',
@@ -112,6 +114,10 @@ AUTH_USER_MODEL = 'profiles.User'
 GRAPPELLI_ADMIN_TITLE = 'PyTexas Admin'
 
 THUMBNAIL_PRESERVE_FORMAT = True
+
+TWOSPACES_SPONSOR_NOTIFY = (
+  'conference@pytexas.net',
+)
 
 from .templates import *
 from .local import *
