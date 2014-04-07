@@ -42,7 +42,7 @@
               <a href="/2014/about/">About</a>
             </li>
             <li{% if request.path|contains:'/sponsor/' %} class="active"{% endif %}>
-              <a href="/sponsor/">Sponsor</a>
+              <a href="{% url "conference-sponsor" request.conference.slug %}">Sponsor</a>
             </li>
             <li{% if request.path|contains:'/speak/' %} class="active"{% endif %}>
               <a href="/speak/">Speak</a>

@@ -1,0 +1,47 @@
+{% extends "base-sidebar.html" %}{% load conf_tags pizza_tags %}
+{% block content-main %}
+<div id="std-page" class="sponsor">
+  <h1><div>Become A Sponsor</div></h1>
+  <div class="content">
+    <form action="./" method="POST" role="form" enctype="multipart/form-data" class="col-xs-12 col-md-8">
+      {{ "sponsor_form_2014"|get_blurb|safe }}
+      <p>
+        ** = required fields
+      </p>
+      {% for field in form.visible_fields %}
+      <div class="form-group{% if field.errors %} has-error{% endif %}">
+        <label class="control-label" for="{{ field.id_for_label }}">
+          {{ field.label }}
+          {% if field.field.required %}<sup>**</sup>{% endif %}
+          {% if field.errors %}
+          <br><span class="error">{{ field.errors.0 }}</span>
+          {% endif %}
+        </label>
+        {{ field|add_class:"form-control" }}
+      </div>
+      {% endfor %}
+      {% csrf_token %}
+      {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+{% block content-side %}
+<div id="side-levels">
+  <h3>Sponsorship Levels</h3>
+  <ul>
+    {% for l in sponsorLevels %}
+    <li>
+      <h4>{{ l.name }}</h4>
+      <div class="cost">${{ l.cost }}</div>
+      <div class="desc">
+        {{ l.description|linebreaks }}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
