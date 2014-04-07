@@ -13,7 +13,7 @@ import sys
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pytx.settings")
 
 base_dir = os.path.dirname(__file__)
-ts = os.path.join(base_dir, 'TwoSpaces')
+ts = os.path.join(base_dir, '..', 'TwoSpaces')
 sys.path.append(ts)
 
 from django.core.wsgi import get_wsgi_application
