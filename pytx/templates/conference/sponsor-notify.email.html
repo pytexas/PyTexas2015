@@ -1,0 +1,13 @@
+{% extends "base.email.html" %}
+{% block title %}New Sponsor{% endblock %}
+{% block body %}
+<p>
+  ID: {{ sponsor.id }}<br>
+  Name: {{ sponsor.name }}<br>
+  URL: {{ sponsor.url }}<br>
+  Contact: {{ sponsor.contact_name }}<br>
+  Phone: {{ sponsor.contact_phone }}<br>
+  E-Mail: {{ sponsor.contact_email }}<br>
+  Level: {{ sponsor.level }}<br>
+</p>
+{% endblock %}

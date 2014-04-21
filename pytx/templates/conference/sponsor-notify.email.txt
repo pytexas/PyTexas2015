@@ -1,0 +1,7 @@
+ID: {{ sponsor.id }}
+Name: {{ sponsor.name }}
+URL: {{ sponsor.url }}
+Contact: {{ sponsor.contact_name }}
+Phone: {{ sponsor.contact_phone }}
+E-Mail: {{ sponsor.contact_email }}
+Level: {{ sponsor.level }}

@@ -120,7 +120,8 @@ GRAPPELLI_ADMIN_TITLE = 'PyTexas Admin'
 THUMBNAIL_PRESERVE_FORMAT = True
 
 TWOSPACES_SPONSOR_NOTIFY = (
-  'conference@pytexas.net',
+  #'conference@pytexas.net',
+  'paul.m.bailey@gmail.com',
 )
 
 from .templates import *

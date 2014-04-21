@@ -9,5 +9,4 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 THUMBNAIL_DEBUG = True
 
-#EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
