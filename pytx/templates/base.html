@@ -17,6 +17,8 @@
     {% else %}
     <link href="{% static "css/texas.css" %}" rel="stylesheet">
     {% endif %}
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    {% block extra_header %}{% endblock %}
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -54,10 +56,34 @@
             <li{% if request.path|contains:'/venue/' %} class="active"{% endif %}>
               <a href="/2014/venue/">Venue</a>
             </li>
+            {% if request.user.is_authenticated %}
+            <li{% if request.path|contains:'/profile/' %} class="active"{% endif %}>
+              <a href="{% url "profiles:profile" %}">My Profile</a>
+            </li>
+            <li>
+              <a href="{% url "profiles:logout" %}">Logout</a>
+            </li>
+            {% else %}
+            <li{% if request.path|contains:'/profile/signup/' %} class="active"{% endif %}>
+              <a href="{% url "profiles:signup" %}">Sign Up</a>
+            </li>
+            <li>
+              <a href="{% url "profiles:login" %}">Sign In</a>
+            </li>
+            {% endif %}
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
+    {% if messages %}
+    <div id="messages">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+          <div class="message">{{ message }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
     {% block content %}
     <div class="container">
       <div class="starter-template">
@@ -66,7 +92,6 @@
       </div>
     </div><!-- /.container -->
     {% endblock %}
-    <script src="{% static "js/jquery.min.js" %}"></script>
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
     {% block morejs %}{% endblock %}
   </body>

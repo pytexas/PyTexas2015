@@ -1,4 +1,4 @@
-{% extends "base.html" %}{% load static thumbnail %}
+{% extends "base.html" %}{% load static thumbnail django_markdown %}
 {% block content %}
 <div id="home" class="container">
   <div class="home-img">
@@ -6,7 +6,7 @@
     <img src="{% static "img/banner-msc-4.png" %}" alt="MSC at Texas A&amp;M">
   </div>
   <div class="intro">
-    {{ conference.description|safe }}
+    {{ conference.description|markdown }}
   </div>
 </div>
 <!--

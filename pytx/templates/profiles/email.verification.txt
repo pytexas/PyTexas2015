@@ -1,0 +1,3 @@
+Please verify your e-mail address by visiting the link below.
+
+http://{{ site.domain }}{% url "profiles:verify" %}?secret={{ ev.secret|urlencode }}

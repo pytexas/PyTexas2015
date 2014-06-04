@@ -90,6 +90,29 @@ label.control-label > span.error {
   font-weight: bold;
   font-size: 2rem;
 }
+span.help {
+  display: block;
+  float: right;
+  font-size: 85%;
+}
+#messages {
+  text-align: center;
+}
+#messages .alert {
+  margin-bottom: 0;
+}
+#messages div.message {
+  margin: 0 auto;
+  max-width: 400px;
+}
+li.markItUpButton {
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  #messages div.message {
+    max-width: 100%;
+  }
+}
 .home-img {
   width: 960px;
   margin: 0 auto;

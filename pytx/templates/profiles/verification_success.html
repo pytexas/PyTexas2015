@@ -3,7 +3,10 @@
 <div id="std-page">
   <h1><div>{{ title }}</div></h1>
   <div class="content">
-    {{ content|markdown }}
+    <h2>Your e-mail has been verified successfully!</h2>
+    <p>
+      <a href="{% url "profiles:profile" %}">View your profile &raquo;</a>
+    </p>
   </div>
 </div>
 {% endblock %}

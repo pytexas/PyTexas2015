@@ -1,0 +1,26 @@
+{% extends "base-sidebar.html" %}{% load static thumbnail django_markdown %}
+{% block content-main %}
+<div id="std-page">
+  <h1><div>{{ title }}</div></h1>
+  <div class="content">
+    {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+    <form role="form" action="{% url "profiles:signup" %}" method="POST" style="max-width: 400px;">
+      {% csrf_token %}
+      {% for field in form.visible_fields %}
+      <div class="form-group{% if field.errors %} has-error{% endif %}">
+        <label class="control-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {% if field.help_text and field.name != "username" %}<span class="help">{{ field.help_text }}</span>{% endif %}
+        {{ field }}
+        {% if field.errors %}<div class="text-danger">{{ field.errors.0 }}</div>{% endif %}
+      </div>
+      {% endfor %}
+      {% for hidden in form.hidden_fields %}
+      {{ hidden }}
+      {% endfor %}
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

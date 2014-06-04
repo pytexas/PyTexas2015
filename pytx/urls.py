@@ -12,6 +12,7 @@ urlpatterns = patterns('',
   
   url('^grappelli/', include('grappelli.urls')),
   url(r'^admin/', include(admin.site.urls)),
+  url('^markdown/', include( 'django_markdown.urls')),
 )
 
 urlpatterns += main_patterns

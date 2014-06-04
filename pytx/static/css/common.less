@@ -43,3 +43,39 @@ label.control-label > span.error {
     }
   }
 }
+
+span.help {
+  display: block;
+  float: right;
+  font-size: 85%;
+}
+
+#messages {
+  text-align: center;
+  
+  .alert {
+    margin-bottom: 0;
+  }
+  
+  div.message {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}
+
+li.markItUpButton {
+  padding: 2px 5px;
+}
+
+textarea.markItUpEditor {
+  width: 560px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  #messages {
+    div.message {
+      max-width: 100%;
+    }
+  }
+}

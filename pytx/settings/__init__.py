@@ -22,7 +22,7 @@ ALLOWED_HOSTS = ['.pytexas.org', 'pytexas.org']
 
 # Application definition
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
   'south',
   'grappelli',
   'sorl.thumbnail',
@@ -44,9 +44,12 @@ INSTALLED_APPS = (
   
   'twospaces.conference',
   'twospaces.profiles',
-)
+  
+  'django_markdown',
+  'django_gravatar',
+]
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES = [
   'django.contrib.sessions.middleware.SessionMiddleware',
   'django.middleware.common.CommonMiddleware',
   'django.middleware.csrf.CsrfViewMiddleware',
@@ -56,7 +59,7 @@ MIDDLEWARE_CLASSES = (
   'pizza.middleware.Siteware',
   'pizza.middleware.RememberAdminQuery',
   'twospaces.conference.middleware.ConferenceMiddleware',
-)
+]
 
 TEMPLATE_CONTEXT_PROCESSORS = (
   "django.contrib.auth.context_processors.auth",
@@ -103,6 +106,9 @@ USE_L10N = True
 USE_TZ = True
 
 SITE_ID = 1
+SITE_NAME = 'PyTexas'
+
+DEFAULT_FROM_EMAIL = 'conference@pytexas.net'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
@@ -123,6 +129,8 @@ TWOSPACES_SPONSOR_NOTIFY = (
   #'conference@pytexas.net',
   'paul.m.bailey@gmail.com',
 )
+
+MARKDOWN_EXTENSIONS = ['extra']
 
 from .templates import *
 from .local import *

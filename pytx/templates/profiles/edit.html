@@ -1,0 +1,71 @@
+{% extends "base-sidebar.html" %}{% load static thumbnail django_markdown gravatar %}
+{% block extra_header %}
+{{ form.media }}
+{% endblock %}
+{% block content-main %}
+<div id="profile">
+  <h1><div>{{ title }}</div></h1>
+  <div class="content">
+    {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+    <form role="form" action="./" enctype="multipart/form-data" method="POST" style="max-width: 500px;">
+      {% csrf_token %}
+      {% for field in form.visible_fields %}
+      <div class="form-group{% if field.errors %} has-error{% endif %}">
+        <label class="control-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {% if field.help_text and field.name != "username" %}<span class="help">{{ field.help_text }}</span>{% endif %}
+        {% if field.name == 'avatar' %}
+        <div style="margin: 5px 0 10px 0;">
+          {% if request.user.avatar %}
+          {% thumbnail request.user.avatar "64" as im %}
+          <img src="{{ im.url }}">
+          {% endthumbnail %}
+          {% else %}
+          {% gravatar request.user.email 64 %}<br>
+          <a href="http://gravatar.com/">Change on Gravatar</a> or upload an image below.
+          {% endif %}
+        </div>
+        {% endif %}
+        {{ field }}
+        {% if field.errors %}<div class="text-danger">{{ field.errors.0 }}</div>{% endif %}
+      </div>
+      {% endfor %}
+      {% for hidden in form.hidden_fields %}
+      {{ hidden }}
+      {% endfor %}
+      <hr>
+      <h2>Social Handles</h2>
+      {{ formset.management_form }}
+      {% for form in formset %}
+      {{ form.id }}
+      <div class="form-group{% if field.errors %} has-error{% endif %}">
+        <table class="handles">
+          <tr>
+            <td>
+              {{ forloop.counter }}.&nbsp;
+            </td>
+            <td style="width: 250px;">
+              <label class="control-label" for="{{ form.site.id_for_label }}">{{ form.site.label }}</label>
+              {{ form.site }}
+              {% if form.site.errors %}<div class="text-danger">{{ form.site.errors.0 }}</div>{% endif %}
+            </td>
+            <td style="width: 250px;">
+              <label class="control-label" for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
+              {{ form.username }}
+              {% if form.username.errors %}<div class="text-danger">{{ form.username.errors.0 }}</div>{% endif %}
+            </td>
+            <td>
+              {% if formset.can_delete %}
+              <br><label>Delete?</label>&nbsp;&nbsp;{{ form.DELETE }}
+              {% endif %}
+            </td>
+          </tr>
+        </table>
+      </div>
+      {% endfor %}
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
