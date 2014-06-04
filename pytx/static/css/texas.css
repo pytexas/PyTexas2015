@@ -106,7 +106,11 @@ span.help {
   max-width: 400px;
 }
 li.markItUpButton {
-  padding: 5px;
+  padding: 2px 5px;
+}
+textarea.markItUpEditor {
+  width: 560px;
+  display: block;
 }
 @media (max-width: 768px) {
   #messages div.message {
@@ -177,4 +181,12 @@ li.markItUpButton {
 }
 #side-levels > ul li:last-child {
   border-bottom: 0;
+}
+#profile table.handles td {
+  vertical-align: top;
+  padding: 0 10px 20px 0;
+}
+#profile table.handles td:last-child {
+  vertical-align: middle;
+  white-space: nowrap;
 }
