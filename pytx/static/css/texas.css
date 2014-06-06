@@ -52,6 +52,9 @@ hr {
 p {
   margin: 0 0 20px;
 }
+a.btn {
+  color: #ffffff;
+}
 .starter-template {
   padding: 40px 15px;
   text-align: center;
