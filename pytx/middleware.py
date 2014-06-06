@@ -9,7 +9,7 @@ class WWWMiddleware (object):
         if request.is_secure():
           url += 's'
           
-        url += '//www.pytexas.org' + request.get_full_path()
+        url += '://www.pytexas.org' + request.get_full_path()
         
         return http.HttpResponseRedirect(url)
         
