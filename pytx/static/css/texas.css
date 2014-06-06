@@ -49,6 +49,9 @@ a:visited {
 hr {
   border-color: #e6e8ea;
 }
+p {
+  margin: 0 0 20px;
+}
 .starter-template {
   padding: 40px 15px;
   text-align: center;
