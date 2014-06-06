@@ -110,7 +110,10 @@ SITE_ID = 1
 SITE_NAME = 'PyTexas'
 
 CSRF_COOKIE_DOMAIN = '.pytexas.org'
+CSRF_COOKIE_SECURE = True
+
 SESSION_COOKIE_DOMAIN = '.pytexas.org'
+SESSION_COOKIE_SECURE = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
