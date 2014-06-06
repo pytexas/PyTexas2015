@@ -1,0 +1,10 @@
+User: {{ session.user.username }}
+Name: {{ session.user.first_name }} {{ session.user.last_name }}
+E-Mail: {{ session.user.email }}
+Title: {{ session.name }}
+Description: {{ session.description }}
+Type: {{ session.get_stype_display }}
+Level: {{ session.get_level_display }}
+Special Requirements: {{ session.special_requirements }}
+
+Admin Link: http://{{ request.get_host }}{% url 'admin:conference_session_change' session.id %}

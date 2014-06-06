@@ -1,0 +1,30 @@
+{% extends "base-sidebar.html" %}{% load conf_tags pizza_tags %}
+{% block content-main %}
+<div id="std-page" class="sponsor">
+  <h1><div>{{ title }}</div></h1>
+  <div class="content">
+    <form action="./" method="POST" role="form" class="col-xs-12 col-md-8">
+      {{ "submit-talk"|get_blurb|safe }}
+      <p>
+        ** = required fields
+      </p>
+      {% for field in form.visible_fields %}
+      <div class="form-group{% if field.errors %} has-error{% endif %}">
+        <label class="control-label" for="{{ field.id_for_label }}">
+          {{ field.label }}{% if field.field.required %}<sup>**</sup>{% endif %}
+        </label>
+        {% if field.help_text %}<br><span style="font-size: 80%;">{{ field.help_text }}</span>{% endif %}
+        {{ field }}
+        {% if field.errors %}<div class="text-danger">{{ field.errors.0 }}</div>{% endif %}
+      </div>
+      {% endfor %}
+      {% csrf_token %}
+      {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+      <div class="form-group">
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

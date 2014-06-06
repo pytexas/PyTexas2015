@@ -108,8 +108,6 @@ USE_TZ = True
 SITE_ID = 1
 SITE_NAME = 'PyTexas'
 
-DEFAULT_FROM_EMAIL = 'conference@pytexas.net'
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
@@ -125,9 +123,14 @@ GRAPPELLI_ADMIN_TITLE = 'PyTexas Admin'
 
 THUMBNAIL_PRESERVE_FORMAT = True
 
+DEFAULT_FROM_EMAIL = 'conference@pytexas.org'
+
+TWOSPACES_SPEAKER_NOTIFY = (
+  'conference@pytexas.org',
+)
+
 TWOSPACES_SPONSOR_NOTIFY = (
-  #'conference@pytexas.net',
-  'paul.m.bailey@gmail.com',
+  'conference@pytexas.org',
 )
 
 MARKDOWN_EXTENSIONS = ['extra']
