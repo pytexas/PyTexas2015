@@ -52,7 +52,7 @@
               <a href="/speak/">Speak</a>
             </li>
             {% endcomment %}
-            <li{% if request.path|contains:'/venue/' %} class="active"{% endif %}>
+            <li{% if request.path|contains:'/about/venue/' %} class="active"{% endif %}>
               <a href="/2014/venue/">Venue</a>
             </li>
             {% if request.user.is_authenticated %}
