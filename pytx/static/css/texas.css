@@ -132,6 +132,9 @@ footer {
   width: 960px;
   margin: 0 auto;
   position: relative;
+  background-image: url(/static/img/banner-msc-4.png);
+  height: 200px;
+  background-position: 50% 50%;
 }
 .home-img h1 {
   position: absolute;
@@ -200,4 +203,9 @@ footer {
 #profile table.handles td:last-child {
   vertical-align: middle;
   white-space: nowrap;
+}
+@media (max-width: 960px) {
+  .home-img {
+    width: 100%;
+  }
 }

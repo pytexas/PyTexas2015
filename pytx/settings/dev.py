@@ -9,6 +9,12 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 THUMBNAIL_DEBUG = True
 
+CSRF_COOKIE_DOMAIN = None
+CSRF_COOKIE_SECURE = False
+
+SESSION_COOKIE_DOMAIN = None
+SESSION_COOKIE_SECURE = False
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 INSTALLED_APPS.insert(0, 'devserver')

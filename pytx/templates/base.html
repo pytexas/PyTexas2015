@@ -59,6 +59,11 @@
             <li{% if request.path|contains:'/profile/' %} class="active"{% endif %}>
               <a href="{% url "profiles:profile" %}">My Profile</a>
             </li>
+            {% if request.user.is_staff %}
+            <li>
+              <a href="/admin/">Admin</a>
+            </li>
+            {% endif %}
             <li>
               <a href="{% url "profiles:logout" %}">Logout</a>
             </li>
