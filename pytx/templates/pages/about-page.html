@@ -1,31 +1,42 @@
 {% extends "base-sidebar.html" %}{% load static thumbnail django_markdown %}
+{% block row %}
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+    <div class="std-page">
+      <h1><div>{{ title }}</div></h1>
+    </div>
+  </div>
+</div>
+{% endblock %}
 {% block content-main %}
 <div id="std-page">
-  <h1><div>{{ title }}</div></h1>
   <div class="content">
     {{ content|markdown }}
   </div>
 </div>
 {% endblock %}
-{% block content-side %}
-<div class="about-side">
-  <h4>More About PyTexas</h4>
-  <ul>
-    <li>
-      <a href="/2014/about/"{% if request.path == "/2014/about/" %} style="font-weight: bold;"{% endif %}>About The Conference</a>
-    </li>
-    <li>
-      <a href="/2014/about/venue/"{% if request.path == "/2014/about/venue/" %} style="font-weight: bold;"{% endif %}>The Venue</a>
-    </li>
-    <li>
-      <a href="/2014/about/code-of-conduct/"{% if request.path == "/2014/about/code-of-conduct/" %} style="font-weight: bold;"{% endif %}>Code of Conduct</a>
-    </li>
-    <li>
-      <a href="/2014/about/diversity/"{% if request.path == "/2014/about/diversity/" %} style="font-weight: bold;"{% endif %}>Conference Diversity Statement</a>
-    </li>
-    <li>
-      <a href="/2014/about/privacy-policy/"{% if request.path == "/2014/about/privacy-policy/" %} style="font-weight: bold;"{% endif %}>Privacy Policy</a>
-    </li>
-  </ul>
+{% block outer-content-side %}{% endblock %}
+{% block side-left %}
+<div class="col-xs-12 col-md-4">
+  <div class="about-side">
+    <h4>More About PyTexas</h4>
+    <ul>
+      <li>
+        <a href="/2014/about/"{% if request.path == "/2014/about/" %} style="font-weight: bold;"{% endif %}>About The Conference</a>
+      </li>
+      <li>
+        <a href="/2014/about/venue/"{% if request.path == "/2014/about/venue/" %} style="font-weight: bold;"{% endif %}>The Venue</a>
+      </li>
+      <li>
+        <a href="/2014/about/code-of-conduct/"{% if request.path == "/2014/about/code-of-conduct/" %} style="font-weight: bold;"{% endif %}>Code of Conduct</a>
+      </li>
+      <li>
+        <a href="/2014/about/diversity/"{% if request.path == "/2014/about/diversity/" %} style="font-weight: bold;"{% endif %}>Conference Diversity Statement</a>
+      </li>
+      <li>
+        <a href="/2014/about/privacy-policy/"{% if request.path == "/2014/about/privacy-policy/" %} style="font-weight: bold;"{% endif %}>Privacy Policy</a>
+      </li>
+    </ul>
+  </div>
 </div>
 {% endblock %}

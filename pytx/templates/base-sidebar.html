@@ -1,15 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
+  {% block row %}{% endblock %}
   <div class="row">
+    {% block side-left %}{% endblock %}
     <div class="col-xs-12 col-md-8">
       {% block content-main %}{% endblock %}
     </div>
+    {% block content-side-outer %}
     <div class="col-xs-12 col-md-4">
       {% block content-side %}
       {% include "modules/sponsors.html" %}
       {% endblock %}
     </div>
+    {% endblock content-side-outer %}
   </div>
 </div>
 {% endblock %}

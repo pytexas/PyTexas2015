@@ -170,12 +170,14 @@ footer {
   float: left;
   margin-right: 20px;
 }
-#std-page > h1 {
+#std-page > h1,
+.std-page > h1 {
   background-image: url(../img/banner-msc-4.png);
   margin: 20px 0 30px 0;
   padding: 0;
 }
-#std-page > h1 > div {
+#std-page > h1 > div,
+.std-page > h1 > div {
   background-color: #1e2933;
   background-color: rgba(30, 41, 51, 0.7);
   padding: 20px;
@@ -211,7 +213,10 @@ footer {
   }
 }
 .about-side {
-  margin: 130px 0 0 0;
+  margin: 0 0 0 0;
+}
+.about-side h4 {
+  margin-top: 0;
 }
 .about-side ul {
   font-size: 120%;
@@ -221,9 +226,4 @@ footer {
 }
 .about-side ul li {
   margin: 20px 0;
-}
-@media (max-width: 768px) {
-  .about-side {
-    margin: 20px 0 0 0;
-  }
 }

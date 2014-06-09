@@ -53,7 +53,7 @@
   }
 }
 
-#std-page {
+#std-page, .std-page {
   > h1 {
     background-image: url(../img/banner-msc-4.png);
     margin: 20px 0 30px 0;
@@ -109,7 +109,11 @@
 }
 
 .about-side {
-  margin: 130px 0 0 0;
+  margin: 0 0 0 0;
+  
+  h4 {
+    margin-top: 0;
+  }
   
   ul {
     font-size: 120%;
@@ -124,7 +128,5 @@
 }
 
 @media (max-width: 768px) {
-  .about-side {
-    margin: 20px 0 0 0;
-  }
+  
 }
