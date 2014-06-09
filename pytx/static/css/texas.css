@@ -210,3 +210,15 @@ footer {
     width: 100%;
   }
 }
+.about-side {
+  margin: 140px 0 0 0;
+}
+.about-side ul {
+  font-size: 120%;
+  margin: 20px 0 20px 20px;
+  padding: 0;
+  list-style-type: none;
+}
+.about-side ul li {
+  margin: 20px 0;
+}

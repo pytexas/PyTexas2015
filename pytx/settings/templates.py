@@ -7,5 +7,13 @@ PIZZA_TEMPLATES = OrderedDict([
         ('content', ('rich', 'Content')),
     ]),
     'inlines': OrderedDict([]),
+  }),
+  
+  ('pages/about-page.html', {
+    'name': 'About Page',
+    'regions': OrderedDict([
+        ('content', ('rich', 'Content')),
+    ]),
+    'inlines': OrderedDict([]),
   })
 ])
