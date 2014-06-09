@@ -154,6 +154,7 @@ footer {
 #home .intro {
   margin: 20px auto;
   max-width: 820px;
+  font-size: 140%;
 }
 #sponsors ul.levels {
   margin: 0 0 0 20px;

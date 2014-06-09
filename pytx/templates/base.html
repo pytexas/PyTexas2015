@@ -52,8 +52,8 @@
               <a href="/speak/">Speak</a>
             </li>
             {% endcomment %}
-            <li{% if request.path|contains:'/about/venue/' %} class="active"{% endif %}>
-              <a href="/2014/about/venue/">Venue</a>
+            <li{% if request.path|contains:'/2014/call-for-proposals/' %} class="active"{% endif %}>
+              <a href="/2014/call-for-proposals/">Submit A Talk</a>
             </li>
             {% if request.user.is_authenticated %}
             <li{% if request.path|contains:'/profile/' %} class="active"{% endif %}>
