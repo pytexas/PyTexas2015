@@ -12,19 +12,19 @@
   <h4>More About PyTexas</h4>
   <ul>
     <li>
-      <a href="/2014/about/">About The Conference</a>
+      <a href="/2014/about/"{% if request.path == "/2014/about/" %} style="font-weight: bold;"{% endif %}>About The Conference</a>
     </li>
     <li>
-      <a href="/2014/about/venue/">The Venue</a>
+      <a href="/2014/about/venue/"{% if request.path == "/2014/about/venue/" %} style="font-weight: bold;"{% endif %}>The Venue</a>
     </li>
     <li>
-      <a href="/2014/code-of-conduct/">Code of Conduct</a>
+      <a href="/2014/about/code-of-conduct/"{% if request.path == "/2014/about/code-of-conduct/" %} style="font-weight: bold;"{% endif %}>Code of Conduct</a>
     </li>
     <li>
-      <a href="/2014/diversity/">Conference Diversity Statement</a>
+      <a href="/2014/about/diversity/"{% if request.path == "/2014/about/diversity/" %} style="font-weight: bold;"{% endif %}>Conference Diversity Statement</a>
     </li>
     <li>
-      <a href="/2014/privacy-policy/">Privacy Policy</a>
+      <a href="/2014/about/privacy-policy/"{% if request.path == "/2014/about/privacy-policy/" %} style="font-weight: bold;"{% endif %}>Privacy Policy</a>
     </li>
   </ul>
 </div>
