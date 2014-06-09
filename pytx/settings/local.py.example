@@ -1,1 +1,3 @@
+from .dev import *
+
 SECRET_KEY = 'some-super-secret-string-here'
