@@ -209,6 +209,8 @@ footer {
   .home-img {
     width: 100%;
   }
+}
+@media (max-width: 768px) {
   .about-side {
     margin: 20px 0 0 0;
   }
