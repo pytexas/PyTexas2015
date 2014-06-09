@@ -142,6 +142,8 @@ TWOSPACES_SPONSOR_NOTIFY = (
 
 MARKDOWN_EXTENSIONS = ['extra']
 
+PIZZA_CACHE_TIMEOUT = 0
+
 from .templates import *
 from .local import *
 
