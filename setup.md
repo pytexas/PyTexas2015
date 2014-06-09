@@ -13,3 +13,7 @@
 1. `./manage.py migrate`
 
 **Notes:** You can also add a settings file named after your development machine in *pytx/settings/*. See *pixiebob.py* for an example.
+
+## Deployment
+
+Coming Soon.
