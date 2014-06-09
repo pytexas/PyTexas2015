@@ -11,3 +11,4 @@ gunicorn==18.0
 django-localflavor==1.0
 django-gravatar2==1.1.4
 ipython
+fabric
