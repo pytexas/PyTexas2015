@@ -16,4 +16,6 @@
 
 ## Deployment
 
-Coming Soon.
+**Requirements:** SSH account for pytexas.org with sudo acccess.  Talk to Paul or Glen for this.
+
+To Deploy: `fab deploy`
