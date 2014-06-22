@@ -64,6 +64,12 @@
             <li{% if request.path|contains:'/2014/call-for-proposals/' %} class="active"{% endif %}>
               <a href="/2014/call-for-proposals/">Submit A Talk</a>
             </li>
+            <li>
+              <a href="http://www.eventbrite.com/e/pytexas-2014-registration-11825772203">Registration</a>
+            </li>
+            <li>
+              <a href="https://www.pytexas.org/2014/sponsors/">Sponsors</a>
+            </li>
             {% if request.user.is_authenticated %}
             <li{% if request.path|contains:'/profile/' %} class="active"{% endif %}>
               <a href="{% url "profiles:profile" %}">My Profile</a>
