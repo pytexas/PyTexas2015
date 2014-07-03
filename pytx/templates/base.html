@@ -61,8 +61,13 @@
               <a href="/speak/">Speak</a>
             </li>
             {% endcomment %}
-            <li{% if request.path|contains:'/2014/call-for-proposals/' %} class="active"{% endif %}>
-              <a href="/2014/call-for-proposals/">Submit A Talk</a>
+            <li{% if request.path|contains:'/2014/call-for-proposals/' or request.path|contains:'/2014/proposed-talks/' or request.path|contains:'/2014/submit-talk/' %} class="active"{% endif %}>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Submit A Talk <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/2014/call-for-proposals/">Call For Proposals</a></li>
+                <li><a href="/2014/submit-talk/">Talk Submission Form</a></li>
+                <li><a href="/2014/proposed-talks/">Proposed Talks</a></li>
+              </ul>
             </li>
             <li>
               <a href="http://www.eventbrite.com/e/pytexas-2014-registration-11825772203">Registration</a>
@@ -71,7 +76,7 @@
               <a href="https://www.pytexas.org/2014/sponsors/">Sponsors</a>
             </li>
             {% if request.user.is_authenticated %}
-            <li{% if request.path|contains:'/profile/' %} class="active"{% endif %}>
+            <li{% if request.path|contains:'/profile/edit/' %} class="active"{% endif %}>
               <a href="{% url "profiles:profile" %}">My Profile</a>
             </li>
             {% if request.user.is_staff %}

@@ -1,0 +1,35 @@
+{% extends "base-sidebar.html" %}{% load static thumbnail django_markdown gravatar %}
+{% block content-main %}
+<div id="std-page">
+  <h1><div>{{ title }}</div></h1>
+  <div id="public-profile" class="content">
+    <div class="avatar">
+      {% if session.user.avatar %}
+      {% thumbnail session.user.avatar "128" as im %}
+      <img src="{{ im.url }}" alt="">
+      {% endthumbnail %}
+      {% else %}
+      {% gravatar session.user.email 128 %}
+      {% endif %}
+    </div>
+    <div class="info">
+      {% if user.first_name %}{{ user.first_name }}{% if user.last_name %} {{ user.last_name }}{% endif %}<br>{% endif %}
+      {% if user.website %}<a href="{{ user.website }}">{{ user.website }}</a>{% endif %}
+    </div>
+    <div class="bio">
+      <h4>Biography</h4>
+      {{ user.biography|markdown_safe }}
+    </div>
+    {% if user.socialhandle_set.all.count > 0 %}
+    <div class="social">
+      <h4>Social</h4>
+      {% for handle in user.socialhandle_set.all %}
+      <a href="{{ handle.link }}" class="btn btn-default" title="{{ handle.get_site_display }}">
+        <i class="fa {{ handle.icon }}"></i> {{ handle.username }}
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

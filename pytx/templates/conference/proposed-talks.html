@@ -1,0 +1,27 @@
+{% extends "pages/talk-page.html" %}{% load conf_tags pizza_tags thumbnail gravatar %}
+{% block content-main %}
+<div id="std-page" class="sponsor">
+  <div class="content">
+    <ul class="proposed-talks">
+      {% for session in sessions %}
+      <li>
+        <a href="{% url "profiles:public-profile" session.user.username %}" class="avatar">
+          {% if session.user.avatar %}
+          {% thumbnail session.user.avatar "64" as im %}
+          <img src="{{ im.url }}" alt="">
+          {% endthumbnail %}
+          {% else %}
+          {% gravatar session.user.email 64 %}
+          {% endif %}
+        </a>
+        <h3>{{ session.name }}</h3>
+        <div class="byline">
+          by <a href="{% url "profiles:public-profile" session.user.username %}">{{ session.user.username }}</a> - {{ session.get_stype_display }}
+        </div>
+        <div class="clearfix"></div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

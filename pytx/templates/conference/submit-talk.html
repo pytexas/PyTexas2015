@@ -1,7 +1,6 @@
-{% extends "base-sidebar.html" %}{% load conf_tags pizza_tags %}
+{% extends "pages/talk-page.html" %}{% load conf_tags pizza_tags %}
 {% block content-main %}
 <div id="std-page" class="sponsor">
-  <h1><div>{{ title }}</div></h1>
   <div class="content">
     <form action="./" method="POST" role="form" class="col-xs-12 col-md-8">
       {{ "submit-talk"|get_blurb|safe }}

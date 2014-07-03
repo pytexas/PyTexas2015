@@ -1,7 +1,6 @@
-{% extends "base-sidebar.html" %}{% load conf_tags pizza_tags %}
+{% extends "pages/talk-page.html" %}{% load conf_tags pizza_tags %}
 {% block content-main %}
 <div id="std-page" class="sponsor">
-  <h1><div>{{ title }}</div></h1>
   <div class="content">
     {{ "cfp_form_success"|get_blurb|safe }}
     <hr>

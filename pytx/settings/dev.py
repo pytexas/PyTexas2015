@@ -23,7 +23,7 @@ MIDDLEWARE_CLASSES.insert(0, 'devserver.middleware.DevServerMiddleware')
 
 DEVSERVER_MODULES = (
   #'devserver.modules.sql.SQLRealTimeModule',
-  #'devserver.modules.sql.SQLSummaryModule',
+  'devserver.modules.sql.SQLSummaryModule',
   'devserver.modules.profile.ProfileSummaryModule',
   
   # Modules not enabled by default

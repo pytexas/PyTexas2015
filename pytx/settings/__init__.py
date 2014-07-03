@@ -39,7 +39,7 @@ INSTALLED_APPS = [
   
   'pytx',
   'pizza.kitchen_sink',
-  #'pizza.blog',
+  'pizza.blog',
   #'pizza.calendar',
   
   'twospaces.conference',
@@ -143,6 +143,8 @@ TWOSPACES_SPONSOR_NOTIFY = (
 MARKDOWN_EXTENSIONS = ['extra']
 
 PIZZA_CACHE_TIMEOUT = 0
+
+GRAVATAR_DEFAULT_IMAGE = 'retro'
 
 from .templates import *
 from .local import *

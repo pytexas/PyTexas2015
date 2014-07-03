@@ -1,0 +1,21 @@
+{% extends "base-sidebar.html" %}{% load conf_tags pizza_tags django_markdown %}
+{% block row %}
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+    <div class="std-page">
+      <h1><div>{{ title }}</div></h1>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block content-main %}
+<div id="std-page">
+  <div class="content">
+    {{ content|markdown }}
+  </div>
+</div>
+{% endblock %}
+{% block outer-content-side %}{% endblock %}
+{% block side-left %}
+{% include "pages/talk-side-nav.html" %}
+{% endblock %}

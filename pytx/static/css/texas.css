@@ -55,6 +55,9 @@ p {
 a.btn {
   color: #ffffff;
 }
+a.btn-default {
+  color: #444444;
+}
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -206,6 +209,41 @@ footer {
 #profile table.handles td:last-child {
   vertical-align: middle;
   white-space: nowrap;
+}
+ul.proposed-talks {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+ul.proposed-talks li {
+  margin: 0 0 30px 0;
+}
+ul.proposed-talks h3 {
+  margin: 0 0 5px 0;
+}
+ul.proposed-talks a.avatar {
+  display: block;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+#public-profile > div {
+  margin: 0 0 30px 0;
+}
+#public-profile .info {
+  font-weight: bold;
+  font-size: 120%;
+}
+#public-profile .avatar {
+  float: right;
+  margin-left: 30px;
+}
+#public-profile .social i {
+  font-size: 200%;
+  padding: 0 3px 0 0;
+  vertical-align: middle;
+}
+#public-profile .social .btn {
+  margin: 0 20px 20px 0;
 }
 @media (max-width: 960px) {
   .home-img {
