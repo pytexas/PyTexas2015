@@ -5,11 +5,11 @@
   <div id="public-profile" class="content">
     <div class="avatar">
       {% if User.avatar %}
-      {% thumbnail User.avatar "128" as im %}
+      {% thumbnail User.avatar "256" as im %}
       <img src="{{ im.url }}" alt="">
       {% endthumbnail %}
       {% else %}
-      {% gravatar User.email 128 %}
+      {% gravatar User.email 256 %}
       {% endif %}
     </div>
     <div class="info">
