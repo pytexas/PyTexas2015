@@ -4,12 +4,12 @@
   <h1><div>{{ title }}</div></h1>
   <div id="public-profile" class="content">
     <div class="avatar">
-      {% if session.user.avatar %}
-      {% thumbnail session.user.avatar "128" as im %}
+      {% if user.avatar %}
+      {% thumbnail user.avatar "128" as im %}
       <img src="{{ im.url }}" alt="">
       {% endthumbnail %}
       {% else %}
-      {% gravatar session.user.email 128 %}
+      {% gravatar user.email 128 %}
       {% endif %}
     </div>
     <div class="info">
