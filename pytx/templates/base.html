@@ -40,14 +40,12 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/">
-            <img src="{% static "img/banner80.png" %}" alt="">
+            <img src="{% static "img/banner80.png" %}" alt="" class="hidden-sm">
+            <img src="{% static "img/icon-256.png" %}" alt="" class="hidden-md hidden-xs hidden-lg">
           </a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li{% if home %} class="active"{% endif %}>
-              <a href="{% url "conference-home" request.conference.slug %}"><i class="fa fa-home"></i></a>
-            </li>
             <li{% if request.path|contains:'/about/' %} class="active"{% endif %}>
               <a href="/2014/about/">About</a>
             </li>
@@ -76,16 +74,15 @@
               <a href="https://www.pytexas.org/2014/sponsors/">Sponsors</a>
             </li>
             {% if request.user.is_authenticated %}
-            <li{% if request.path|contains:'/profile/edit/' %} class="active"{% endif %}>
-              <a href="{% url "profiles:profile" %}">My Profile</a>
-            </li>
-            {% if request.user.is_staff %}
-            <li>
-              <a href="/admin/">Admin</a>
-            </li>
-            {% endif %}
-            <li>
-              <a href="{% url "profiles:logout" %}">Logout</a>
+            <li {% if request.path|contains:'/profile/' %} class="active"{% endif %}>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="{% url "profiles:profile" %}">My Profile</a></li>
+                {% if request.user.is_staff %}
+                <li><a href="/admin/">Admin</a></li>
+                {% endif %}
+                <li><a href="{% url "profiles:logout" %}">Logout</a></li>
+              </ul>
             </li>
             {% else %}
             <li{% if request.path|contains:'/profile/signup/' %} class="active"{% endif %}>
