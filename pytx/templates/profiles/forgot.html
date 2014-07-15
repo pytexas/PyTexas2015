@@ -3,14 +3,18 @@
 <div id="std-page">
   <h1><div>{{ title }}</div></h1>
   <div class="content">
+    <p>
+      Submit your username or e-mail and we'll send you a password reset.
+    </p>
     {% if error %}
     <div class="alert alert-danger">{{ error }}</div>
     {% endif %}
-    <form role="form" action="{% url "profiles:login" %}" method="POST" style="max-width: 400px;">
+    <form role="form" action="{% url "profiles:forgot" %}" method="POST" style="max-width: 400px;">
       {% csrf_token %}
       {% for field in form.visible_fields %}
       <div class="form-group{% if field.errors %} has-error{% endif %}">
         <label class="control-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {% if field.help_text %}<span class="help">{{ field.help_text }}</span>{% endif %}
         {{ field }}
         {% if field.errors %}<div class="text-danger">{{ field.errors.0 }}</div>{% endif %}
       </div>
@@ -18,13 +22,8 @@
       {% for hidden in form.hidden_fields %}
       {{ hidden }}
       {% endfor %}
-      <button type="submit" class="btn btn-primary">Login</button>
-      <span style="padding-left: 40px;">Don't have an account?  <a href="{% url "profiles:signup" %}?redirect={{ form.redirect.value|urlencode }}">Sign up Now!</a></span>
+      <button type="submit" class="btn btn-primary">Reset Password</button>
     </form>
-    <p>
-      <br><br>
-      <a href="{% url "profiles:forgot" %}">Forgot your password or username?</a>
-    </p>
   </div>
 </div>
 {% endblock %}
