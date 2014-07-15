@@ -150,6 +150,40 @@ ul.proposed-talks {
   }
 }
 
+a.rss {
+  display: block;
+  float: right;
+}
+
+.post {
+  h2 {
+    margin: 20px 0 0 0;
+  }
+  
+  .date {
+    margin: 0 0 10px 0;
+    
+    &.large {
+      font-weight: bold;
+      margin: 0 0 20px 0;
+      font-size: 120%;
+    }
+  }
+  
+  .main-img {
+    float: right;
+    display: block;
+    padding: 0 0 20px 20px;
+  }
+  
+  &:nth-child(even) {
+    .main-img {
+      float: left;
+      padding: 0 20px 20px 0;
+    }
+  }
+}
+
 @media (max-width: 960px) {
   .home-img {
     width: 100%;

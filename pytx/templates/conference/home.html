@@ -8,6 +8,35 @@
     {{ conference.description|markdown }}
   </div>
 </div>
+{% if LATEST_POST %}
+<div id="latest" class="container" style="max-width: 800px;">
+  <hr>
+  {% with post=LATEST_POST %}
+  <h2>Latest Blog Post: {{ post.title }}</h2>
+  <div class="post">
+    <a class="main-img" href="{% url "blog:detail" post.blog.slug post.slug %}">
+    {% thumbnail post.first_image.file "250x192" crop="center" as im %}
+    <img src="{{ im.url }}" alt="">
+    {% empty %}
+    
+    {% endthumbnail %}
+    </a>
+    <h2><a href="{% url "blog:detail" post.blog.slug post.slug %}">{{ post.title }}</a></h2>
+    <div class="date">
+      {{ post.publish|date:"M d, Y" }}
+    </div>
+    <div class="body">
+      {{ post.body|markdown|striptags|truncatewords:20 }}
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  {% endwith %}
+  <p style="font-size: 140%;">
+    <br>
+    Follow <a href="https://twitter.com/pytexas">@pytexas</a> for updates.
+  </p>
+</div>
+{% endif %}
 <!--
 <div id="sponsors" class="container">
   <hr>

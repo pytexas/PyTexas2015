@@ -1,0 +1,28 @@
+{% extends "base-sidebar.html" %}{% load static thumbnail django_markdown %}
+{% block title %}{{ post.title }} | Blog | {% endblock %}
+{% block colclass %}col-md-9{% endblock %}
+{% block content-main %}
+<div id="std-page">
+  <h1><div>{{ post.title }}</div></h1>
+  <div class="content">
+    <div id="posts">
+      <div class="post">
+        {% thumbnail post.first_image.file "400x384" as im %}
+        <img class="main-img" src="{{ im.url }}" alt="">
+        {% empty %}
+        
+        {% endthumbnail %}
+        <div class="date large">
+          Posted in the <a href="../">PyTexas Blog</a><br>
+          {{ post.publish|date:"M d, Y" }}
+        </div>
+        <div class="body">
+          {{ post.body|markdown }}
+        </div>
+        <div class="clearfix"></div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

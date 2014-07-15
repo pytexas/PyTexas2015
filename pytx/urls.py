@@ -9,6 +9,7 @@ from twospaces.urls import main_patterns
 
 urlpatterns = patterns('',
   url(r'^ks/', include('pizza.kitchen_sink.urls', namespace='kitchen_sink', app_name='kitchen_sink')),
+  url(r'^blogs/', include('pizza.blog.urls_blogs', namespace='blog', app_name='blog')),
   
   url('^grappelli/', include('grappelli.urls')),
   url(r'^admin/', include(admin.site.urls)),

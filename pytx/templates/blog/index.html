@@ -1,0 +1,36 @@
+{% extends "base-sidebar.html" %}{% load static thumbnail django_markdown %}
+{% block title %}Blog | {% endblock %}
+{% block content-main %}
+<div id="std-page">
+  <h1>
+    <div>
+      <a href="./?format=atom" class="rss"><img src="{% static 'img/feed-icon.png' %}" alt=""></a>
+      PyTexas Blog
+    </div>
+  </h1>
+  <div class="content">
+    <div id="posts">
+      {% for post in paginator.current_list %}
+      <div class="post">
+        <a class="main-img" href="{% url "blog:detail" blog.slug post.slug %}">
+        {% thumbnail post.first_image.file "250x192" crop="center" as im %}
+        <img src="{{ im.url }}" alt="">
+        {% empty %}
+        
+        {% endthumbnail %}
+        </a>
+        <h2><a href="{% url "blog:detail" blog.slug post.slug %}">{{ post.title }}</a></h2>
+        <div class="date">
+          {{ post.publish|date:"M d, Y" }}
+        </div>
+        <div class="body">
+          {{ post.body|markdown|striptags|truncatewords:20 }}
+        </div>
+        <div class="clearfix"></div>
+        <hr>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

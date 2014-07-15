@@ -4,11 +4,11 @@
   {% block row %}{% endblock %}
   <div class="row">
     {% block side-left %}{% endblock %}
-    <div class="col-xs-12 col-md-8">
+    <div class="col-xs-12 {% block colclass %}col-md-8{% endblock %}">
       {% block content-main %}{% endblock %}
     </div>
     {% block content-side-outer %}
-    <div class="col-xs-12 col-md-4">
+    <div class="col-xs-12 {% block colclass_side %}col-md-4{% endblock %}">
       {% block content-side %}
       {% include "modules/sponsors.html" %}
       {% endblock %}

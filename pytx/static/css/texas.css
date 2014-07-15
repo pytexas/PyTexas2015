@@ -245,6 +245,30 @@ ul.proposed-talks a.avatar {
 #public-profile .social .btn {
   margin: 0 20px 20px 0;
 }
+a.rss {
+  display: block;
+  float: right;
+}
+.post h2 {
+  margin: 20px 0 0 0;
+}
+.post .date {
+  margin: 0 0 10px 0;
+}
+.post .date.large {
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  font-size: 120%;
+}
+.post .main-img {
+  float: right;
+  display: block;
+  padding: 0 0 20px 20px;
+}
+.post:nth-child(even) .main-img {
+  float: left;
+  padding: 0 20px 20px 0;
+}
 @media (max-width: 960px) {
   .home-img {
     width: 100%;
