@@ -12,7 +12,7 @@
   <hr>
   {% if LATEST_POST %}
   {% with post=LATEST_POST %}
-  <h2>Latest Blog Post: {{ post.title }}</h2>
+  <h2>Latest Blog Post: <a href="{% url "blog:detail" post.blog.slug post.slug %}">{{ post.title }}</a></h2>
   <div class="post">
     <a class="main-img" href="{% url "blog:detail" post.blog.slug post.slug %}">
     {% thumbnail post.first_image.file "250x192" crop="center" as im %}
@@ -21,7 +21,6 @@
     
     {% endthumbnail %}
     </a>
-    <h2><a href="{% url "blog:detail" post.blog.slug post.slug %}">{{ post.title }}</a></h2>
     <div class="date">
       {{ post.publish|date:"M d, Y" }}
     </div>
