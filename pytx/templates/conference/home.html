@@ -8,9 +8,9 @@
     {{ conference.description|markdown }}
   </div>
 </div>
-{% if LATEST_POST %}
 <div id="latest" class="container" style="max-width: 800px;">
   <hr>
+  {% if LATEST_POST %}
   {% with post=LATEST_POST %}
   <h2>Latest Blog Post: {{ post.title }}</h2>
   <div class="post">
@@ -31,12 +31,12 @@
     <div class="clearfix"></div>
   </div>
   {% endwith %}
+  {% endif %}
   <p style="font-size: 140%;">
     <br>
     Follow <a href="https://twitter.com/pytexas">@pytexas</a> for updates.
   </p>
 </div>
-{% endif %}
 <!--
 <div id="sponsors" class="container">
   <hr>

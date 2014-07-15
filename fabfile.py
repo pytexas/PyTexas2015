@@ -8,6 +8,7 @@ def deploy ():
     sudo('git pull', user=WEB_USER)
     sudo('git submodule update', user=WEB_USER)
     sudo('su -c "pip install -r requirements.txt --user" {}'.format(WEB_USER))
+    sudo('su -c "./manage.py migrate" {}'.format(WEB_USER))
     sudo('su -c "./manage.py collectstatic --noinput" {}'.format(WEB_USER))
     
     sudo('sudo supervisorctl restart pytx')
