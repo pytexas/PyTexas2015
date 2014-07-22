@@ -1,0 +1,27 @@
+{% extends "base-sidebar.html" %}{% load static conf_tags pizza_tags %}
+{% block content-main %}
+<div id="std-page" class="sponsor">
+  <h1><div>{{ title }}</div></h1>
+  <div class="content">
+    <p style="font-size: 200%;">
+      To complete the payment please click the button below and fill out the form.
+    </p>
+    <form action="./" method="POST">
+      {% csrf_token %}
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="{{ STRIPE_PUB_KEY }}"
+        data-amount="{{ invoice.cents }}"
+        data-name="{{ invoice.name }}"
+        data-description="PyTexas.org"
+        data-image="{% static "img/icon-256.png" %}">
+      </script>
+    </form>
+  </div>
+</div>
+{% endblock %}
+{% block content-side %}
+<div id="side-levels">
+  
+</div>
+{% endblock %}
