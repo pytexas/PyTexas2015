@@ -25,7 +25,10 @@
       {{ post.publish|date:"M d, Y" }}
     </div>
     <div class="body">
-      {{ post.body|markdown|striptags|truncatewords:20 }}
+      {{ post.body|markdown|striptags|truncatewords:40 }}
+      <p>
+        <a href="{% url "blog:detail" post.blog.slug post.slug %}">Read More &raquo;</a>
+      </p>
     </div>
     <div class="clearfix"></div>
   </div>
