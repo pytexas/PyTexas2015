@@ -39,29 +39,5 @@
     Follow <a href="https://twitter.com/pytexas">@pytexas</a> for updates.
   </p>
 </div>
-<!--
-<div id="sponsors" class="container">
-  <hr>
-  <h2>Sponsors</h2>
-  <ul class="levels">
-    {% for l in sponsorLevels %}
-    <li>
-      <h3>{{ l.name }} Sponsors</h3>
-      <div class="sponsors">
-        {% for s in l.sponsors %}
-        <div>
-          {% thumbnail s.logo "270x110" format="PNG" as im %}
-          <a href="{{ s.url }}"><img src="{{ im.url }}" alt="{{ s.name }}"></a>
-          {% empty %}
-          <h4><a href="{{ s.url }}">{{ s.name }}</a></h4>
-          {% endthumbnail %}
-        </div>
-        {% endfor %}
-      </div>
-      <div class="clear"></div>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
--->
+{% include "modules/sponsors-bottom.html" %}
 {% endblock %}

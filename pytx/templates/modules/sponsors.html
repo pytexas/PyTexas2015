@@ -1,4 +1,6 @@
-<div id="side-sponsors">{% load static thumbnail %}
+{% load static thumbnail %}
+{% if sponsorCount > 0 %}
+<div id="side-sponsors">
   {% if sponsorLevels.count > 0 %}
   <h3>Sponsors</h3>
   <ul>
@@ -16,3 +18,4 @@
   </ul>
   {% endif %}
 </div>
+{% endif %}

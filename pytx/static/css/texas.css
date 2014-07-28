@@ -91,13 +91,16 @@ label.control-label > span.error {
   padding: 0;
 }
 #side-sponsors > ul li {
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
   padding: 0;
   text-align: center;
 }
 #side-sponsors > ul li a {
   font-weight: bold;
   font-size: 2rem;
+}
+.content h2:first-child {
+  margin-top: 0;
 }
 span.help {
   display: block;
@@ -165,9 +168,12 @@ footer {
   list-style-type: none;
 }
 #sponsors ul.levels li {
-  margin: 0 0 40px 0;
-  padding: 0 0 40px 0;
+  margin: 0 0 30px 0;
+  padding: 0 0 30px 0;
   border-bottom: 1px solid #e6e8ea;
+}
+#sponsors ul.levels li:last-child {
+  border-bottom: 0;
 }
 #sponsors ul.levels li .sponsors > div {
   float: left;
