@@ -5,6 +5,7 @@
   <h2>Sponsors</h2>
   <ul class="levels">
     {% for l in sponsorLevels %}
+    {% if l.sponsors.count > 0 %}
     <li>
       <h3>{{ l.name }} Sponsors</h3>
       <div class="sponsors">
@@ -20,6 +21,7 @@
       </div>
       <div class="clear"></div>
     </li>
+    {% endif %}
     {% endfor %}
   </ul>
 </div>
