@@ -275,6 +275,21 @@ a.rss {
   float: left;
   padding: 0 20px 20px 0;
 }
+.all-sponsors ul.levels {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.all-sponsors ul.levels > li {
+  margin: 0 0 40px 0;
+}
+.all-sponsors ul.levels div.sponsor {
+  margin: 0 0 20px 0;
+}
+.all-sponsors ul.levels div.sponsor img {
+  float: right;
+  margin: 0 0 20px 20px;
+}
 @media (max-width: 960px) {
   .home-img {
     width: 100%;

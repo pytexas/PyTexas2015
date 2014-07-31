@@ -1,0 +1,34 @@
+{% extends "base-sidebar.html" %}{% load static thumbnail django_markdown %}
+{% block content-main %}
+<div class="std-page all-sponsors">
+  <h1><div>{{ title }}</div></h1>
+  <ul class="levels">
+    {% for l in sponsorLevels %}
+    {% if l.sponsors.count > 0 %}
+    <li>
+      <h3>{{ l.name }} Sponsors</h3>
+      <div class="sponsors">
+        {% for s in l.sponsors %}
+        <div class="sponsor">
+          {% thumbnail s.logo "270x110" format="PNG" as im %}
+          <a href="{{ s.url }}"><img src="{{ im.url }}" alt="{{ s.name }}"></a>
+          {% endthumbnail %}
+          <h4><a href="{{ s.url }}">{{ s.name }}</a></h4>
+          <p>
+            {{ s.description|linebreaksbr }}
+          </p>
+          <div class="clear"></div>
+        </div>
+        {% endfor %}
+      </div>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+{% block content-side %}
+<div id="side-sponsors" style="margin-top: 110px; padding-left: 40px;">
+  <a href="../sponsor-prospectus/" class="btn btn-primary btn-lg">Become a Sponsor</a>
+</div>
+{% endblock %}
