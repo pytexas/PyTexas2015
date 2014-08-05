@@ -3,7 +3,7 @@
   margin: 0 auto;
   position: relative;
   background-image: url(/static/img/banner-msc-4.png);
-  height: 200px;
+  height: 150px;
   background-position: 50% 50%;
   
   h1 {
@@ -24,11 +24,39 @@
   }
 }
 
-#home {
+.home {
   .intro {
     margin: 20px auto;
     max-width: 820px;
     font-size: 140%;
+  }
+}
+
+#sponsors.home ul.levels li {
+  margin: 20px 0 10px 0;
+  padding: 0 0 10px 0;
+  text-align: center;
+  
+  &:last-child {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sponsors {
+    text-align: center;
+    
+    > div {
+      float: none;
+      display: inline-block;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+      
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
   }
 }
 
