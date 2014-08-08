@@ -64,6 +64,7 @@ a.btn-default {
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 h1,
 h2,
@@ -177,6 +178,7 @@ footer {
 #sponsors.home ul.levels li .sponsors > div {
   float: none;
   display: inline-block;
+  padding-bottom: 10px;
 }
 #sponsors.home ul.levels li .sponsors > div:last-child {
   margin-right: 0;
@@ -309,6 +311,14 @@ a.rss {
   margin: 0 0 60px 0;
 }
 .all-sponsors ul.levels div.sponsor img {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+#std-page.talk h2 {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+#std-page.talk .avatar {
   float: right;
   margin: 0 0 20px 20px;
 }
