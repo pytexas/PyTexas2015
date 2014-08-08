@@ -14,7 +14,7 @@
           {% gravatar session.user.email 64 %}
           {% endif %}
         </a>
-        <h3>{{ session.name }}</h3>
+        <h3><a href="{% url "conference-talk-detail" request.conference.slug session.id %}">{{ session.name }}</a></h3>
         <div class="byline">
           by <a href="{% url "profiles:public-profile" session.user.username %}">{{ session.user.username }}</a> - {{ session.get_stype_display }}
         </div>

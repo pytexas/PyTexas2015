@@ -1,0 +1,33 @@
+{% extends "base-sidebar.html" %}{% load static thumbnail django_markdown gravatar %}
+{% block title %}{{ session.name }} | Talks | {% endblock %}
+{% block content-main %}
+<div id="std-page" class="talk">
+  <h1><div>{{ session.name }}</div></h1>
+  <div class="content">
+    <div id="posts">
+      <div class="post">
+        {% if session.status = 'submitted' %}<h2><em>Proposed Talk</em></h2>{% endif %}
+        <div class="date large">
+          <a href="{% url "profiles:public-profile" session.user.username %}" class="avatar">
+            {% if session.user.avatar %}
+            {% thumbnail session.user.avatar "128" as im %}
+            <img src="{{ im.url }}" alt="">
+            {% endthumbnail %}
+            {% else %}
+            {% gravatar session.user.email 128 %}
+            {% endif %}
+          </a>
+          by <a href="{% url "profiles:public-profile" session.user.username %}">{{ session.user.username }}</a>
+          <br>Level: {{ session.get_level_display }}
+          {% if session.start %}<br>{{ session.start|date:"M d, Y \a\t P" }}{% endif %}
+        </div>
+        <div class="body">
+          {{ session.description|markdown }}
+        </div>
+        <div class="clearfix"></div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
