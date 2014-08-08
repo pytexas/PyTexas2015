@@ -3,7 +3,11 @@
 <div id="std-page" class="sponsor">
   <div class="content">
     <form action="./" method="POST" role="form" class="col-xs-12 col-md-8">
+      {% if talk == "lightning" %}
+      {{ "submit-lightning-talk"|get_blurb|safe }}
+      {% else %}
       {{ "submit-talk"|get_blurb|safe }}
+      {% endif %}
       <p>
         ** = required fields
       </p>
