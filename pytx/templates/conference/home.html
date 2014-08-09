@@ -5,6 +5,9 @@
     <h1><span>{{ conference.name }}</span></h1>
   </div>
 </div>
+<div id="date-location">
+{{ "date-location"|get_blurb|safe }}
+</div>
 {% if sponsorCount > 0 %}
 <div id="sponsors" class="home container">
   <ul class="levels">
