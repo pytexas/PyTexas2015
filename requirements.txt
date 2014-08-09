@@ -13,3 +13,4 @@ django-gravatar2==1.1.4
 ipython
 mpeg1audio
 stripe==1.18.0
+Pillow==2.5.1
