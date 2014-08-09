@@ -164,7 +164,7 @@ footer {
   font-size: 140%;
 }
 #sponsors.home ul.levels li {
-  margin: 20px 0 10px 0;
+  margin: 0px 0 10px 0;
   padding: 0 0 10px 0;
   text-align: center;
 }
@@ -341,4 +341,14 @@ a.rss {
 }
 .about-side ul li {
   margin: 20px 0;
+}
+@media (max-width: 768px) {
+  
+}
+div#date-location {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 0;
+  font-size: 1.2em;
 }
