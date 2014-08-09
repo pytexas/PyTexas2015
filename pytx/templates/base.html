@@ -50,6 +50,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/2014/about/">About</a></li>
+                <li><a href="/2014/about/venue/">Venue</a></li>
+                <li><a href="/2014/hotels/">Hotels</a></li>
                 <li><a href="{% url "blog:index" "main" %}">Blog</a></li>
               </ul>
             </li>
@@ -59,7 +61,7 @@
             </li>
             {% endcomment %}
             <li{% if request.path|contains:'/2014/call-for-proposals/' or request.path|contains:'/2014/proposed-talks/' or request.path|contains:'/2014/submit-talk/' %} class="active"{% endif %}>
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Submit A Talk <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Speaking <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/2014/call-for-proposals/">Call For Proposals</a></li>
                 <li><a href="/2014/submit-talk/">Talk Submission Form</a></li>
@@ -73,10 +75,10 @@
             <li{% if request.path|contains:'/sponsors/' %} class="active"{% endif %}>
               <a href="/2014/sponsors/">Sponsors</a>
             </li>
-            <li{% if request.path|contains:'/about/venue/' %} class="active"{% endif %}>
+            <li class="hide768{% if request.path|contains:'/about/venue/' %} active{% endif %}">
               <a href="/2014/about/venue/">Venue</a>
             </li>
-            <li{% if request.path|contains:'/hotels/' %} class="active"{% endif %}>
+            <li class="hide768{% if request.path|contains:'/hotels/' %} active{% endif %}">
               <a href="/2014/hotels/">Hotels</a>
             </li>
             {% if request.user.is_authenticated %}

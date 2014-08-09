@@ -79,11 +79,25 @@ textarea.markItUpEditor {
   display: block;
 }
 
+.nav > li.hide768 {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .nav > li.hide768 {
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   #messages {
     div.message {
       max-width: 100%;
     }
+  }
+  
+  .nav > li.hide768 {
+    display: block;
   }
 }
 
