@@ -73,6 +73,12 @@
             <li{% if request.path|contains:'/sponsors/' %} class="active"{% endif %}>
               <a href="/2014/sponsors/">Sponsors</a>
             </li>
+            <li{% if request.path|contains:'/about/venue/' %} class="active"{% endif %}>
+              <a href="/2014/about/venue/">Venue</a>
+            </li>
+            <li{% if request.path|contains:'/hotels/' %} class="active"{% endif %}>
+              <a href="/2014/hotels/">Hotels</a>
+            </li>
             {% if request.user.is_authenticated %}
             <li {% if request.path|contains:'/profile/' %} class="active"{% endif %}>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <span class="caret"></span></a>
