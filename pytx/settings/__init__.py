@@ -153,6 +153,7 @@ EVENTBRITE_EVENT_ID = ''
 
 # Weekly stats settings
 WEEKLY_STATS_EMAIL = 'conference@pytexas.org'
+WEEKLY_STATS_FROM_EMAIL = DEFAULT_FROM_EMAIL
 
 # caching
 CACHES = {

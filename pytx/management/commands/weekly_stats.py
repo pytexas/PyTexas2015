@@ -254,7 +254,7 @@ class Command(BaseCommand):
         email = EmailMessage(
             'PyTexas Weekly Stats',
             html_message,
-            settings.DEFAULT_FROM_EMAIL,
+            settings.WEEKLY_STATS_FROM_EMAIL,
             [settings.WEEKLY_STATS_EMAIL,]
         )
         email.content_subtype = "html"
