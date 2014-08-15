@@ -148,16 +148,6 @@ class Command(BaseCommand):
         invoice_total = Invoice.objects.aggregate(Sum('amount'))
         invoice_paid_total = Invoice.objects.filter(paid_on__isnull=False).aggregate(Sum('amount'))
 
-        # print 'TOTAL:', eb_total_attendees
-        # print 'GROSS:',eb_gross_sales
-        # print 'NET:', eb_net_sales
-        # print 'TOTAL_SESSIONS:', session_total
-        # print 'SESSION_TYPES:', session_types
-        # print 'SESSION_LEVELS:', session_levels
-        # print 'SPONSORS:', sponsors
-        # print 'INVOICE_TOTAL:', invoice_total
-        # print 'INVOICE_PAID_TOTAL', invoice_paid_total
-
         # setup the message parameters for string formatting
         html_params = {
             'eb_total_attendees': eb_total_attendees,
