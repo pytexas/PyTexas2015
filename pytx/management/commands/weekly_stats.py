@@ -213,7 +213,7 @@ class Command(BaseCommand):
                     <td>Paid Invoiced Amount</td>
                     <td>{invoice_paid_total}</td>
                 </tr>
-            </table>  
+            </table>
             <h2>Sessions</h2>
             <table>
                 <tr>
@@ -248,14 +248,14 @@ class Command(BaseCommand):
                     <td>Long (50 min)</td>
                     <td>{sessions_long}</td>
                 </tr>
-            </table> 
+            </table>
         """.format(**html_params)
 
         email = EmailMessage(
             'PyTexas Weekly Stats',
             html_message,
             settings.DEFAULT_FROM_EMAIL,
-            [settings.WEEKLY_STATS_EMAIL,],
-            headers={'Content-Type': 'text/html'}
+            [settings.WEEKLY_STATS_EMAIL,]
         )
+        email.content_subtype = "html"
         email.send()
