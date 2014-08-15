@@ -176,8 +176,14 @@ class Command(BaseCommand):
         }
 
         html_message = """
+            <style type="text/css">
+                table th, td {
+                    text-align: left;
+                    padding: 5px;
+                }
+            </style>
             <h2>EventBrite</h2>
-            <table align="left" cellpadding="2" cellspacing="2">
+            <table>
                 <tr>
                     <th>Name</th>
                     <th>Total</ht>
@@ -196,7 +202,7 @@ class Command(BaseCommand):
                 </tr>
             </table>
             <h2>Sponsorship</h2>
-            <table align="left" cellpadding="2" cellspacing="2">
+            <table>
                 <tr>
                     <th>Name</th>
                     <th>Total</ht>
@@ -215,7 +221,7 @@ class Command(BaseCommand):
                 </tr>
             </table>
             <h2>Sessions</h2>
-            <table align="left" cellpadding="2" cellspacing="2">
+            <table>
                 <tr>
                     <th>Name</th>
                     <th>Total</ht>
