@@ -177,7 +177,7 @@ class Command(BaseCommand):
 
         html_message = """
             <h2>EventBrite</h2>
-            <table>
+            <table align="left" cellpadding="2" cellspacing="2">
                 <tr>
                     <th>Name</th>
                     <th>Total</ht>
@@ -196,7 +196,7 @@ class Command(BaseCommand):
                 </tr>
             </table>
             <h2>Sponsorship</h2>
-            <table>
+            <table align="left" cellpadding="2" cellspacing="2">
                 <tr>
                     <th>Name</th>
                     <th>Total</ht>
@@ -215,7 +215,7 @@ class Command(BaseCommand):
                 </tr>
             </table>
             <h2>Sessions</h2>
-            <table>
+            <table align="left" cellpadding="2" cellspacing="2">
                 <tr>
                     <th>Name</th>
                     <th>Total</ht>
