@@ -177,10 +177,10 @@ class Command(BaseCommand):
 
         html_message = """
             <style type="text/css">
-                table th, td {
+                table th, td {{
                     text-align: left;
                     padding: 5px;
-                }
+                }}
             </style>
             <h2>EventBrite</h2>
             <table>
