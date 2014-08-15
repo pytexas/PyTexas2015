@@ -176,83 +176,77 @@ class Command(BaseCommand):
         }
 
         html_message = """
-            <style type="text/css">
-                table th, td {{
-                    text-align: left;
-                    padding: 5px;
-                }}
-            </style>
             <h2>EventBrite</h2>
             <table>
                 <tr>
-                    <th>Name</th>
-                    <th>Total</ht>
+                    <th style="text-align: left;padding: 5px;">Name</th>
+                    <th style="text-align: left;padding: 5px;">Total</ht>
                 </tr>
                 <tr>
-                    <td>Attendees</td>
-                    <td>{eb_total_attendees}</td>
+                    <td style="text-align: left;padding: 5px;">Attendees</td>
+                    <td style="text-align: left;padding: 5px;">{eb_total_attendees}</td>
                 </tr>
                 <tr>
-                    <td>Gross Sales</td>
-                    <td>{eb_gross_sales}</td>
+                    <td style="text-align: left;padding: 5px;">Gross Sales</td>
+                    <td style="text-align: left;padding: 5px;">{eb_gross_sales}</td>
                 </tr>
                 <tr>
-                    <td>Net Sales</td>
-                    <td>{eb_net_sales}</td>
+                    <td style="text-align: left;padding: 5px;">Net Sales</td>
+                    <td style="text-align: left;padding: 5px;">{eb_net_sales}</td>
                 </tr>
             </table>
             <h2>Sponsorship</h2>
             <table>
                 <tr>
-                    <th>Name</th>
-                    <th>Total</ht>
+                    <th style="text-align: left;padding: 5px;">Name</th>
+                    <th style="text-align: left;padding: 5px;">Total</ht>
                 </tr>
                 <tr>
-                    <td>Sponsors</td>
-                    <td>{sponsors}</td>
+                    <td style="text-align: left;padding: 5px;">Sponsors</td>
+                    <td style="text-align: left;padding: 5px;">{sponsors}</td>
                 </tr>
                 <tr>
-                    <td>Invoiced Amount</td>
-                    <td>{invoice_total}</td>
+                    <td style="text-align: left;padding: 5px;">Invoiced Amount</td>
+                    <td style="text-align: left;padding: 5px;">{invoice_total}</td>
                 </tr>
                 <tr>
-                    <td>Paid Invoiced Amount</td>
-                    <td>{invoice_paid_total}</td>
+                    <td style="text-align: left;padding: 5px;">Paid Invoiced Amount</td>
+                    <td style="text-align: left;padding: 5px;">{invoice_paid_total}</td>
                 </tr>
             </table>
             <h2>Sessions</h2>
             <table>
                 <tr>
-                    <th>Name</th>
-                    <th>Total</ht>
+                    <th style="text-align: left;padding: 5px;">Name</th>
+                    <th style="text-align: left;padding: 5px;">Total</ht>
                 </tr>
                 <tr>
-                    <td>Sessions</td>
-                    <td>{sessions}</td>
+                    <td style="text-align: left;padding: 5px;">Sessions</td>
+                    <td style="text-align: left;padding: 5px;">{sessions}</td>
                 </tr>
                 <tr>
-                    <td>Beginner</td>
-                    <td>{sessions_beginner}</td>
+                    <td style="text-align: left;padding: 5px;">Beginner</td>
+                    <td style="text-align: left;padding: 5px;">{sessions_beginner}</td>
                 </tr>
                 <tr>
-                    <td>Intermediate</td>
-                    <td>{sessions_intermediate}</td>
+                    <td style="text-align: left;padding: 5px;">Intermediate</td>
+                    <td style="text-align: left;padding: 5px;">{sessions_intermediate}</td>
                 </tr>
                 <tr>
-                    <td>Advanced</td>
-                    <td>{sessions_advanced}</td>
+                    <td style="text-align: left;padding: 5px;">Advanced</td>
+                    <td style="text-align: left;padding: 5px;">{sessions_advanced}</td>
                 </tr>
                 <tr>
-                    <td>Lightning (5min) </td>
-                    <td>{sessions_lightning}</td>
+                    <td style="text-align: left;padding: 5px;">Lightning (5min) </td>
+                    <td style="text-align: left;padding: 5px;">{sessions_lightning}</td>
                 </tr>
                 <tr>
-                    <td>Short (25 min)</td>
-                    <td>{sessions_short}</td>
+                    <td style="text-align: left;padding: 5px;">Short (25 min)</td>
+                    <td style="text-align: left;padding: 5px;">{sessions_short}</td>
                 </tr>
                 <tr>
-                    <td>Long (50 min)</td>
-                    <td>{sessions_long}</td>
+                    <td style="text-align: left;padding: 5px;">Long (50 min)</td>
+                    <td style="text-align: left;padding: 5px;">{sessions_long}</td>
                 </tr>
             </table>
         """.format(**html_params)
