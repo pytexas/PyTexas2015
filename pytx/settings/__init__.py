@@ -146,6 +146,23 @@ PIZZA_CACHE_TIMEOUT = 0
 
 GRAVATAR_DEFAULT_IMAGE = 'retro'
 
+# Eventbrite settings
+EVENTBRITE_API_URL = 'https://www.eventbriteapi.com/v3'
+EVENTBRITE_OAUTH_TOKEN = ''
+EVENTBRITE_EVENT_ID = ''
+
+# Weekly stats settings
+WEEKLY_STATS_EMAIL = 'conference@pytexas.org'
+
+# caching
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+        'TIMEOUT': 1200
+    }
+}
+
 from .templates import *
 from .local import *
 

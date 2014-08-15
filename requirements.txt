@@ -14,3 +14,4 @@ ipython
 mpeg1audio
 stripe==1.18.0
 Pillow==2.5.1
+python-memcached==1.53
