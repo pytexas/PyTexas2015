@@ -31,7 +31,7 @@
                 {% endfor %}
             </ul>
         {% else %}
-          <p>No talks yet. <a href="{% url 'conference-submit-talk' CONFERENCE_YEAR %}">Submit a talk!</a></p>
+          <p>No talks yet. <a href="{% url 'conference-submit-talk' request.conference.slug %}">Submit a talk!</a></p>
         {% endif %}
       </div>
       <div class="tab-pane pt-lightning-talks-tab" id="pt-lightning-talks">
@@ -57,7 +57,7 @@
               {% endfor %}
             </ul>
         {% else %}
-          <p>No lightning talks yet. <a href="{% url 'conference-submit-lightning-talk' CONFERENCE_YEAR %}">Submit a lightning talk!</a></p>
+          <p>No lightning talks yet. <a href="{% url 'conference-submit-lightning-talk' request.conference.slug %}">Submit a lightning talk!</a></p>
         {% endif %}
       </div>
       <div class="tab-pane pt-tutorials-tab" id="pt-tutorials">
@@ -83,7 +83,7 @@
               {% endfor %}
             </ul>
         {% else %}
-          <p>No tutorials yet. <a href="{% url 'conference-submit-talk' CONFERENCE_YEAR %}">Submit a tutorial!</a></p>
+          <p>No tutorials yet. <a href="{% url 'conference-submit-talk' request.conference.slug %}">Submit a tutorial!</a></p>
         {% endif %}
       </div>
     </div>

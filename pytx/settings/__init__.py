@@ -162,9 +162,6 @@ CACHES = {
     }
 }
 
-# Conference year for linking
-CONFERENCE_YEAR = '2014'
-
 from .templates import *
 from .local import *
 

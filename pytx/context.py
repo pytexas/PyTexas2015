@@ -14,8 +14,7 @@ def global_vars (request):
       
   context = {
     'DEV': settings.DEBUG,
-    'LATEST_POST': post,
-    'CONFERENCE_YEAR': settings.CONFERENCE_YEAR
+    'LATEST_POST': post
   }
   
   return context
