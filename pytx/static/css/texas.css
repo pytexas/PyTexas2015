@@ -353,10 +353,20 @@ a.rss {
 .about-side ul li {
   margin: 20px 0;
 }
+@media (max-width: 768px) {
+  
+}
 div#date-location {
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
   padding-bottom: 0;
   font-size: 1.2em;
+}
+#talk-tab-content {
+  margin-top: 30px;
+}
+.pt-standard-talks-tab,
+.pt-lightning-talks-tab {
+  display: none;
 }
