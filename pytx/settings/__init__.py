@@ -19,9 +19,7 @@ TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['.pytexas.org', 'pytexas.org', '127.0.0.1']
 
-
 # Application definition
-
 INSTALLED_APPS = [
   'south',
   'grappelli',
@@ -164,6 +162,9 @@ CACHES = {
     }
 }
 
+# Conference year for linking
+CONFERENCE_YEAR = '2014'
+
 from .templates import *
 from .local import *
 
@@ -176,13 +177,12 @@ try:
   istr = 'pytx.settings.' + machine
   tmp = __import__(istr)
   mod = sys.modules[istr]
-  
+
 except ImportError:
   print 'No settings module for %s' % machine
-  
+
 else:
   print 'Importing settings for %s' % machine
   for setting in dir(mod):
     if setting == setting.upper():
       setattr(sys.modules[__name__], setting, getattr(mod, setting))
-      
