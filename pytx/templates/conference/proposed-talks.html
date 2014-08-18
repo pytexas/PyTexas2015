@@ -2,26 +2,91 @@
 {% block content-main %}
 <div id="std-page" class="sponsor">
   <div class="content">
-    <ul class="proposed-talks">
-      {% for session in sessions %}
-      <li>
-        <a href="{% url "profiles:public-profile" session.user.username %}" class="avatar">
-          {% if session.user.avatar %}
-          {% thumbnail session.user.avatar "64" as im %}
-          <img src="{{ im.url }}" alt="">
-          {% endthumbnail %}
-          {% else %}
-          {% gravatar session.user.email 64 %}
-          {% endif %}
-        </a>
-        <h3><a href="{% url "conference-talk-detail" request.conference.slug session.id %}">{{ session.name }}</a></h3>
-        <div class="byline">
-          by <a href="{% url "profiles:public-profile" session.user.username %}">{{ session.user.username }}</a> - {{ session.get_stype_display }}
-        </div>
-        <div class="clearfix"></div>
-      </li>
-      {% endfor %}
+    <ul id="pt-talk-tabs" class="nav nav-tabs" role="tablist">
+      <li class="active"><a href="#pt-standard-talks" data-toggle="tab">Talks</a></li>
+      <li><a href="#pt-lightning-talks" data-toggle="tab">Lightning Talks</a></li>
+      <li><a href="#pt-tutorials" data-toggle="tab">Tutorials</a></li>
     </ul>
+    <div id="talk-tab-content" class="tab-content">
+      <div class="tab-pane pt-standard-talks-tab active" id="pt-standard-talks">
+        {% if standard_sessions %}
+            <ul class="proposed-talks">
+              {% for session in standard_sessions %}
+                <li>
+                  <a href="{% url "profiles:public-profile" session.user.username %}" class="avatar">
+                    {% if session.user.avatar %}
+                    {% thumbnail session.user.avatar "64" as im %}
+                    <img src="{{ im.url }}" alt="">
+                    {% endthumbnail %}
+                    {% else %}
+                    {% gravatar session.user.email 64 %}
+                    {% endif %}
+                  </a>
+                  <h3><a href="{% url "conference-talk-detail" request.conference.slug session.id %}">{{ session.name }}</a></h3>
+                  <div class="byline">
+                    by <a href="{% url "profiles:public-profile" session.user.username %}">{{ session.user.username }}</a> - {{ session.get_stype_display }}
+                  </div>
+                  <div class="clearfix"></div>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+          <p>No talks yet. <a href="{% url 'conference-submit-talk' CONFERENCE_YEAR %}">Submit a talk!</a></p>
+        {% endif %}
+      </div>
+      <div class="tab-pane pt-lightning-talks-tab" id="pt-lightning-talks">
+        {% if lightning_sessions %}
+          <ul class="proposed-talks">
+            {% for session in lightning_sessions %}
+              <li>
+                <a href="{% url "profiles:public-profile" session.user.username %}" class="avatar">
+                  {% if session.user.avatar %}
+                  {% thumbnail session.user.avatar "64" as im %}
+                  <img src="{{ im.url }}" alt="">
+                  {% endthumbnail %}
+                  {% else %}
+                  {% gravatar session.user.email 64 %}
+                  {% endif %}
+                </a>
+                <h3><a href="{% url "conference-talk-detail" request.conference.slug session.id %}">{{ session.name }}</a></h3>
+                <div class="byline">
+                  by <a href="{% url "profiles:public-profile" session.user.username %}">{{ session.user.username }}</a> - {{ session.get_stype_display }}
+                </div>
+                <div class="clearfix"></div>
+              </li>
+              {% endfor %}
+            </ul>
+        {% else %}
+          <p>No lightning talks yet. <a href="{% url 'conference-submit-lightning-talk' CONFERENCE_YEAR %}">Submit a lightning talk!</a></p>
+        {% endif %}
+      </div>
+      <div class="tab-pane pt-tutorials-tab" id="pt-tutorials">
+        {% if tutorial_sessions %}
+          <ul class="proposed-talks">
+            {% for session in tutorial_sessions %}
+              <li>
+                <a href="{% url "profiles:public-profile" session.user.username %}" class="avatar">
+                  {% if session.user.avatar %}
+                  {% thumbnail session.user.avatar "64" as im %}
+                  <img src="{{ im.url }}" alt="">
+                  {% endthumbnail %}
+                  {% else %}
+                  {% gravatar session.user.email 64 %}
+                  {% endif %}
+                </a>
+                <h3><a href="{% url "conference-talk-detail" request.conference.slug session.id %}">{{ session.name }}</a></h3>
+                <div class="byline">
+                  by <a href="{% url "profiles:public-profile" session.user.username %}">{{ session.user.username }}</a> - {{ session.get_stype_display }}
+                </div>
+                <div class="clearfix"></div>
+              </li>
+              {% endfor %}
+            </ul>
+        {% else %}
+          <p>No tutorials yet. <a href="{% url 'conference-submit-talk' CONFERENCE_YEAR %}">Submit a tutorial!</a></p>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
