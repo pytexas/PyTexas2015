@@ -55,10 +55,12 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'pytx.urls'
 
+FRONT_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'frontend')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [FRONT_ROOT],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,7 +111,7 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'profiles.User'
 GRAPPELLI_ADMIN_TITLE = 'PyTexas Admin'
 
-FRONT_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'frontend')
+DEFAULT_CONF = '2015'
 
 from pytx.settings.local import *
 

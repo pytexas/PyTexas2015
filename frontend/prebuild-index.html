@@ -1,0 +1,73 @@
+{% verbatim %}<!doctype html>
+<html ng-app="pytx">
+  <head>
+    <title>PyTexas $conf</title>
+    <meta name="viewport" content="initial-scale=1">
+    <script>
+      var CONFIG = {
+        dir: '$base/',
+        conf: '$conf',
+        api_base: '$api'
+      }
+    </script>
+    
+    <link rel="stylesheet" href="$base/bower/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="$base/bower/font-awesome/css/font-awesome.min.css">
+    
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet/less" type="text/css" href="$base/css/pytx.less">
+    <script src="$base/bower/less/dist/less.min.js" type="text/javascript"></script>
+    
+    <base href="/$conf/">
+  </head>
+  <body layout="row">
+    <md-sidenav layout="column" class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="leftnav" md-is-locked-open="$media('gt-md')">
+      <md-toolbar layout="row" layout-align="center center">
+        <div class="close-menu" hide-gt-md>
+          <md-button ng-click="toggle_side()">
+            <i class="fa fa-times"></i> Close Menu
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-content>
+        
+      </md-content>
+    </md-sidenav>
+    <div layout="column" layout-fill role="main">
+      <md-toolbar>
+        <div class="md-toolbar-tools header">
+          <div hide-gt-md class="hamburger">
+            <a aria-label="Toggle Menu" ng-click="toggle_side()" class="clickme">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div flex>
+            <h2 layout="row" layout-align="start center">
+              <a href="/$conf/" class="logo">
+                <img ng-src="{{ img_path('banner80.png') }}" alt="PyTexas">
+                <span>2015</span>
+              </a>
+            </h2>
+          </div>
+        </div>
+      </md-toolbar>
+      <md-content md-scroll-y flex class="main-content md-padding">
+        <div ng-view class="view-animate">Nothing to see here</div>
+      </md-content>
+    </div>
+    
+    <script src="$base/bower/angular/angular.min.js"></script>
+    <script src="$base/bower/angular-animate/angular-animate.min.js"></script>
+    <script src="$base/bower/angular-aria/angular-aria.min.js"></script>
+    <script src="$base/bower/angular-material/angular-material.min.js"></script>
+    <script src="$base/bower/angular-route/angular-route.min.js"></script>
+    <script src="$base/bower/angular-cookies/angular-cookies.min.js"></script>
+    <script src="$base/bower/angular-sanitize/angular-sanitize.min.js"></script>
+    
+    <script src="$base/app.js"></script>
+    <script src="$base/controllers/home-ctrl.js"></script>
+    <script src="$base/controllers/error-ctrl.js"></script>
+  </body>
+</html>
+{% endverbatim %}

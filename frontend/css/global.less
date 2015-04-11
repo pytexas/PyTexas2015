@@ -1,0 +1,40 @@
+body {
+  font-family: @bodyFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @headerFont;
+}
+
+md-toolbar.md-default-theme {
+  background-color: @primaryColor;
+  
+  a.logo {
+    display: flex;
+    
+    img {
+      height: 48px;
+    }
+    
+    span {
+      display: inline-block;
+      margin: -9px 0 0 4px;
+    }
+  }
+  
+  .hamburger {
+    a {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+.clickme {
+  cursor: pointer;
+}
+
+.tc {
+  text-align: center;
+}

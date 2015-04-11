@@ -11,6 +11,11 @@ urlpatterns = [
 if settings.DEBUG:
   urlpatterns += [
     url(r'^favicon.ico$', 'pytx.views.favicon', name="favicon"),
-    url(r'^app-\S+?/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.FRONT_ROOT})
+    url(r'^\S+/app-\S+?/(?P<path>.*)$', 'django.views.static.serve',
+      {'document_root': settings.FRONT_ROOT}),
+    url(r'^(\S+)/.*$', 'pytx.views.index', name="index"),
   ]
   
+urlpatterns += [
+  url(r'^$', 'pytx.views.default_conf', name="default-conf"),
+]

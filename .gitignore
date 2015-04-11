@@ -1,6 +1,9 @@
 *.pyc
 
 backend/pytx/settings/local.py
+backend/twospaces
+backend/release_hash.py
+
+frontend/bower
 
 TwoSpaces
-backend/twospaces
