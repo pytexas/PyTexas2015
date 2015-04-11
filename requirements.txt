@@ -1,1 +1,6 @@
 Django==1.8
+psycopg2==2.6
+pytz==2015.2
+Pillow==2.8.1
+django-grappelli==2.6.4
+-e git+https://github.com/pizzapanther/django_markdown.git#egg=django_markdown

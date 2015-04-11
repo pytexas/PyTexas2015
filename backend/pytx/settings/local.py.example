@@ -1,0 +1,3 @@
+SECRET_KEY = 'super-secret-characters'
+
+from pytx.settings.dev import *
