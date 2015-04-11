@@ -1,0 +1,4 @@
+*.pyc
+
+backend/pytx/settings/local.py
+
