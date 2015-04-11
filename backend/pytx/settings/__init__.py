@@ -21,7 +21,10 @@ BASE_DIR = os.path.dirname(
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+  'pytexas.org',
+  '.pytexas.org',
+]
 
 
 # Application definition
