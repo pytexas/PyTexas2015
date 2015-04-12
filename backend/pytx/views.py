@@ -14,6 +14,7 @@ def default_conf (request):
   return http.HttpResponseRedirect(settings.DEFAULT_CONF + '/')
   
 def index (request, conf_slug):
+  conf_slug = conf_slug.split('/')[0]
   template = render_to_string('prebuild-index.html', {})
   
   context = dict(

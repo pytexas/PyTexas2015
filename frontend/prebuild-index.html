@@ -31,7 +31,7 @@
         </div>
       </md-toolbar>
       <md-content>
-        
+        <div ng-include="tpl('sidenav.html')"></div>
       </md-content>
     </md-sidenav>
     <div layout="column" layout-fill role="main">
@@ -57,6 +57,8 @@
       </md-content>
     </div>
     
+    <script src="$base/bower/marked/marked.min.js"></script>
+    
     <script src="$base/bower/angular/angular.min.js"></script>
     <script src="$base/bower/angular-animate/angular-animate.min.js"></script>
     <script src="$base/bower/angular-aria/angular-aria.min.js"></script>
@@ -64,10 +66,14 @@
     <script src="$base/bower/angular-route/angular-route.min.js"></script>
     <script src="$base/bower/angular-cookies/angular-cookies.min.js"></script>
     <script src="$base/bower/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="$base/bower/angular-marked/angular-marked.min.js"></script>
     
     <script src="$base/app.js"></script>
-    <script src="$base/controllers/home-ctrl.js"></script>
     <script src="$base/controllers/error-ctrl.js"></script>
+    <script src="$base/controllers/home-ctrl.js"></script>
+    <script src="$base/controllers/page-ctrl.js"></script>
+    
+    <script src="$base/directives/menu-widgets.js"></script>
   </body>
 </html>
 {% endverbatim %}

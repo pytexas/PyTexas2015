@@ -29,6 +29,7 @@ class Command (BaseCommand):
       'css',
       'img',
       'templates',
+      'pages',
     )
     
     files = (

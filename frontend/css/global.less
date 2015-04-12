@@ -2,12 +2,42 @@ body {
   font-family: @bodyFont;
 }
 
+body p, html p {
+  line-height: 1.4;
+  margin: 0.3em 0 1.2em 0;
+}
+
+ul, ol {
+  margin: 0.3em 0 1.2em 0;
+  
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+a {
+  color: @accentColor2;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: @headerFont;
+  letter-spacing: 2px;
+}
+
+body h2, html h2 {
+  margin: 1.3em 0 0.3em 0;
+}
+
+body h3, html h3 {
+  margin: 1.3em 0 0.3em 0;
 }
 
 md-toolbar.md-default-theme {
   background-color: @primaryColor;
+  
+  h2 {
+    margin: 0;
+  }
   
   a.logo {
     display: flex;
