@@ -61,6 +61,72 @@ md-toolbar.md-default-theme {
   }
 }
 
+md-sidenav.md-locked-open {
+  width: 250px;
+  max-width: 250px;
+  min-width: 250px;
+}
+
+md-sidenav {
+  width: 250px;
+  max-width: 250px;
+  min-width: 250px;
+  
+  ul.menu {
+    margin: 0;
+    padding: 5px 0;
+    
+    li {
+      margin: 0;
+      display: block;
+    }
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      
+      .md-button {
+        padding-left: 26px;
+      }
+    }
+    
+    .md-button {
+      width: 100%;
+      text-align: left;
+      display: block;
+      padding-left: 12px;
+    }
+  }
+}
+
+.menu-collapse {
+  > div {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  > .md-button {
+    position: relative;
+    
+    &:after {
+      content: "\f107";
+      font-family: @iconFont;
+      right: 20px;
+      position: absolute;
+      font-weight: bold;
+      margin-top: 2px;
+      transition: transform 0.5s;
+      transition-timing-function: ease-in-out;
+    }
+    
+    &.open:after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
 .ErrorCtrl {
   img {
     display: block;

@@ -1,0 +1,12 @@
+<div class="menu-collapse">
+  <md-button ng-click="toggle_collapse()" ng-class="{open: open}">
+    {{ title }}
+  </md-button>
+  <div ng-style="style">
+    <ul>
+      <li ng-repeat="item in items">
+        <md-button href="/{{ conf }}/{{ item.url }}">{{ item.title }}</md-button>
+      </li>
+    </ul>
+  </div>
+</div>
