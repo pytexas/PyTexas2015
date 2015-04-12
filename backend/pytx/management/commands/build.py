@@ -52,6 +52,9 @@ class Command (BaseCommand):
       api_base='/',
     )
     
+    less = os.path.join(deploy_dir, 'css', 'pytx')
+    subprocess.call("lessc {}.less {}.css".format(less, less), shell=True)
+    
     template = render_to_string('prebuild-index.html', {})
     html = Template(template).safe_substitute(context)
     
