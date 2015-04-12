@@ -43,6 +43,8 @@ INSTALLED_APPS = (
   
   'twospaces.profiles',
   'twospaces.conference',
+  
+  'pytx',
 )
 
 MIDDLEWARE_CLASSES = (
