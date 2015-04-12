@@ -68,3 +68,6 @@ class Command (BaseCommand):
       fh.write(html)
       fh.close()
       
+    gen_path = os.path.join(deploy_dir, 'generated')
+    subprocess.call("date > {}".format(gen_path), shell=True)
+    
