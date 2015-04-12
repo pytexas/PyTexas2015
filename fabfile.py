@@ -23,6 +23,9 @@ def deploy (slug):
   with cd('/home/www/TwoSpaces/'):
     sudo('git pull', user=WEB_USER)
     
+  with cd('/home/www/PyTexasWeb/frontend/'):
+    sudo('su -c "bower install" {}'.format(WEB_USER))
+    
   with cd('/home/www/PyTexasWeb/backend/'):
     sudo('su -c "python3 manage.py migrate" {}'.format(WEB_USER))
     sudo('su -c "python3 manage.py collectstatic --noinput" {}'.format(WEB_USER))

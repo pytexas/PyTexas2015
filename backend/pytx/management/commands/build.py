@@ -30,6 +30,7 @@ class Command (BaseCommand):
       'img',
       'templates',
       'pages',
+      'directives',
     )
     
     files = (
