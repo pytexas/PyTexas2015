@@ -71,6 +71,6 @@ class Command (BaseCommand):
     gen_path = os.path.join(deploy_dir, 'generated')
     subprocess.call("date > {}".format(gen_path), shell=True)
     
-    release_path = os.path.join(deploy_dir, slug, 'release.txt')
+    release_path = os.path.join(settings.FRONT_ROOT, slug, 'release.txt')
     subprocess.call("echo '{}' > {}".format(rel, release_path), shell=True)
     
