@@ -31,6 +31,8 @@ pytx.run(function ($rootScope, $mdSidenav, $mdDialog) {
   $rootScope.title = 'PyTexas ' + CONFIG.conf;
   
   $rootScope.set_title = function (t) {
+    $rootScope.title = '';
+    
     if (t) {
       $rootScope.title = t + ' | ';
     }

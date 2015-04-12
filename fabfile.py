@@ -24,7 +24,6 @@ def deploy (slug):
     sudo('git pull', user=WEB_USER)
     
   with cd('/home/www/PyTexasWeb/backend/'):
-    sudo('echo "RELEASE = \'"`git rev-parse --short HEAD`"\'" > release.py', user=WEB_USER)
     #sudo('su -c "python3 manage.py migrate" {}'.format(WEB_USER))
     sudo('su -c "python3 manage.py build {}" {}'.format(slug, WEB_USER))
     
