@@ -1,3 +1,3 @@
 pytx.controller('ErrorCtrl', function($scope, $rootScope) {
-  console.log('error');
+  $scope.set_title('404 Page Not Found');
 });

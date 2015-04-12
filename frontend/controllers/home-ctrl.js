@@ -1,3 +1,3 @@
 pytx.controller('HomeCtrl', function($scope, $rootScope) {
-  console.log('narf');
+  $scope.set_title();
 });

@@ -1,5 +1,5 @@
 function tpl (path) {
-  return CONFIG.dir + '/templates/' + path;
+  return CONFIG.dir + 'templates/' + path;
 }
 
 function img_path (path) {
@@ -28,6 +28,15 @@ pytx.config(function ($routeProvider, $locationProvider, $httpProvider) {
 pytx.run(function ($rootScope, $mdSidenav, $mdDialog) {
   $rootScope.tpl = tpl;
   $rootScope.img_path = img_path;
+  $rootScope.title = 'PyTexas ' + CONFIG.conf;
+  
+  $rootScope.set_title = function (t) {
+    if (t) {
+      $rootScope.title = t + ' | ';
+    }
+    
+    $rootScope.title += 'PyTexas ' + CONFIG.conf;
+  };
   
   $rootScope.toggle_side = function () {
     $mdSidenav('leftnav').toggle();
