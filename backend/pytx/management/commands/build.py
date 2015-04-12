@@ -18,6 +18,9 @@ class Command (BaseCommand):
     os.chdir(settings.BASE_DIR)
     subprocess.call('echo "RELEASE = \'"`git rev-parse --short HEAD`"\'" > release_hash.py', shell=True)
     
+    from release import release
+    rel = release()
+    
     os.chdir(settings.FRONT_ROOT)
     
     dirs = (
@@ -33,9 +36,6 @@ class Command (BaseCommand):
       'favicon.ico',
     )
     
-    from release import release
-    
-    rel = release()
     deploy_dir = os.path.join(settings.FRONT_ROOT, slug, 'app-{}'.format(rel))
     if not os.path.exists(deploy_dir):
       os.makedirs(deploy_dir)
