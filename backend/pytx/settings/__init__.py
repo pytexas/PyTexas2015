@@ -112,6 +112,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/www/PyTexasWeb/frontend/static/'
 
 AUTH_USER_MODEL = 'profiles.User'
 GRAPPELLI_ADMIN_TITLE = 'PyTexas Admin'
