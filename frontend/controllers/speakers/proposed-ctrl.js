@@ -1,5 +1,6 @@
 pytx.controller('ProposedTalksCtrl', function($scope, $rootScope, APIFactory) {
   $scope.APIService = new APIFactory('v1');
+  $scope.set_title('Proposed Talks');
   
   $scope.load_talks = function (data) {
     $scope.talks = data;

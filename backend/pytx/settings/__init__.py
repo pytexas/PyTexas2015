@@ -115,6 +115,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/www/PyTexasWeb/frontend/static/'
 
+MEDIA_URL = '/static/uploads/'
+MEDIA_ROOT = '/home/www/PyTexasWeb/frontend/static/uploads/'
+
 AUTH_USER_MODEL = 'profiles.User'
 GRAPPELLI_ADMIN_TITLE = 'PyTexas Admin'
 

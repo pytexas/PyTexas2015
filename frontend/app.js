@@ -48,8 +48,7 @@ pytx.config(function ($routeProvider, $locationProvider, $httpProvider, markedPr
     })
     .when('/speakers/proposals', {
       controller:'ProposedTalksCtrl',
-      templateUrl: tpl('speakers/proposed-talks.html'),
-      title: 'Proposed Talks'
+      templateUrl: tpl('speakers/proposed-talks.html')
     })
     
     .otherwise({controller:'ErrorCtrl', templateUrl: tpl('404.html')});
