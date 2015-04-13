@@ -1,0 +1,23 @@
+<div class="loading" layout="row" layout-sm="column" layout-align="space-around" ng-if="APIService.loading">
+  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+<div ng-hide="APIService.loading" class="Talk content-page">
+  <h1>{{ talk.name }}</h1>
+  <a href="/{{ conf }}/user/{{ talk.user.username }}" class="user">
+    <img src="{{ talk.user.image }}" alt="{{ talk.user.username }}">
+  </a>
+  <div class="details">
+    <div>
+      by <a href="/{{ conf }}/user/{{ talk.user.username }}">{{ talk.user.username }}</a>
+    </div>
+    <div>Type: {{ talk.stype }}</div>
+    <div>Level: {{ talk.level }}</div>
+    <div ng-if="talk.start">{{ talk.start | amDateFormat:'dddd, MMMM Do YYYY, h:mm a' }}</div>
+    <div ng-if="talk.slides">
+      <a href="{{ talk.slides }}">Link to Presentation &raquo;</a>
+    </div>
+  </div>
+  <hr>
+  <div class="desc" marked="talk.description"></div>
+  <div class="clear"></div>
+</div>
