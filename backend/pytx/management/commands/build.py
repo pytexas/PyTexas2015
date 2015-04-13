@@ -23,21 +23,17 @@ class Command (BaseCommand):
     
     os.chdir(settings.FRONT_ROOT)
     
-    dirs = (
-      'bower',
-      'controllers',
-      'css',
-      'img',
-      'templates',
-      'pages',
-      'directives',
-    )
-    
-    files = (
-      'app.js',
-      'favicon.ico',
-    )
-    
+    dirs = []
+    files = []
+    for item in os.listdir():
+      if os.path.isdir(item):
+        rp = os.path.join(item, 'release.txt')
+        if not os.path.exists(rp):
+          dirs.append(item)
+          
+      else:
+        files.append(item)
+        
     deploy_dir = os.path.join(settings.FRONT_ROOT, slug, 'app-{}'.format(rel))
     if not os.path.exists(deploy_dir):
       os.makedirs(deploy_dir)

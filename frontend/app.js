@@ -41,6 +41,16 @@ pytx.config(function ($routeProvider, $locationProvider, $httpProvider, markedPr
       templateUrl: tpl('page.html'),
       title: 'Code of Conduct'
     })
+    .when('/speakers/call-for-proposals', {
+      controller:'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Call for Proposals'
+    })
+    .when('/speakers/proposals', {
+      controller:'ProposedTalksCtrl',
+      templateUrl: tpl('speakers/proposed-talks.html'),
+      title: 'Proposed Talks'
+    })
     
     .otherwise({controller:'ErrorCtrl', templateUrl: tpl('404.html')});
     
@@ -71,6 +81,15 @@ pytx.run(function ($rootScope, $mdSidenav, $mdDialog) {
     $mdSidenav('leftnav').close();
   };
   
+  $rootScope.show_error = function (error) {
+    var alert = $mdDialog.alert()
+      .title('Error Encountered!')
+      .content(error)
+      .ok('Close');
+      
+    $mdDialog.show(alert);
+  };
+  
   $rootScope.$on('$locationChangeStart', function (event) {
     $rootScope.close_side();
   });
@@ -79,6 +98,10 @@ pytx.run(function ($rootScope, $mdSidenav, $mdDialog) {
     ['Sponsors', [
       {title: 'Become A Sponsor', url: 'sponsors/prospectus'},
       {title: 'Our Sponsors', url: 'sponsors'},
+    ]],
+    ['Speakers', [
+      {title: 'Call For Proposals', url: 'speakers/call-for-proposals'},
+      {title: 'Proposed Talks', url: 'speakers/proposals'},
     ]],
     ['About', [
       {title: 'Privacy Policy', url: 'about/privacy-policy'},

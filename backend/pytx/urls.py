@@ -6,6 +6,7 @@ urlpatterns = [
   url(r'^grappelli/', include('grappelli.urls')),
   url(r'^admin/', include(admin.site.urls)),
   url('^markdown/', include( 'django_markdown.urls')),
+  url('^api/', include( 'twospaces.urls')),
 ]
 
 if settings.DEBUG:

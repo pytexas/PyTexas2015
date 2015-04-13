@@ -1,0 +1,10 @@
+<ul>
+  <li ng-repeat="talk in talk_group[1]">
+    <a href="/{{ conf }}/user/{{ talk.user.username }}">
+      <img src="{{ talk.user.image }}" alt="">
+    </a>
+    <h3><a href="/{{ conf }}/talk/{{ talk.id }}">{{ talk.name }}</a></h3>
+    by <a href="/{{ conf }}/user/{{ talk.user.username }}">{{ talk.user.username }}</a>
+    <div class="clear"></div>
+  </li>
+</ul>

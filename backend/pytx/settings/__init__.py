@@ -40,6 +40,7 @@ INSTALLED_APPS = (
   'django.contrib.staticfiles',
   
   'django_markdown',
+  'rest_framework',
   
   'twospaces.profiles',
   'twospaces.conference',
@@ -118,6 +119,8 @@ AUTH_USER_MODEL = 'profiles.User'
 GRAPPELLI_ADMIN_TITLE = 'PyTexas Admin'
 
 DEFAULT_CONF = '2015'
+
+GRAVATAR_DEFAULT_IMAGE = 'retro'
 
 from pytx.settings.local import *
 
