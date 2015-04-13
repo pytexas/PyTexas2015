@@ -10,66 +10,33 @@ var pytx = angular.module('pytx',
   ['ngAnimate', 'ngMaterial', 'ngRoute', 'ngSanitize', 'ngCookies', 'hc.marked', 'angularMoment']
 );
 
-pytx.config(function ($routeProvider, $locationProvider, $httpProvider, markedProvider) {
+pytx.config(function ($locationProvider, $httpProvider, markedProvider) {
   $locationProvider.html5Mode(true);
   
   $httpProvider.defaults.xsrfCookieName = 'csrftoken';
   $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
   
-  $routeProvider
-    .when('/', {
-      controller:'HomeCtrl',
-      templateUrl: tpl('home.html'),
-    })
-    .when('/sponsors', {
-      controller:'PageCtrl',
-      templateUrl: tpl('page.html'),
-      title: 'Our Sponsors'
-    })
-    .when('/sponsors/prospectus', {
-      controller:'PageCtrl',
-      templateUrl: tpl('page.html'),
-      title: 'Sponsor Prospectus'
-    })
-    .when('/about/privacy-policy', {
-      controller:'PageCtrl',
-      templateUrl: tpl('page.html'),
-      title: 'Privacy Policy'
-    })
-    .when('/about/code-of-conduct', {
-      controller:'PageCtrl',
-      templateUrl: tpl('page.html'),
-      title: 'Code of Conduct'
-    })
-    .when('/speakers/call-for-proposals', {
-      controller:'PageCtrl',
-      templateUrl: tpl('page.html'),
-      title: 'Call for Proposals'
-    })
-    .when('/speakers/proposals', {
-      controller:'ProposedTalksCtrl',
-      templateUrl: tpl('speakers/proposed-talks.html')
-    })
-    .when('/talk/:id', {
-      controller:'TalkDetailCtrl',
-      templateUrl: tpl('speakers/talk-detail.html')
-    })
-    
-    .when('/user/:username', {
-      controller:'UserDetailCtrl',
-      templateUrl: tpl('users/user-detail.html')
-    })
-    
-    .otherwise({controller:'ErrorCtrl', templateUrl: tpl('404.html')});
-    
   markedProvider.setOptions({gfm: false, sanitize: true});
 });
 
-pytx.run(function ($rootScope, $mdSidenav, $mdDialog) {
+pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdToast, APIFactory) {
   $rootScope.tpl = tpl;
   $rootScope.img_path = img_path;
   $rootScope.title = 'PyTexas ' + CONFIG.conf;
   $rootScope.conf = CONFIG.conf;
+  $rootScope.logged_in = false;
+  if ($cookies.sessionid && $cookies.angular_logged_in) {
+    $rootScope.logged_in = true;
+  }
+  
+  $rootScope.url = function () {
+    var u = $location.url();
+    if (u.indexOf('/login') > -1) {
+      u = '/';
+    }
+    
+    return encodeURIComponent(u);
+  };
   
   $rootScope.set_title = function (t) {
     $rootScope.title = '';
@@ -87,6 +54,25 @@ pytx.run(function ($rootScope, $mdSidenav, $mdDialog) {
   
   $rootScope.close_side = function () {
     $mdSidenav('leftnav').close();
+  };
+  
+  $rootScope.logout = function () {
+    var APIService = new APIFactory('v1');
+    APIService.post('users/logout')
+      .success(function () {
+        $rootScope.logged_in = false;
+        $mdToast.show(
+          $mdToast.simple()
+            .content('Logout Successful')
+            .position('bottom left')
+            .hideDelay(5000)
+        );
+        
+        $location.path('/');
+      })
+      .error(function () {
+        $rootScope.show_error('Error logging out.');
+      });
   };
   
   $rootScope.show_error = function (error) {

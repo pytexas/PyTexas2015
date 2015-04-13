@@ -1,0 +1,19 @@
+<div class="content-page">
+  <h1>Login</h1>
+  <form name="loginForm" class="norm-form" ng-submit="do_login()">
+    <md-input-container>
+      <label>Username</label>
+      <input ng-model="form.username" required>
+      <div ng-messages="errors" class="error-color">
+        <div ng-message="errors.username">{{ errors.username[0] }}</div>
+      </div>
+    </md-input-container>
+    <md-input-container>
+      <label>Password</label>
+      <input type="password" ng-model="form.password" required>
+    </md-input-container>
+    <md-button class="md-raised md-primary button">
+      <i class="fa fa-caret-square-o-right"></i> Login
+    </md-button>
+  </form>
+</div>

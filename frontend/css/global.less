@@ -39,6 +39,7 @@ md-toolbar.md-default-theme {
   
   h2 {
     margin: 0;
+    font-size: 1.5rem;
   }
   
   a.logo {
@@ -157,13 +158,19 @@ hr {
 }
 
 .md-button.md-default-theme.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab {
-  background-color: @accentColor;
-  color: darken(@accentColor2, 5%);
+  background-color: @accentColor2;
+  color: @textPrimaryColor;
 }
 
 .md-button.md-default-theme.md-primary.md-raised:not([disabled]):hover, .md-button.md-default-theme.md-primary.md-raised:not([disabled]):focus, .md-button.md-default-theme.md-primary.md-fab:not([disabled]):hover, .md-button.md-default-theme.md-primary.md-fab:not([disabled]):focus {
-  background-color: @accentColor2;
-  color: @textPrimaryColor;
+  background-color: @accentColor;
+  color: @accentColor2;
+}
+
+form.norm-form {
+  input {
+    max-width: 500px;
+  }
 }
 
 .loading {
@@ -180,4 +187,8 @@ hr {
 
 .clear {
   clear: both;
+}
+
+.error-color {
+  color: @errorColor;
 }

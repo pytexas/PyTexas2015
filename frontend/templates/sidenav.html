@@ -2,4 +2,14 @@
   <li ng-repeat="menu_item in menu">
     <menu-collapse title="menu_item[0]" items="menu_item[1]" conf="conf"></menu-collapse>
   </li>
+  <li ng-hide="logged_in">
+    <md-button href="/{{ conf }}/user/login?next={{ url() }}">
+      Login
+    </md-button>
+  </li>
+  <li ng-show="logged_in">
+    <md-button ng-click="logout()">
+      Logout
+    </md-button>
+  </li>
 </ul>

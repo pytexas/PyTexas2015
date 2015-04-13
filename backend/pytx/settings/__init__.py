@@ -57,6 +57,7 @@ MIDDLEWARE_CLASSES = (
   'django.contrib.messages.middleware.MessageMiddleware',
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
   'django.middleware.security.SecurityMiddleware',
+  'twospaces.middleware.JsonRequest',
 )
 
 ROOT_URLCONF = 'pytx.urls'
@@ -95,6 +96,7 @@ DATABASES = {
   }
 }
 
+SESSION_COOKIE_HTTPONLY = False
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
