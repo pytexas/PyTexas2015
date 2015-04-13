@@ -2,7 +2,7 @@ pytx.directive('menuCollapse', function () {
   return {
     templateUrl: tpl('widgets/menu-collapse.html'),
     scope: {title: '=', items: '=', conf: '='},
-    controller: function ($scope) {
+    controller: function ($scope, $rootScope) {
       $scope.style = {height: 0};
       $scope.open = false;
       

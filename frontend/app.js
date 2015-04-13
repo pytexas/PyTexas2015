@@ -57,6 +57,14 @@ pytx.run(function ($rootScope, $mdSidenav, $mdDialog) {
     $mdSidenav('leftnav').toggle();
   };
   
+  $rootScope.close_side = function () {
+    $mdSidenav('leftnav').close();
+  };
+  
+  $rootScope.$on('$locationChangeStart', function (event) {
+    $rootScope.close_side();
+  });
+  
   $rootScope.menu = {
     sponsors: [
       {title: 'Become A Sponsor', url: 'sponsors/prospectus'},
