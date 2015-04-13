@@ -31,7 +31,17 @@ pytx.config(function ($routeProvider, $locationProvider, $httpProvider, markedPr
       templateUrl: tpl('page.html'),
       title: 'Sponsor Prospectus'
     })
-      
+    .when('/about/privacy-policy', {
+      controller:'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Privacy Policy'
+    })
+    .when('/about/code-of-conduct', {
+      controller:'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Code of Conduct'
+    })
+    
     .otherwise({controller:'ErrorCtrl', templateUrl: tpl('404.html')});
     
   markedProvider.setOptions({gfm: false});
@@ -65,10 +75,14 @@ pytx.run(function ($rootScope, $mdSidenav, $mdDialog) {
     $rootScope.close_side();
   });
   
-  $rootScope.menu = {
-    sponsors: [
+  $rootScope.menu = [
+    ['Sponsors', [
       {title: 'Become A Sponsor', url: 'sponsors/prospectus'},
       {title: 'Our Sponsors', url: 'sponsors'},
-    ]
-  };
+    ]],
+    ['About', [
+      {title: 'Privacy Policy', url: 'about/privacy-policy'},
+      {title: 'Code of Conduct', url: 'about/code-of-conduct'},
+    ]]
+  ];
 });

@@ -1,5 +1,5 @@
 <ul class="menu">
-  <li>
-    <menu-collapse title="'Sponsors'" items="menu.sponsors" conf="conf"></menu-collapse>
+  <li ng-repeat="menu_item in menu">
+    <menu-collapse title="menu_item[0]" items="menu_item[1]" conf="conf"></menu-collapse>
   </li>
 </ul>
