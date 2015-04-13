@@ -6,6 +6,6 @@ pytx.controller('PageCtrl', function($scope, $route, marked, $http) {
   
   $http.get($scope.page_url)
     .success(function (data) {
-      $scope.page_source = marked(data);
+      $scope.page_source = data;
     });
 });

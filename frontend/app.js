@@ -7,7 +7,7 @@ function img_path (path) {
 }
 
 var pytx = angular.module('pytx',
-  ['ngAnimate', 'ngMaterial', 'ngRoute', 'ngSanitize', 'ngCookies', 'hc.marked']
+  ['ngAnimate', 'ngMaterial', 'ngRoute', 'ngSanitize', 'ngCookies', 'hc.marked', 'angularMoment']
 );
 
 pytx.config(function ($routeProvider, $locationProvider, $httpProvider, markedProvider) {
@@ -57,7 +57,7 @@ pytx.config(function ($routeProvider, $locationProvider, $httpProvider, markedPr
     
     .otherwise({controller:'ErrorCtrl', templateUrl: tpl('404.html')});
     
-  markedProvider.setOptions({gfm: false});
+  markedProvider.setOptions({gfm: false, sanitize: true});
 });
 
 pytx.run(function ($rootScope, $mdSidenav, $mdDialog) {
@@ -111,4 +111,8 @@ pytx.run(function ($rootScope, $mdSidenav, $mdDialog) {
       {title: 'Code of Conduct', url: 'about/code-of-conduct'},
     ]]
   ];
+});
+
+pytx.constant('angularMomentConfig', {
+  timezone: 'America/Chicago'
 });
