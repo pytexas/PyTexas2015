@@ -28,7 +28,7 @@ class Command (BaseCommand):
     for item in os.listdir():
       if os.path.isdir(item):
         rp = os.path.join(item, 'release.txt')
-        if item == 'static' and not os.path.exists(rp):
+        if item != 'static' and not os.path.exists(rp):
           dirs.append(item)
           
       else:
