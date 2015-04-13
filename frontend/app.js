@@ -55,6 +55,11 @@ pytx.config(function ($routeProvider, $locationProvider, $httpProvider, markedPr
       templateUrl: tpl('speakers/talk-detail.html')
     })
     
+    .when('/user/:username', {
+      controller:'UserDetailCtrl',
+      templateUrl: tpl('users/user-detail.html')
+    })
+    
     .otherwise({controller:'ErrorCtrl', templateUrl: tpl('404.html')});
     
   markedProvider.setOptions({gfm: false, sanitize: true});

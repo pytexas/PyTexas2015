@@ -1,0 +1,30 @@
+<div class="loading" layout="row" layout-sm="column" layout-align="space-around" ng-if="APIService.loading">
+  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+<div ng-hide="APIService.loading" class="Talk content-page">
+  <h1>{{ user.username }}</h1>
+  <a class="user">
+    <img src="{{ user.image }}" alt="{{ user.username }}">
+  </a>
+  <div class="details">
+    <div ng-if="user.name">{{ user.name }}</div>
+    <div ng-if="user.website">
+      <a href="{{ user.website }}">{{ user.website }} &raquo;</a>
+    </div>
+  </div>
+  <div ng-if="user.biography">
+    <hr>
+    <h4>Biography</h4>
+    <div class="desc" marked="user.biography"></div>
+  </div>
+  <div ng-if="user.social_handles.length > 0">
+    <hr>
+    <h4 style="margin-bottom: 20px;">Social</h4>
+    <div class="desc">
+      <md-button href="{{ handle.url }}" ng-repeat="handle in user.social_handles" class="md-raised md-primary">
+        <i class="fa {{ handle.icon }}"></i> {{ handle.site }}
+      </md-button>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

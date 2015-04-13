@@ -30,7 +30,7 @@ body h2, html h2 {
   margin: 1.3em 0 0.3em 0;
 }
 
-body h3, html h3 {
+body h3, html h3, body h4, html h4 {
   margin: 1.3em 0 0.3em 0;
 }
 
@@ -154,6 +154,16 @@ hr {
   border: 0;
   border-top: 1px dotted @dividerColor;
   margin: 1em 0;
+}
+
+.md-button.md-default-theme.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab {
+  background-color: @accentColor;
+  color: darken(@accentColor2, 5%);
+}
+
+.md-button.md-default-theme.md-primary.md-raised:not([disabled]):hover, .md-button.md-default-theme.md-primary.md-raised:not([disabled]):focus, .md-button.md-default-theme.md-primary.md-fab:not([disabled]):hover, .md-button.md-default-theme.md-primary.md-fab:not([disabled]):focus {
+  background-color: @accentColor2;
+  color: @textPrimaryColor;
 }
 
 .loading {

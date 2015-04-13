@@ -4,6 +4,7 @@ pytx.controller('TalkDetailCtrl', function($scope, $routeParams, APIFactory) {
   
   $scope.load_talk = function (data) {
     $scope.talk = data;
+    $scope.set_title(data.name);
   };
   
   $scope.get_talk = function () {
