@@ -122,6 +122,7 @@ MEDIA_ROOT = '/home/www/PyTexasWeb/frontend/static/uploads/'
 
 AUTH_USER_MODEL = 'profiles.User'
 GRAPPELLI_ADMIN_TITLE = 'PyTexas Admin'
+SITE_NAME = 'PyTexas'
 
 DEFAULT_CONF = '2015'
 

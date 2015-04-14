@@ -1,0 +1,9 @@
+<div class="content-page SignupPage">
+  <h1>E-Mail Verification</h1>
+  <div class="loading" layout="row" layout-sm="column" layout-align="space-around" ng-if="!message">
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+  </div>
+  <h2 ng-show="message">
+    {{ message }}
+  </h2>
+</div>

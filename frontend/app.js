@@ -19,7 +19,7 @@ pytx.config(function ($locationProvider, $httpProvider, markedProvider) {
   markedProvider.setOptions({gfm: false, sanitize: true});
 });
 
-pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdToast, APIFactory) {
+pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdToast, $timeout, APIFactory) {
   $rootScope.tpl = tpl;
   $rootScope.img_path = img_path;
   $rootScope.title = 'PyTexas ' + CONFIG.conf;
@@ -29,12 +29,14 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
     $rootScope.logged_in = true;
   }
   
-  $rootScope.csrf = function () {
+  $rootScope.conf_data = function () {
     var APIService = new APIFactory('v1');
-    APIService.get('users/ensure-csrf');
+    APIService.get('conferences/data').success(function (data) {
+      $rootScope.conf_obj = data;
+    });
   };
   
-  $rootScope.csrf();
+  $rootScope.conf_data();
   
   $rootScope.url = function () {
     var u = $location.url();
@@ -91,8 +93,12 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
     $mdDialog.show(alert);
   };
   
-  $rootScope.$on('$locationChangeStart', function (event) {
+  $rootScope.$on('$locationChangeSuccess', function (event) {
     $rootScope.close_side();
+    $timeout(function () {
+      var element = document.querySelector("#main-content");
+      element.scrollTop = 0;
+    }, 10);
   });
   
   $rootScope.menu = [
@@ -110,7 +116,8 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
       {title: 'Code of Conduct', url: 'about/code-of-conduct'},
     ]],
     ['My Account', [
-      {title: 'My Talks', url: 'user/my-talks'}
+      {title: 'My Talks', url: 'user/my-talks'},
+      {title: 'Profile', url: 'user/my-profile'},
     ]]
   ];
 });

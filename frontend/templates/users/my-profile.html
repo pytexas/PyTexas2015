@@ -1,0 +1,15 @@
+<div class="content-page SignupPage">
+  <h1>My Profile</h1>
+  <div ng-show="next">
+    <strong>
+      Please fill out the speaker fields to continue.
+    </strong>
+    <br><br>
+  </div>
+  <form name="signupForm" class="norm-form" ng-submit="do_edit()">
+    <div ng-include="tpl('users/profile-inputs.html')"></div>
+    <md-button class="md-raised md-primary button">
+      <i class="fa fa-caret-square-o-right"></i> Update
+    </md-button>
+  </form>
+</div>

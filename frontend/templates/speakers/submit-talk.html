@@ -9,7 +9,10 @@
       </md-button>
     </p>
   </div>
-  <div ng-hide="thanks">
+  <div ng-show="closed">
+    <h2>Talk Submissions are Closed</h2>
+  </div>
+  <div ng-hide="thanks || closed">
     <p>
       Please fill out the following information about your talk.
       <br>If you have any questions feel free to e-mail us at 

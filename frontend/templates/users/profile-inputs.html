@@ -1,0 +1,92 @@
+<fieldset>
+  <legend>Required Fields</legend>
+  <md-input-container>
+    <label>Username</label>
+    <input ng-model="form.username" required>
+    <div ng-messages="errors" class="error-color">
+      <div ng-message="errors.username">{{ errors.username[0] }}</div>
+    </div>
+  </md-input-container>
+  <md-input-container>
+    <label>E-Mail</label>
+    <input type="email" ng-model="form.email" required>
+    <div ng-messages="errors" class="error-color">
+      <div ng-message="errors.email">{{ errors.email[0] }}</div>
+    </div>
+  </md-input-container>
+  <md-input-container ng-if="!update">
+    <label>Password</label>
+    <input type="password" ng-model="form.password" required>
+  </md-input-container>
+  <md-input-container ng-if="update">
+    <label>Password (leave blank unless changing)</label>
+    <input type="password" ng-model="form.password">
+  </md-input-container>
+</fieldset>
+<fieldset>
+  <legend>Required for Speaking (optional otherwise)</legend>
+  <md-input-container>
+    <label>Phone</label>
+    <input ng-model="form.phone">
+    <div ng-messages="errors" class="error-color">
+      <div ng-message="errors.phone">{{ errors.phone[0] }}</div>
+    </div>
+  </md-input-container>
+  <md-input-container>
+    <label>Biography (Markdown accepted)</label>
+    <textarea ng-model="form.biography"></textarea>
+    <div ng-messages="errors" class="error-color">
+      <div ng-message="errors.biography">{{ errors.biography[0] }}</div>
+    </div>
+  </md-input-container>
+</fieldset>
+<fieldset>
+  <legend>Optional</legend>
+  <md-input-container>
+    <label>Website</label>
+    <input ng-model="form.website">
+    <div ng-messages="errors" class="error-color">
+      <div ng-message="errors.website">{{ errors.website[0] }}</div>
+    </div>
+  </md-input-container>
+  <md-input-container class="tc">
+    <md-button type="button" ng-click="add_handle()">
+      <i class="fa fa-plus"></i> Add A Social Handle<br>
+      <em>Twitter, Github, etc</em>
+    </md-button>
+  </md-input-container>
+  <div ng-repeat="handle in form.social_handles track by $index">
+    <div class="label">Social Handle {{ $index + 1 }}</div>
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>Username</label>
+        <input ng-model="handle.username" required>
+        <div ng-messages="errors" class="error-color">
+          <div ng-message="errors.social_handles[$index].username">
+            {{ errors.social_handles[$index].username[0] }}
+          </div>
+        </div>
+      </md-input-container>
+      <md-input-container flex>
+        <div class="label">Site</div>
+        <md-select ng-model="handle.site" placeholder="Select a site">
+          <md-option value="about.me">About.Me</md-option>
+          <md-option value="facebook">Facebook</md-option>
+          <md-option value="github">Github</md-option>
+          <md-option value="gplus">Google+</md-option>
+          <md-option value="twitter">Twitter</md-option>
+        </md-select>
+        <div ng-messages="errors" class="error-color">
+          <div ng-message="errors.social_handles[$index].site">
+            {{ errors.social_handles[$index].site[0] }}
+          </div>
+        </div>
+      </md-input-container>
+      <md-input-container>
+        <md-button type="button" ng-click="remove_handle($index)">
+          <i class="fa fa-times"></i> Remove
+        </md-button>
+      </md-input-container>
+    </div>
+  </div>
+</fieldset>

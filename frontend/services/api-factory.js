@@ -49,8 +49,14 @@ pytx.factory("APIFactory", function ($http) {
   };
   
   APIFactory.prototype._show_form_errors = function (data) {
-    this.scope.errors = data.errors;
-    this.scope.show_error('Please correct the errors in your request.');
+    if (data.errors) {
+      this.scope.errors = data.errors;
+      this.scope.show_error('Please correct the errors in your request.');
+    }
+    
+    else if (data.message) {
+      this.scope.show_error(data.message);
+    }
   };
   
   APIFactory.prototype.prepare_url = function (url) {

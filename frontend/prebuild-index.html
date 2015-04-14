@@ -57,7 +57,7 @@
           </div>
         </div>
       </md-toolbar>
-      <md-content md-scroll-y flex class="main-content md-padding">
+      <md-content md-scroll-y flex class="main-content md-padding" id="main-content">
         <div ng-view class="view-animate">Nothing to see here</div>
         <footer>
           <a href="/$conf/about/privacy-policy">Privacy Policy</a>&nbsp; |&nbsp; 
@@ -90,8 +90,11 @@
     <script src="$base/controllers/speakers/submit-talk-ctrl.js"></script>
     <script src="$base/controllers/users/user-ctrl.js"></script>
     <script src="$base/controllers/users/login-ctrl.js"></script>
+    <script src="$base/controllers/users/signup-ctrl.js"></script>
     <script src="$base/controllers/users/talks-ctrl.js"></script>
     <script src="$base/controllers/users/edit-talk-ctrl.js"></script>
+    <script src="$base/controllers/users/profile-ctrl.js"></script>
+    <script src="$base/controllers/users/verify-ctrl.js"></script>
     
     <script src="$base/services/api-factory.js"></script>
     

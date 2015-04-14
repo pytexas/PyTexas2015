@@ -24,6 +24,12 @@ pytx.config(function ($routeProvider) {
       templateUrl: tpl('page.html'),
       title: 'Code of Conduct'
     })
+    .when('/about/registration', {
+      controller:'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Registration Info'
+    })
+    
     .when('/speakers/call-for-proposals', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
@@ -50,9 +56,21 @@ pytx.config(function ($routeProvider) {
       controller:'TalkListCtrl',
       templateUrl: tpl('users/my-talks.html')
     })
+    .when('/user/my-profile', {
+      controller:'ProfileCtrl',
+      templateUrl: tpl('users/my-profile.html')
+    })
     .when('/user/talk/:id', {
       controller:'EditTalkCtrl',
       templateUrl: tpl('users/edit-talk.html')
+    })
+    .when('/user/sign-up', {
+      controller:'SignUpCtrl',
+      templateUrl: tpl('users/sign-up.html')
+    })
+    .when('/user/verify', {
+      controller:'VerifyCtrl',
+      templateUrl: tpl('users/verify.html')
     })
     .when('/user/:username', {
       controller:'UserDetailCtrl',

@@ -31,12 +31,28 @@
       display: inline-block;
       height: 0px; 
       border-left: 40px solid transparent;
-      border-right: 40px solid transparent; 
-      border-bottom: 115px solid @accentColor2;
+      border-right: 40px solid transparent;
+      margin: 0 0 15px 0;
+      width: 215px;
+      
+      &.bass {
+        border-bottom: 125px solid @accentColor2;
+      }
+      
+      &.treble {
+        border-top: 125px solid @accentColor2;
+        position: relative;
+        
+        h2 {
+          position: absolute;
+          top: -125px;
+        }
+      }
       
       h2 {
-        font-size: 1.1rem;
+        font-size: 1.0rem;
         margin: 0;
+        width: 135px;
         
         a {
           color: @accentColor;
@@ -44,6 +60,24 @@
           padding: 20px 0;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 450px) and (max-width: 710px) {
+  .HomeCtrl {
+    .body {
+      > div {
+        margin: 0 60px 15px 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .HomeCtrl {
+    h1 {
+      font-size: 1.8em;
     }
   }
 }

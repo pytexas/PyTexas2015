@@ -39,7 +39,7 @@ md-toolbar.md-default-theme {
   
   h2 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   a.logo {
@@ -50,8 +50,10 @@ md-toolbar.md-default-theme {
     }
     
     span {
-      display: inline-block;
-      margin: -9px 0 0 4px;
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 208px;
     }
   }
   
@@ -60,6 +62,34 @@ md-toolbar.md-default-theme {
       display: inline-block;
       padding: 5px 10px;
       margin: 0 10px 0 0;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  md-toolbar.md-default-theme {
+    a.logo {
+      span {
+        left: 260px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  md-toolbar.md-default-theme {
+    a.logo {
+      img {
+        height: 40px;
+      }
+      
+      span {
+        left: 228px;
+      }
+    }
+    
+    h2 {
+      font-size: 1.2rem;
     }
   }
 }
@@ -179,6 +209,22 @@ form.norm-form {
   
   .label {
     color: rgba(0,0,0,0.26);
+  }
+  
+  fieldset {
+    border: 1px dotted @dividerColor;
+    margin: 0 0 30px 0;
+    
+    legend {
+      color: @dividerColor;
+      padding: 0 15px;
+    }
+  }
+  
+  .md-button {
+    em {
+      font-size: 80%;
+    }
   }
 }
 
