@@ -1,0 +1,14 @@
+<div class="content-page">
+  <h1>My Talks</h1>
+  <div>
+    <md-list-item class="md-3-line" ng-repeat="talk in talks">
+      <div class="md-list-item-text">
+        <h3>
+          <a href="/{{ conf }}/user/talk/{{ talk.id }}">{{ talk.name }}</a>
+        </h3>
+        <h4>{{ talk.stype }}</h4>
+      </div>
+      <hr>
+    </md-list-item>
+  </div>
+</div>
