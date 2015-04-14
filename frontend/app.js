@@ -29,6 +29,13 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
     $rootScope.logged_in = true;
   }
   
+  $rootScope.csrf = function () {
+    var APIService = new APIFactory('v1');
+    APIService.get('users/ensure-csrf');
+  };
+  
+  $rootScope.csrf();
+  
   $rootScope.url = function () {
     var u = $location.url();
     if (u.indexOf('/login') > -1) {
