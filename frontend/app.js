@@ -108,6 +108,9 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
     ['About', [
       {title: 'Privacy Policy', url: 'about/privacy-policy'},
       {title: 'Code of Conduct', url: 'about/code-of-conduct'},
+    ]],
+    ['My Account', [
+      {title: 'My Talks', url: 'user/my-talks'}
     ]]
   ];
 });

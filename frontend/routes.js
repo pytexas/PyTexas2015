@@ -46,6 +46,14 @@ pytx.config(function ($routeProvider) {
       controller:'LoginCtrl',
       templateUrl: tpl('users/login.html')
     })
+    .when('/user/my-talks', {
+      controller:'TalkListCtrl',
+      templateUrl: tpl('users/my-talks.html')
+    })
+    .when('/user/talk/:id', {
+      controller:'EditTalkCtrl',
+      templateUrl: tpl('users/edit-talk.html')
+    })
     .when('/user/:username', {
       controller:'UserDetailCtrl',
       templateUrl: tpl('users/user-detail.html')

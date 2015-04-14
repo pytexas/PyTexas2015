@@ -127,5 +127,10 @@ DEFAULT_CONF = '2015'
 
 GRAVATAR_DEFAULT_IMAGE = 'retro'
 
+DEFAULT_FROM_EMAIL = 'conference@pytexas.org'
+
+TWOSPACES_SPEAKER_NOTIFY = ['conference@pytexas.org']
+TWOSPACES_SPONSOR_NOTIFY = ['conference@pytexas.org']
+
 from pytx.settings.local import *
 
