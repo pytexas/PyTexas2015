@@ -102,6 +102,7 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
     ]],
     ['Speakers', [
       {title: 'Call For Proposals', url: 'speakers/call-for-proposals'},
+      {title: 'Submit A Talk', url: 'speakers/submit-talk'},
       {title: 'Proposed Talks', url: 'speakers/proposals'},
     ]],
     ['About', [

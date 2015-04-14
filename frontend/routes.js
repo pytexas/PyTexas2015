@@ -33,6 +33,10 @@ pytx.config(function ($routeProvider) {
       controller:'ProposedTalksCtrl',
       templateUrl: tpl('speakers/proposed-talks.html')
     })
+    .when('/speakers/submit-talk', {
+      controller:'SubmitTalkCtrl',
+      templateUrl: tpl('speakers/submit-talk.html')
+    })
     .when('/talk/:id', {
       controller:'TalkDetailCtrl',
       templateUrl: tpl('speakers/talk-detail.html')

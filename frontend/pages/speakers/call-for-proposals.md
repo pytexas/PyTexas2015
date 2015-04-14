@@ -10,6 +10,8 @@ The PyTexas 2015 conference is now accepting proposals for talks to be
 presented at the conference. The PyTexas organizers would like to invite anyone 
 interested to submit proposals for scheduled talks or tutorials.
 
+### [Submit A Talk Form >](/2015/speakers/submit-talk)
+
 ## Talks
 
 Talks may be either 25 or 50 minutes, though for exceptional proposals other 
@@ -35,7 +37,10 @@ Everyone! We want all kinds of proposals from people of all experience levels. W
 
 ### How do I submit a proposal?
 
-It’s easy! Just submit your talk using the speaker proposal form. You will be required to create an account and tell us a little about yourself in addition to the info about your talk.
+It’s easy! Just submit your talk using the 
+[speaker proposal form](/2015/speakers/submit-talk). You will be 
+required to create an account and tell us a little about yourself in addition 
+to the info about your talk.
 
 ### What should I give a talk on?
 
@@ -54,3 +59,5 @@ Some other ideas might be:
 - How to broaden diversity within the Python community.
 - Development tools for Python (or written in Python)
 - etc. 
+
+### [Submit A Talk Form >](/2015/speakers/submit-talk)

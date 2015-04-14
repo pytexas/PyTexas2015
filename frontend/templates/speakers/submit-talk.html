@@ -1,0 +1,78 @@
+<div class="content-page">
+  <h1>Submit A Talk</h1>
+  <div ng-show="thanks">
+    <h3>Your talk submissions has been successfully submitted.</h3>
+    <p>
+      <br>
+      <md-button class="md-raised md-primary" ng-click="reset()">
+        <i class="fa fa-caret-square-o-right"></i> Submit Another Talk
+      </md-button>
+    </p>
+  </div>
+  <div ng-hide="thanks">
+    <p>
+      Please fill out the following information about your talk.
+      <br>If you have any questions feel free to e-mail us at 
+      <a href="mailto: conference@pytexas.org">conference@pytexas.org</a>.
+    </p>
+    <form name="talkForm" class="norm-form" ng-submit="do_submit()">
+      <md-input-container>
+        <md-radio-group ng-model="form.stype">
+          <md-radio-button value="talk-short" class="md-primary">
+            Short Talk (25 Minutes)
+          </md-radio-button>
+          <md-radio-button value="talk-long">
+            Long Talk (50 Minutes)
+          </md-radio-button>
+          <md-radio-button value="tutorial">
+            Tutorial
+          </md-radio-button>
+          <md-radio-button value="lightning">
+            Lightning Talk (5 Minutes)
+          </md-radio-button>
+        </md-radio-group>
+      </md-input-container>
+      <md-input-container>
+        <label>Title Of Talk</label>
+        <input ng-model="form.name" required>
+        <div ng-messages="errors" class="error-color">
+          <div ng-message="errors.name">{{ errors.name[0] }}</div>
+        </div>
+      </md-input-container>
+      <md-input-container>
+        <label>Description (Markdown Text Supported)</label>
+        <textarea ng-model="form.description" required></textarea>
+        <div ng-messages="errors" class="error-color">
+          <div ng-message="errors.description">{{ errors.description[0] }}</div>
+        </div>
+      </md-input-container>
+      <div ng-show="form.stype != 'lightning'">
+        <md-input-container>
+          <div class="label">Level</div>
+          <md-select ng-model="form.level" placeholder="Select a level">
+            <md-option value="beginner">Beginner</md-option>
+            <md-option value="intermediate">Intermediate</md-option>
+            <md-option value="advanced">Advanced</md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container>
+          <label>URL to Slides <sup>(optional)</sup></label>
+          <input ng-model="form.slides">
+          <div ng-messages="errors" class="error-color">
+            <div ng-message="errors.slides">{{ errors.slides[0] }}</div>
+          </div>
+        </md-input-container>
+        <md-input-container>
+          <label>Special Requirements <sup>(optional)</sup></label>
+          <textarea ng-model="form.special_requirements"></textarea>
+          <div ng-messages="errors" class="error-color">
+            <div ng-message="errors.special_requirements">{{ errors.special_requirements[0] }}</div>
+          </div>
+        </md-input-container>
+      </div>
+      <md-button class="md-raised md-primary button">
+        <i class="fa fa-caret-square-o-right"></i> Submit
+      </md-button>
+    </form>
+  </div>
+</div>
