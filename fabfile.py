@@ -31,5 +31,5 @@ def deploy (slug):
     sudo('su -c "python3 manage.py collectstatic --noinput" {}'.format(WEB_USER))
     sudo('su -c "python3 manage.py build {}" {}'.format(slug, WEB_USER))
     
-  #sudo('supervisorctl restart pytx')
+  sudo('supervisorctl restart pytxweb')
   
