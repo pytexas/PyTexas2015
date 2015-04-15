@@ -14,7 +14,7 @@ interested to submit proposals for scheduled talks or tutorials.
 
 ## Talks
 
-Talks may be either 25 or 50 minutes, though for exceptional proposals other 
+Talks may be either 20 or 45 minutes, though for exceptional proposals other 
 talk durations may be considered.
 
 Tutorials will be given in 3 hour blocks. If you would like a longer tutorial 
