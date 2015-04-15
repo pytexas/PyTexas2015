@@ -68,6 +68,10 @@ pytx.config(function ($routeProvider) {
       controller:'SignUpCtrl',
       templateUrl: tpl('users/sign-up.html')
     })
+    .when('/user/reset-password', {
+      controller:'ResetCtrl',
+      templateUrl: tpl('users/reset-password.html')
+    })
     .when('/user/verify', {
       controller:'VerifyCtrl',
       templateUrl: tpl('users/verify.html')
