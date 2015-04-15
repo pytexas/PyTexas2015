@@ -1,4 +1,4 @@
-pytx.controller('EditTalkCtrl', function($scope, $location, $routeParams, $mdToast, APIFactory) {
+pytx.controller('EditTalkCtrl', function($scope, $location, $routeParams, $mdToast, $cookies, APIFactory) {
   $scope.APIService = new APIFactory('v1', $scope);
   $scope.set_title('Edit Talk');
   $scope.id = $routeParams.id;
@@ -34,6 +34,10 @@ pytx.controller('EditTalkCtrl', function($scope, $location, $routeParams, $mdToa
   
   if (!$scope.logged_in) {
     $location.url('/user/login?next=' + encodeURIComponent($location.path()));
+  }
+  
+  else if ($cookies.angular_logged_in != 'speaker') {
+    $location.url('/user/my-profile?next=' + encodeURIComponent($location.path()));
   }
   
   else {
