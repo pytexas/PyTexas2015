@@ -57,3 +57,65 @@ pytx.controller('ProfileCtrl', function($scope, $routeParams, $location, $timeou
     $scope.get_profile();
   }
 });
+
+pytx.controller('AvatarCtrl', function($scope, $mdToast, $cookies, $location, APIFactory) {
+  $scope.APIService = new APIFactory('v1', $scope);
+  $scope.set_title('My Profile Image');
+  $scope.csrf = $cookies.csrftoken;
+  $scope.ret = $location.path();
+  var search_object = $location.search();
+  
+  $scope.get_image = function () {
+    $scope.APIService.get('users/my-profile-image')
+      .success($scope.load_image)
+      .error(function () {
+        $scope.show_error('Error getting image data.');
+      });
+  };
+  
+  $scope.load_image = function (data) {
+    $scope.image = data;
+  };
+  
+  $scope.load_gravatar = function (data) {
+    $scope.load_image(data);
+    var element = document.querySelector("#main-content");
+    element.scrollTop = 0;
+    
+    $mdToast.show(
+      $mdToast.simple()
+        .content('Image Updated Successfully!')
+        .position('bottom left')
+        .hideDelay(5000)
+    );
+  };
+  
+  $scope.use_gravatar = function () {
+    $scope.APIService.post('users/my-profile-image', {gravatar: 'true'})
+      .success($scope.load_gravatar)
+      .error(function () {
+        $scope.show_error('Error setting Gravatar.');
+      });
+  };
+  
+  if (!$scope.logged_in) {
+    $location.url('/user/login?next=' + encodeURIComponent($location.path()));
+  }
+  
+  else {
+    $scope.get_image();
+    
+    if (search_object.success) {
+      $mdToast.show(
+        $mdToast.simple()
+          .content('Image Saved Successfully!')
+          .position('bottom left')
+          .hideDelay(5000)
+      );
+    }
+    
+    else if (search_object.error) {
+      $scope.show_error('Error saving image.');
+    }
+  }
+});

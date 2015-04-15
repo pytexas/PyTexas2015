@@ -60,6 +60,10 @@ pytx.config(function ($routeProvider) {
       controller:'ProfileCtrl',
       templateUrl: tpl('users/my-profile.html')
     })
+    .when('/user/my-avatar', {
+      controller:'AvatarCtrl',
+      templateUrl: tpl('users/my-avatar.html')
+    })
     .when('/user/talk/:id', {
       controller:'EditTalkCtrl',
       templateUrl: tpl('users/edit-talk.html')

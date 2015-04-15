@@ -27,3 +27,6 @@ LOGGING = {
     },
   }
 }
+
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = '../uploads/'

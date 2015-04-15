@@ -118,6 +118,7 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
     ['My Account', [
       {title: 'My Talks', url: 'user/my-talks'},
       {title: 'Profile', url: 'user/my-profile'},
+      {title: 'Profile Image', url: 'user/my-avatar'}
     ]]
   ];
 });
