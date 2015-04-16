@@ -111,9 +111,16 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
       {title: 'Submit A Talk', url: 'speakers/submit-talk'},
       {title: 'Proposed Talks', url: 'speakers/proposals'},
     ]],
+    ['Venue', [
+      {title: 'The Venue', url: 'venue'},
+      {title: 'Hotels', url: 'venue/hotels'},
+      {title: 'Map', url: 'venue/map'},
+    ]],
     ['About', [
+      {title: 'About The Conference', url: 'about'},
       {title: 'Privacy Policy', url: 'about/privacy-policy'},
       {title: 'Code of Conduct', url: 'about/code-of-conduct'},
+      {title: 'Diversity Statement', url: 'about/diversity-statement'},
     ]],
     ['My Account', [
       {title: 'My Talks', url: 'user/my-talks'},

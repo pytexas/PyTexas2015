@@ -14,6 +14,11 @@ pytx.config(function ($routeProvider) {
       templateUrl: tpl('page.html'),
       title: 'Sponsor Prospectus'
     })
+    .when('/about', {
+      controller:'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'About The Conference'
+    })
     .when('/about/privacy-policy', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
@@ -24,10 +29,31 @@ pytx.config(function ($routeProvider) {
       templateUrl: tpl('page.html'),
       title: 'Code of Conduct'
     })
+    .when('/about/diversity-statement', {
+      controller:'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Diversity Statement'
+    })
     .when('/about/registration', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),
       title: 'Registration Info'
+    })
+    
+    .when('/venue', {
+      controller:'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'The Venue'
+    })
+    .when('/venue/hotels', {
+      controller:'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Hotels'
+    })
+    .when('/venue/map', {
+      controller:'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Map'
     })
     
     .when('/speakers/call-for-proposals', {
