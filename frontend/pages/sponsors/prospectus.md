@@ -1,6 +1,6 @@
 # Sponsor Prospectus
 
-Presenting PyTexas 2014, the 8th Annual Python Community Conference for the 
+Presenting PyTexas 2015, the 9th Annual Python Community Conference for the 
 Texas Region. The purpose of PyTexas is to share Python-related knowledge and 
 enthusiasm in the form of presentations, coding sprints, "teach me" sessions, 
 and general networking among developers. It is run every year by volunteers 
@@ -10,7 +10,7 @@ In 2012, PyTexas received national recognition from former Python Software
 Foundation chair Steve Holden as a regional conference that deserves the Python 
 community's support.
 
-Please consider sponsoring PyTexas 2014 through a financial contribution to the 
+Please consider sponsoring PyTexas 2015 through a financial contribution to the 
 PyTexas Foundation, a Texas nonprofit corporation. Your contribution helps the 
 Texas area Python community build a better conference, while also providing a 
 targeted marketing and community outreach opportunity.
