@@ -45,7 +45,7 @@ managers, inventors, entrepreneurs, geographers, meteorologists.
     lightning talks. Room for sponsor booths & tables, as well as drinks and 
     snacks, will be open all day. Promotional sponsor party slot available in 
     the evening.
-- **Sun, Sept 25**: Talks continue. Sprints and "unconference" style open space 
+- **Sun, Sept 27**: Talks continue. Sprints and "unconference" style open space 
     meetings.
 
 ## Why Sponsor?
