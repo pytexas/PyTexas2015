@@ -5,6 +5,7 @@ from fabric.api import (
   run,
   sudo,
   cd,
+  lcd,
   hosts,
   settings as fabric_settings
 )
@@ -34,17 +35,17 @@ def deploy (slug):
   sudo('supervisorctl restart pytxweb')
   
 def deploy_local (slug):
-  with cd('/home/www/PyTexasWeb/'):
+  with lcd('/home/www/PyTexasWeb/'):
     local('git pull')
     local('pip3 install -r requirements.txt --user')
     
-  with cd('/home/www/TwoSpaces/'):
+  with lcd('/home/www/TwoSpaces/'):
     local('git pull')
     
-  with cd('/home/www/PyTexasWeb/frontend/'):
+  with lcd('/home/www/PyTexasWeb/frontend/'):
     local('bower install')
     
-  with cd('/home/www/PyTexasWeb/backend/'):
+  with lcd('/home/www/PyTexasWeb/backend/'):
     local('python3 manage.py migrate')
     local('python3 manage.py collectstatic --noinput')
     local('python3 manage.py build {}'.format(slug))
