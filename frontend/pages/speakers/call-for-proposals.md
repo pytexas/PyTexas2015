@@ -60,4 +60,8 @@ Some other ideas might be:
 - Development tools for Python (or written in Python)
 - etc. 
 
+### Does PyTexas offer any financial support for speakers?
+
+PyTexas does not currently offer financial support specifically for speakers. Since PyTexas is a community driven, not for profit conference, all speakers are required to purchase a ticket and provide accommodations for themselves. PyTexas does have a fund for financial assistance, and speakers are welcome to apply for those funds. However, the assistance funds are limited and are used mainly with general attendees in mind.
+
 ### [Submit A Talk Form >](/2015/speakers/submit-talk)
