@@ -34,4 +34,12 @@
       </h2>
     </div>
   </div>
+  <div class="latest-post" ng-if="latest_post">
+    <h3>Latest Blog Post</h3>
+    <md-list>
+      <md-list-item class="md-3-line post" ng-repeat="post in [latest_post]">
+        <ng-include src="tpl('blog/post-list-item.html')"></ng-include>
+      </md-list-item>
+    </md-list>
+  </div>
 </div>
