@@ -30,3 +30,5 @@ LOGGING = {
 
 MEDIA_URL = '/uploads/'
 MEDIA_ROOT = '../uploads/'
+
+USE_X_FORWARDED_HOST = False
