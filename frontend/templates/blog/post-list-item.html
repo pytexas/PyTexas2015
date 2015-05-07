@@ -1,0 +1,11 @@
+<a href="/{{ conf }}/blog/{{ post.slug }}" ng-if="post.thumbnail">
+  <img src="{{ post.thumbnail }}" alt="">
+</a>
+<h3>
+  <a href="/{{ conf }}/blog/{{ post.slug }}">{{ post.title }} &raquo;</a>
+</h3>
+<h4>{{ post.publish | amDateFormat:'dddd, MMMM Do YYYY, h:mm a' }}</h4>
+<p ng-if="post.authors.length > 0">
+  by <span ng-repeat="author in post.authors">{{ author.name }}</span>
+</p>
+<div class="clear"></div>

@@ -1,5 +1,7 @@
 <div class="Post content-page">
-  <h1>{{ post.title }}</h1>
+  <h1>
+    <a href="/{{ conf }}/blog">Blog</a> &raquo; {{ post.title }}
+  </h1>
   <div class="metadata">
     <img src="{{ post.image }}" class="main-img" alt="" ng-if="post.image">
     <div class="date">
