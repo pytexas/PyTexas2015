@@ -14,9 +14,14 @@
     <author>
       <name>{{ author.name }}</name>
     </author>
+    {% empty %}
+    <author>
+      <name>PyTexas</name>
+    </author>
     {% endfor %}
     <id>{{ request.scheme }}://{{ request.get_host }}{% url "post-detail" conf post.slug %}</id>
     <summary type="html">
+      {% if post.image %}&lt;img src="" alt="" style="width: 300px; float: right;" width="300"&gt;{% endif %}
       {{ post.body_html }}
     </summary>
   </entry>
