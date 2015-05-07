@@ -122,6 +122,7 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
       {title: 'Code of Conduct', url: 'about/code-of-conduct'},
       {title: 'Diversity Statement', url: 'about/diversity-statement'},
     ]],
+    ['Blog', {url: 'blog'}],
     ['My Account', [
       {title: 'My Talks', url: 'user/my-talks'},
       {title: 'Profile', url: 'user/my-profile'},

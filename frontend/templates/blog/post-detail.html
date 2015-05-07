@@ -1,0 +1,17 @@
+<div class="Post content-page">
+  <h1>{{ post.title }}</h1>
+  <div class="metadata">
+    <img src="{{ post.image }}" class="main-img" alt="" ng-if="post.image">
+    <div class="date">
+      Published: {{ post.publish | amDateFormat:'dddd, MMMM Do YYYY, h:mm a' }}
+    </div>
+    <div class="authors" ng-if="post.authors.length > 0" ng-repeat="author in post.authors">
+      By: <span><a href="/{{ conf }}/user/{{ author.username }}">{{ author.name }}</a></span>
+    </div>
+    <div class="cats" ng-if="post.categories.length > 0" ng-repeat="cat in post.categories">
+      Categories: <span><a href="/{{ conf }}/blog/category/{{ cat.slug }}">{{ cat.title }}</a></span>
+    </div>
+  </div>
+  <div marked="post.body" opts="{sanitize: false}" class="body marked"></div>
+  <div class="clear"></div>
+</div>
