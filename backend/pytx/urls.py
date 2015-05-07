@@ -20,5 +20,7 @@ if settings.DEBUG:
   ]
   
 urlpatterns += [
+  url(r'^blog.rss$', 'twospaces.blog.views.blog_rss', name="blog-rss"),
+  url(r'^(\S+)/blog/(\S+)$', 'pytx.views.frontend', name="post-detail"),
   url(r'^$', 'pytx.views.default_conf', name="default-conf"),
 ]

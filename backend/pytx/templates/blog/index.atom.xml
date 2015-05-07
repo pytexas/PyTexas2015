@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+  <title>PyTexas Blog</title>
+  <link href="{{ request.build_absolute_uri }}" rel="alternate"></link>
+  <link href="{{ request.build_absolute_uri }}" rel="self"></link>
+  <id>{{ request.build_absolute_uri }}</id>
+  <updated>{{ posts.0.publish|date:"c" }}</updated>
+  {% for post in posts %}
+  <entry>
+    <title>{{ post.title|striptags }}</title>
+    <link href="{{ request.scheme }}://{{ request.get_host }}{% url "post-detail" conf post.slug %}" rel="alternate"></link>
+    <updated>{{ post.publish|date:"c" }}</updated>
+    {% for author in post.authors.all %}
+    <author>
+      <name>{{ author.name }}</name>
+    </author>
+    {% empty %}
+    <author>
+      <name>PyTexas</name>
+    </author>
+    {% endfor %}
+    <id>{{ request.scheme }}://{{ request.get_host }}{% url "post-detail" conf post.slug %}</id>
+    <summary type="html">
+      {% if post.image %}&lt;img src="" alt="" style="width: 300px; float: right;" width="300"&gt;{% endif %}
+      {{ post.body_html }}
+    </summary>
+  </entry>
+  {% endfor %}
+</feed>

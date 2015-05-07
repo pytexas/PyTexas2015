@@ -16,3 +16,7 @@ def index (request, conf_slug):
   html = index_generator(conf_slug, dev=True)
   return http.HttpResponse(html)
   
+def frontend (request, *args, **kwargs):
+  return http.HttpResponse(
+    "Front-End Should Serve This URL", content_type="text/plain")
+    

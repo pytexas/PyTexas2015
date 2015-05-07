@@ -41,9 +41,11 @@ INSTALLED_APPS = (
   
   'django_markdown',
   'rest_framework',
+  'imagekit',
   
   'twospaces.profiles',
   'twospaces.conference',
+  'twospaces.blog',
   
   'pytx',
 )

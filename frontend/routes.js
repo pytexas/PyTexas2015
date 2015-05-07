@@ -111,5 +111,18 @@ pytx.config(function ($routeProvider) {
       templateUrl: tpl('users/user-detail.html')
     })
     
+    .when('/blog', {
+      controller:'BlogCtrl',
+      templateUrl: tpl('blog/index.html')
+    })
+    .when('/blog/:slug', {
+      controller:'BlogPostCtrl',
+      templateUrl: tpl('blog/post-detail.html')
+    })
+    .when('/blog/category/:cat', {
+      controller:'BlogCtrl',
+      templateUrl: tpl('blog/index.html')
+    })
+    
     .otherwise({controller:'ErrorCtrl', templateUrl: tpl('404.html')});
 });
