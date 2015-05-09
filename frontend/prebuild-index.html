@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="$base/bower/font-awesome/css/font-awesome.min.css">
     <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,700' rel='stylesheet' type='text/css'>
     
-    <link rel="manifest" href="$app_base/manifest.json">
+    <link rel="manifest" href="$base/manifest.json">
     <script>
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('$base/service-worker.js', { scope: '$app_base/' })
+        navigator.serviceWorker.register('$base/service-worker.js', { scope: '$base/' })
           .then(function(r) {
             console.log('registered service worker');
           })
