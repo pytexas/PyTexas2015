@@ -59,9 +59,8 @@ class Command (BaseCommand):
       fh.close()
       
     for file in ('logo144.png', 'offline.html'):
-      fp = os.path.join(settings.FRONT_ROOT, slug, file)
-      cp = os.path.join(deploy_dir, file)
-      subprocess.call("cp {} {}".format(fp, cp), shell=True)
+      cp = os.path.join(settings.FRONT_ROOT, slug, file)
+      subprocess.call("cp -v {} {}".format(file, cp), shell=True)
       
     gen_path = os.path.join(deploy_dir, 'generated')
     subprocess.call("date > {}".format(gen_path), shell=True)
