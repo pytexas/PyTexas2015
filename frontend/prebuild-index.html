@@ -16,6 +16,18 @@
     <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,700' rel='stylesheet' type='text/css'>
     
     <link rel="manifest" href="$base/manifest.json">
+    <script>
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('$base/service-worker.js', { scope: '$base/' })
+          .then(function(r) {
+            console.log('registered service worker');
+          })
+          .catch(function(whut) {
+            console.error('uh oh... ');
+            console.error(whut);
+          });
+      });
+    </script>
     
     <meta name="theme-color" content="#1e2933">
     <meta name="mobile-web-app-capable" content="yes"> 
@@ -119,19 +131,6 @@
     <script src="$base/services/api-factory.js"></script>
     
     <script src="$base/directives/menu-widgets.js"></script>
-    
-    <script>
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('$base/service-worker.js', { scope: '$base/' })
-          .then(function(r) {
-            console.log('registered service worker');
-          })
-          .catch(function(whut) {
-            console.error('uh oh... ');
-            console.error(whut);
-          });
-      });
-    </script>
     
     <!--prod-->
     <script>
