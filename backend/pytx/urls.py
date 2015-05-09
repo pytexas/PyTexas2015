@@ -14,7 +14,7 @@ if settings.DEBUG:
     url(r'^favicon.ico$', 'pytx.views.favicon', name="favicon"),
     url(r'^uploads/(?P<path>.*)$', 'django.views.static.serve',
       {'document_root': settings.MEDIA_ROOT}),
-    url(r'^(logo144.png|offline.html|service-worker.js)$', 'django.views.static.serve',
+    url(r'^\S+/(logo\d+.png|offline.html|service-worker.js)$', 'django.views.static.serve',
       {'document_root': settings.FRONT_ROOT}),
     url(r'^\S+/app-\S+?/(?P<path>.*)$', 'django.views.static.serve',
       {'document_root': settings.FRONT_ROOT}),
