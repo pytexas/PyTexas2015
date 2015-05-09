@@ -59,7 +59,7 @@ class Command (BaseCommand):
       fh.close()
       
     for file in ('logo144.png', 'logo192.png', 'logo72.png', 'logo96.png',
-                 'offline.html'):
+                 'logo48.png', 'offline.html'):
       cp = os.path.join(settings.FRONT_ROOT, slug, file)
       subprocess.call("cp -v {} {}".format(file, cp), shell=True)
       
