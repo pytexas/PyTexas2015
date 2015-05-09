@@ -1,0 +1,13 @@
+{
+  "short_name": "PyTexas",
+  "name": "PyTexas",
+  "icons": [
+    {
+      "src": "logo144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html?app=1",
+  "display": "browser"
+}
