@@ -17,7 +17,7 @@
     
     <link rel="manifest" href="/$conf/manifest.json">
     <script>
-      window.addEventListener('load', function() {
+      //window.addEventListener('load', function() {
         navigator.serviceWorker.register('$base/service-worker.js', { scope: '/$conf/' })
           .then(function(r) {
             console.log('registered service worker');
@@ -26,7 +26,7 @@
             console.error('uh oh... ');
             console.error(whut);
           });
-      });
+      //});
     </script>
     
     <meta name="theme-color" content="#1e2933">
