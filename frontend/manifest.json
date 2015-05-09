@@ -9,5 +9,5 @@
     }
   ],
   "start_url": "/2015/?app=1",
-  "display": "standalone"
+  "display": "browser"
 }
