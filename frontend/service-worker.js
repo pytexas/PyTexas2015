@@ -1,5 +1,5 @@
 const OFFLINE_CACHE = 'offline';
-const OFFLINE_URL = 'offline.html';
+const OFFLINE_URL = '/2015/offline.html';
 
 self.addEventListener('install', function(event) {
   const offlineRequest = new Request(OFFLINE_URL);
