@@ -18,7 +18,7 @@
     <link rel="manifest" href="/$conf/manifest.json">
     <script>
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('$base/service-worker.js', { scope: '$conf/' })
+        navigator.serviceWorker.register('$base/service-worker.js', { scope: '/$conf/' })
           .then(function(r) {
             console.log('registered service worker');
           })
