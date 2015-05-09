@@ -8,6 +8,6 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/2015/index.html?app=1",
+  "start_url": "/2015/?app=1",
   "display": "browser"
 }
