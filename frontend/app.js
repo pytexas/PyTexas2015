@@ -7,7 +7,10 @@ function img_path (path) {
 }
 
 var pytx = angular.module('pytx',
-  ['ngAnimate', 'ngMaterial', 'ngRoute', 'ngSanitize', 'ngCookies', 'hc.marked', 'angularMoment']
+  [
+    'ngAnimate', 'ngMaterial', 'ngRoute', 'ngSanitize', 'ngCookies', 'hc.marked',
+    'angularMoment', 'angulartics', 'angulartics.google.analytics'
+  ]
 );
 
 pytx.config(function ($locationProvider, $httpProvider, markedProvider) {
