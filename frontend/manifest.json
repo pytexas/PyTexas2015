@@ -3,11 +3,11 @@
   "name": "PyTexas",
   "icons": [
     {
-      "src": "logo144.png",
+      "src": "/2015/logo144.png",
       "sizes": "144x144",
       "type": "image/png"
     }
   ],
-  "start_url": "index.html?app=1",
+  "start_url": "/2015/index.html?app=1",
   "display": "browser"
 }

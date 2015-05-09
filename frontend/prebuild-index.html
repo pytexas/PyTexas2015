@@ -106,7 +106,7 @@
     
     <script>
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('$base/service-worker.js', { scope: '/' })
+        navigator.serviceWorker.register('$base/service-worker.js', { scope: '$base/' })
           .then(function(r) {
             console.log('registered service worker');
           })
