@@ -122,7 +122,7 @@
     
     <script>
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('$base/service-worker.js', { scope: '$base/' })
+        navigator.serviceWorker.register('$base/service-worker.js', { scope: './' })
           .then(function(r) {
             console.log('registered service worker');
           })
