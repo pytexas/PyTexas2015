@@ -14,6 +14,7 @@ def index_generator (conf_slug=settings.DEFAULT_CONF, dev=False):
     conf=conf_slug,
     api_base='/',
     release=release(),
+    app_base='app-{}'.format(release()),
   )
   
   html = Template(template).safe_substitute(context)
