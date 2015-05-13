@@ -31,6 +31,8 @@ Tutorials will be 3 hours in length, and should aim to provide a thorough
 in-depth treatment of a given topic. Preference will likely be given to 
 proposals which aim to provide an introduction to a given topic.
 
+## Frequently Asked Questions
+
 ### Who should submit a proposal?
 
 Everyone! We want all kinds of proposals from people of all experience levels. Whether you’ve never given a talk at a conference, or have given dozens. Whether you just discovered Python, or are an old hand. Whether you're a programmer, designer, scientist, or music theorist (or whatever). We want to hear what you have to share!
