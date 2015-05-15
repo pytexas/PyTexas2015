@@ -267,3 +267,58 @@ form.norm-form {
     font-weight: 500;
   }
 }
+
+.view-animate-container {
+  
+}
+
+.view-animate {
+  
+}
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+  -webkit-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* easeOutQuad */
+}
+
+.view-animate.ng-enter {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  opacity: 0;
+}
+
+.view-animate.ng-enter.ng-enter-active {
+  transform: perspective(300px) rotateY(0deg);
+  -ms-transform: perspective(300px) rotateY(0deg);
+  -webkit-transform: perspective(300px) rotateY(0deg);
+  opacity: 1;
+}
+
+.view-animate.ng-leave {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  opacity: 1;
+}
+
+.view-animate.ng-leave.ng-leave-active {
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  opacity: 0;
+}
