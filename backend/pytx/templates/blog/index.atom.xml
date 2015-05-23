@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
   <title>PyTexas Blog</title>
-  <link href="{{ request.build_absolute_uri }}" rel="alternate"></link>
+  <link href="https://www.pytexas.org/2015/blog"></link>
   <link href="{{ request.build_absolute_uri }}" rel="self"></link>
   <id>{{ request.build_absolute_uri }}</id>
   <updated>{{ posts.0.publish|date:"c" }}</updated>
