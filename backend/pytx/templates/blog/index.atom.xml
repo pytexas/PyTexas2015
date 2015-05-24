@@ -21,7 +21,7 @@
     {% endfor %}
     <id>{{ request.scheme }}://{{ request.get_host }}{% url "post-detail" conf post.slug %}</id>
     <summary type="html">
-      {% if post.image %}&lt;img src="{{ request.scheme }}://{{ request.get_host }}{{ post.image.url }}" alt="" style="width: 300px; float: right;" width="300"&gt;{% endif %}
+      {% if post.image %}&lt;img src="{{ request.scheme }}://{{ request.get_host }}{{ post.image.url }}" alt="" style="width: 300px; float: right; padding: 20px;" width="300"&gt;{% endif %}
       {{ post.body_html }}
     </summary>
   </entry>
