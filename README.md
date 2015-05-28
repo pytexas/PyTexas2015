@@ -46,7 +46,7 @@ cd frontend
 bower install
 cd ../backend/
 cp pytx/settings/local.py.example pytx/settings/local.py
-# adjust local.py for your your dev db
+# adjust local.py for your dev db
 ./manage.py migrate
 ./manage.py runserver
 ```
