@@ -25,6 +25,7 @@ sudo apt-get install postgresql postgresql-contrib
 sudo -i -u postgres
 createdb postgres
 exit
+sudo /etc/init.d/postgresql restart
 
 #edit: /etc/hosts
 #add db.internal to line: 127.0.0.1       localhost db.internal
