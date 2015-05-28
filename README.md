@@ -23,7 +23,7 @@ sudo apt-get install postgresql postgresql-contrib
 #line: host   all   all   127.0.0.1/32   trust
 #change end to "trust"
 sudo -i -u postgres
-createdb postgres
+createdb pytexasweb3
 exit
 sudo /etc/init.d/postgresql restart
 
