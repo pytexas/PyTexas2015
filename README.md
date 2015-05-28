@@ -18,6 +18,17 @@ sudo npm install -g bower
 
 #db
 sudo apt-get install postgresql postgresql-contrib
+
+#edit: /etc/postgresql/9.3/main/pg_hba.conf
+#line: host   all   all   127.0.0.1/32   trust
+#change end to "trust"
+sudo -i -u postgres
+createdb postgres
+exit
+
+#edit: /etc/hosts
+#add db.internal to line: 127.0.0.1       localhost db.internal
+
 ```
 
 **Site Installation**
