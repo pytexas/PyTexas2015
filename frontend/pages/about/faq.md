@@ -15,8 +15,8 @@ speakers. Even our organizing team purchases tickets, because all funds are even
 better the Texas Python community. For the same reasons, we do not generally pay speakers.
 
 However, we do offer a limited number of scholarships for special cases. If you are facing financial
-hardship, please email us at SCHOLARSHIP-EMAIL-ADDRESS. Our goal is to ensure that everyone who wants
-to attend PyTexas can do so.
+hardship, please email us at [conference@pytexas.org](conference.pytexas.org). Our goal is to ensure
+that everyone who wants to attend PyTexas can do so.
 
 ## How much of my sponsorship or ticket price goes to the conference?
 
