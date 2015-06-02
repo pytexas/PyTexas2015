@@ -30,7 +30,7 @@ Here are some ways you can help us build a more diverse conference experience:
     supportive, free from intimidation and marginalization 
     (send an email to PyTexas organizers)
 - Share your ideas and best practices for how we can realize our vision 
-    (send an email to [PyTexas organizers](conference@pytexas.net))
+    (send an email to [PyTexas organizers](mailto:conference@pytexas.org))
 - We value diversity in the communities we bring together, and we welcome your 
     contributions to bringing balanced representation of the richness of our 
     collective human experience. Help us do this by following our
