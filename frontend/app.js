@@ -121,6 +121,7 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
     ]],
     ['About', [
       {title: 'About The Conference', url: 'about'},
+      {title: 'Register', url: 'about/registration'},
       {title: 'Privacy Policy', url: 'about/privacy-policy'},
       {title: 'Code of Conduct', url: 'about/code-of-conduct'},
       {title: 'Diversity Statement', url: 'about/diversity-statement'},
