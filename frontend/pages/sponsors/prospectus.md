@@ -10,16 +10,16 @@ In 2012, PyTexas received national recognition from former Python Software
 Foundation chair Steve Holden as a regional conference that deserves the Python 
 community's support.
 
-Please consider sponsoring PyTexas 2015 through a financial contribution to the 
-PyTexas Foundation, a Texas nonprofit corporation. Your contribution helps the 
-Texas area Python community build a better conference, while also providing a 
-targeted marketing and community outreach opportunity.
+Please consider sponsoring PyTexas 2015 through a financial contribution to the
+non-profit PyTexas Foundation. Your contribution helps the Texas-area Python
+community build a better conference, while also providing a targeted marketing
+and community outreach opportunity.
 
 We have provided this prospectus for potential sponsors to find out more about 
 the conference itself and available sponsorship opportunities. Our contact 
 information is available immediately below if you have any questions.
 
-### Contact Details
+### Contact Details<a name="contact"></a>
 
 Sponsor Chair: Jeremy Boyd<br>
 E-Mail: <a href="mailto: sponsorship@pytexas.org">sponsorship@pytexas.org</a><br>
@@ -33,8 +33,8 @@ increasing attendance, and with the growing popularity of Python we only expect
 this trend to continue.
 
 **Audience Profile:**<br>
-Amateurs, students, and professional Python software developers, architects, 
-managers, inventors, entrepreneurs, geographers, meteorologists.
+Professional Python developers, data scientists, amateurs, students, software
+architects, managers, inventors, entrepreneurs, geographers, meteorologists.
 
 **Schedule (tentative):**
 
@@ -65,16 +65,16 @@ As a sponsor, your funding assistance will serve three critical purposes:
 ## Sponsorship Opportunities
 
 We offer several standard packages. However, if none of these seem to fit, 
-please feel free to contact the Sponsor Chair. We want to help you make the 
+please feel free to [contact the Sponsor Chair](#contact). We want to help you make the
 most of your investment in the Python community.
 
 ### Standard Packages
 
 - Bronze $200
-    - Available for individuals and early-stage startups
+    - Available for individuals and startups of up to 10 employees
     - Name and link included on PyTexas website
     - 1 free ticket to PyTexas
-- Silver $500
+- Silver $750
     - Name, link, and logo included on the PyTexas website
     - Promotional items placed in the PyTexas swag bag
     - Company name and link included in the PyTexas press release
@@ -83,17 +83,23 @@ most of your investment in the Python community.
     - All the benefits of Silver-level sponsorship
     - Select a table/booth space from the remaining available spots (first paid, first served)
     - 1 additional free ticket to PyTexas (3 total)
-- Platinum $1,000
+- Platinum $1,250
     - Limit: 5
     - All the benefits of Gold-level sponsorship
     - Company logo on back of PyTexas t-shirt (size & placement subject to artistic license of PyTexas organizers and may be affected by the number of other sponsors at this level)
     - Company banner placed in the large conference room
-    - If you are interested in this level, please contact Jeremy Boyd before donating. Once the number of Platinum sponsors has been finalized, we can define the size and placement of t-shirt logos.
+    - If you are interested in this level, please [contact the Sponsor Chair](#contact) before purchasing. Once the number of Platinum sponsors has been finalized, we can define the size and placement of t-shirt logos.
     - 1 additional free ticket to PyTexas (4 total)
 - Diamond $2,500
     - Limit: 2
     - All the benefits of Platinum-level sponsorship
     - Premier brand placement for entire conference
+
+**Notes:** All promotional items must be delivered in a timely fashion. Please coordinate with the
+Sponsor Chair to ensure your items are available to attendees. "Premier brand placement" is subject
+to the limitations of the PyTexas venue. Typical configurations include prominent placement in slide
+decks (including those on video), stand-up banners being placed at speaker stations (also included
+in video), and multiple in-person mentions.
 
 ### Exclusive Benefits
 
@@ -102,12 +108,13 @@ PyTexas also offers several exclusive sponsor benefits on a first-come, first-se
 - Lanyard tag ($500)
     - One slot available
     - Each attendee’s lanyard will be affixed with a ribbon with a design of your choice (subject to approval by Sponsor Chair)
-- Exclusive party slot ($1000)
+- Exclusive party slot ($500)
     - Friday and Saturday slots currently available
-    - Promote your party on the day of the party
+    - Promote your party via banners, signs, etc.
     - Official promotion via website, schedule, and announcements
+    - Party costs (e.g., venue and refreshments) to be paid by sponsor
 - Swag bag sponsor ($2000)
-    - Donation includes cost of bags
+    - Contribution includes cost of bags
     - Exclusive name/logo on exterior of bag
 - Hackathon/contest sponsor ($2000)
     - One slot available
@@ -115,7 +122,7 @@ PyTexas also offers several exclusive sponsor benefits on a first-come, first-se
     - Special session available on Sunday (e.g., to announce winners, demo coolest hacks, etc.)
     - Official promotion via website, schedule, and announcements
 
-Contact the Sponsor Chair for more details.
+[Contact the Sponsor Chair](#contact) for more details.
 
 ### Have an Idea?
 
@@ -132,9 +139,8 @@ This is a great way to get the word out about your product.
 ### Location
 
 Since 2011, PyTexas has been held at Texas A&M University in College Station. 
-We have enjoyed significant support from the University’s Department of 
-Computer Science and College of Architecture, both of which use Python 
-professionally.
+We have enjoyed significant support from the University’s College of Architecture and
+Department of Computer Science, both of which use Python professionally.
 
 PyTexas 2015 will return to College Station and the Texas A&M campus with the 
 College of Architecture hosting the conference. As in 2014, the PyTexas 2015 
@@ -149,13 +155,8 @@ For more info on the Memorial Student Center, see [http://ourmsc.tamu.edu/](http
 
 Python is a general purpose, open source programming language popular for its 
 elegant, high-level, and cross-platform design. It is protected and promoted by 
-the [Python Software Foundation](http://www.python.org/psf/). The PSF also aids organizers of local 
-conferences such as PyTexas with financial and logistical support.
-
-As of 2014, the annual PyTexas conference is sponsored by the PyTexas 
-Foundation, a Texas nonprofit corporation. The Foundation aims to further the 
-PSF's mission as well as to provide support for local user groups throughout 
-the state.
+the [Python Software Foundation](http://www.python.org/psf/). The PSF also aids
+organizers of local conferences such as PyTexas with financial and logistical support.
 
 Python has a wide range of practical uses, from simple scripts to large scale 
 enterprise applications to high volume websites such as YouTube.
@@ -166,10 +167,10 @@ for systems integration, among other things. Python developers have many
 choices of runtime environments, including CPython, JVM (Jython), and .NET 
 (IronPython).
 
-See [http://www.python.org/about/quotes/](http://www.python.org/about/quotes/) to find out how organizations around 
-the world are using Python.
+See [http://www.python.org/about/quotes/](http://www.python.org/about/quotes/) to find out
+how organizations around the world are using Python.
 
 ## Questions or Comments
 
 The PyTexas 2015 staff appreciate your time in considering this prospectus. If 
-you have any questions or comments, please contact the Sponsor Chair.
+you have any questions or comments, please [contact the Sponsor Chair](#contact).
