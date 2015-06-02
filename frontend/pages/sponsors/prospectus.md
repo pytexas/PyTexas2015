@@ -79,7 +79,7 @@ most of your investment in the Python community.
     - Promotional items placed in the PyTexas swag bag
     - Company name and link included in the PyTexas press release
     - 2 free tickets to PyTexas
-- Gold $750
+- Gold $1000
     - All the benefits of Silver-level sponsorship
     - Select a table/booth space from the remaining available spots (first paid, first served)
     - 1 additional free ticket to PyTexas (3 total)
