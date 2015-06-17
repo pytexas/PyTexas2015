@@ -39,6 +39,11 @@ pytx.config(function ($routeProvider) {
       templateUrl: tpl('page.html'),
       title: 'Registration Info'
     })
+    .when('/about/faq', {
+        controller: 'PageCtrl',
+        templateUrl: tpl('page.html'),
+        title: 'Frequently Asked Questions'
+    })
     
     .when('/venue', {
       controller:'PageCtrl',

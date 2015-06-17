@@ -18,7 +18,7 @@ conference time approaches.
 
 ## Contact Us
 
-Please feel free to email [conference@pytexas.net](mailto: conference@pytexas.net) with any questions.
+Please feel free to email [conference@pytexas.org](mailto: conference@pytexas.org) with any questions.
 
 You may also reach the larger Texas Python community by joining the mailing 
 list, which is used for general community discussions. Python-oriented job 
