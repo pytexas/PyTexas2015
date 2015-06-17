@@ -7,6 +7,7 @@ urlpatterns = [
   url(r'^admin/', include(admin.site.urls)),
   url('^markdown/', include( 'django_markdown.urls')),
   url('^api/', include( 'twospaces.urls')),
+  url('^conference/', include( 'twospaces.conference.urls')),
 ]
 
 if settings.DEBUG:
@@ -20,7 +21,7 @@ if settings.DEBUG:
       {'document_root': settings.FRONT_ROOT}),
     url(r'^(\S+)/.*$', 'pytx.views.index', name="index"),
   ]
-  
+
 urlpatterns += [
   url(r'^blog.rss$', 'twospaces.blog.views.blog_rss', name="blog-rss"),
   url(r'^(\S+)/blog/(\S+)$', 'pytx.views.frontend', name="post-detail"),

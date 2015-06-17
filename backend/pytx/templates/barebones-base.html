@@ -1,0 +1,13 @@
+<!doctype html>{% load static %}
+<html>
+  <head>
+    <title ng-bind="title">PyTexas</title>
+    <meta name="viewport" content="initial-scale=1">
+  </head>
+  <body>
+    <img src="{% static "img/banner80.png" %}" alt="PyTexas" style="margin: 0 auto; display: block;">
+    <div style="margin: 0 auto; display: block; max-width: 700px; padding: 10px;">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
