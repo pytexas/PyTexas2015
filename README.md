@@ -84,3 +84,5 @@ cp pytx/settings/local.py.example pytx/settings/local.py
 ./manage.py migrate
 ./manage.py runserver
 ```
+
+NARF
