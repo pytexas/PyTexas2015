@@ -8,6 +8,7 @@ Requirements:
 - pip3
 - git
 - bower
+- less
 - postgres db
 
 ### Requirements Installation

@@ -37,6 +37,10 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
     APIService.get('conferences/data').success(function (data) {
       $rootScope.conf_obj = data;
     });
+    
+    APIService.get('conferences/sponsors').success(function (data) {
+      $rootScope.sponsor_levels = data;
+    });
   };
   
   $rootScope.conf_data();

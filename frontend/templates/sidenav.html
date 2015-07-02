@@ -16,3 +16,14 @@
     </md-button>
   </li>
 </ul>
+<hr>
+<div class="sponsors-side-list" ng-if="sponsor_levels.length > 0">
+  <h3>Our Sponsors</h3>
+  <div class="level" ng-repeat="level in sponsor_levels">
+    <div layout="row" layout-align="start start" layout-wrap>
+      <a href="{{ sponsor.url }}" ng-repeat="sponsor in level.sponsors">
+        <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+      </a>
+    </div>
+  </div>
+</div>

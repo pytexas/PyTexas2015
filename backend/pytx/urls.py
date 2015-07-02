@@ -17,6 +17,7 @@ if settings.DEBUG:
       {'document_root': settings.MEDIA_ROOT}),
     url(r'^\S+/(logo\d+.png|offline.html|service-worker.js)$', 'django.views.static.serve',
       {'document_root': settings.FRONT_ROOT}),
+    url(r'^\S+/app-\S+?/css/pytx.css$', 'pytx.views.less_view'),
     url(r'^\S+/app-\S+?/(?P<path>.*)$', 'django.views.static.serve',
       {'document_root': settings.FRONT_ROOT}),
     url(r'^(\S+)/.*$', 'pytx.views.index', name="index"),

@@ -5,8 +5,8 @@ pytx.config(function ($routeProvider) {
       templateUrl: tpl('home.html'),
     })
     .when('/sponsors', {
-      controller:'PageCtrl',
-      templateUrl: tpl('page.html'),
+      controller:'SponsorCtrl',
+      templateUrl: tpl('sponsors.html'),
       title: 'Our Sponsors'
     })
     .when('/sponsors/prospectus', {

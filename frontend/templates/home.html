@@ -7,8 +7,12 @@
       September 25th-27th, 2015 in the Memorial Student Center, 
       at Texas A&M University
     </p>
-    <a href="http://www.eventbrite.com/e/pytexas-2015-registration-17162264796?ref=ebtn" target="_blank"><img src="https://www.eventbrite.com/custombutton?eid=17162264796" alt="Eventbrite - PyTexas 2015" /></a>
-    <p>Registration deadline for Earlybird pricing is <strong>July 19th!</strong</strong></p>
+    <a href="http://www.eventbrite.com/e/pytexas-2015-registration-17162264796?ref=ebtn" target="_blank">
+      <img src="https://www.eventbrite.com/custombutton?eid=17162264796" alt="Eventbrite - PyTexas 2015">
+    </a>
+    <p>
+      Registration deadline for Earlybird pricing is <strong>July 19th!</strong>
+    </p>
   </div>
   <div class="body tc">
     <div class="treble">
@@ -43,5 +47,15 @@
         <ng-include src="tpl('blog/post-list-item.html')"></ng-include>
       </md-list-item>
     </md-list>
+  </div>
+  <div class="sponsors-list" ng-if="sponsor_levels.length > 0">
+    <div class="level" ng-repeat="level in sponsor_levels">
+      <h2>{{ level.name }} Sponsors</h2>
+      <div layout="row" layout-align="center center" layout-wrap>
+        <a href="{{ sponsor.url }}" ng-repeat="sponsor in level.sponsors">
+          <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+        </a>
+      </div>
+    </div>
   </div>
 </div>
