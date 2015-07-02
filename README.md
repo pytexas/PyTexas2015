@@ -7,8 +7,8 @@ Requirements:
 - python3
 - pip3
 - git
-- bower
-- less
+- bower (npm)
+- less (npm)
 - postgres db
 
 ### Requirements Installation
