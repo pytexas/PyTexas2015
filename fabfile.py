@@ -43,7 +43,7 @@ def deploy_local (slug):
     local('git pull')
     
   with lcd('/home/www/PyTexasWeb/frontend/'):
-    local('bower install')
+    local('bower install --config.interactive=false')
     
   with lcd('/home/www/PyTexasWeb/backend/'):
     local('python3 manage.py migrate')
