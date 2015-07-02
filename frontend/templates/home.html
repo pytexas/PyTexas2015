@@ -50,11 +50,13 @@
   </div>
   <div class="sponsors-list" ng-if="sponsor_levels.length > 0">
     <div class="level" ng-repeat="level in sponsor_levels">
-      <h2>{{ level.name }} Sponsors</h2>
-      <div layout="row" layout-align="center center" layout-wrap>
-        <a href="{{ sponsor.url }}" ng-repeat="sponsor in level.sponsors">
-          <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">
-        </a>
+      <div ng-if="level.sponsors.length > 0">
+        <h2>{{ level.name }} Sponsors</h2>
+        <div layout="row" layout-align="center center" layout-wrap>
+          <a href="{{ sponsor.url }}" ng-repeat="sponsor in level.sponsors">
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+          </a>
+        </div>
       </div>
     </div>
   </div>
