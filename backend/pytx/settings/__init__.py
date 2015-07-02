@@ -138,5 +138,12 @@ DEFAULT_FROM_EMAIL = 'conference@pytexas.org'
 TWOSPACES_SPEAKER_NOTIFY = ['conference@pytexas.org']
 TWOSPACES_SPONSOR_NOTIFY = ['conference@pytexas.org']
 
+EVENTBRITE_API_URL = 'https://www.eventbriteapi.com/v3'
+EVENTBRITE_OAUTH_TOKEN = ''
+EVENTBRITE_EVENT_ID = ''
+
+WEEKLY_STATS_EMAIL = 'conference@pytexas.org'
+WEEKLY_STATS_FROM_EMAIL = DEFAULT_FROM_EMAIL
+
 from pytx.settings.local import *
 
