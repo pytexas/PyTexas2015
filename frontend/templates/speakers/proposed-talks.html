@@ -2,7 +2,7 @@
   <md-progress-circular md-mode="indeterminate"></md-progress-circular>
 </div>
 <div ng-if="talks" class="TalkList">
-  <md-tabs md-stretch-tabs="never" md-center-tabs="true" md-autoselect>
+  <md-tabs md-stretch-tabs="never" md-center-tabs="true" md-autoselect md-dynamic-height>
     <md-tab label="{{ talk_group[0] }}" ng-repeat="talk_group in talks track by $index">
       <div class="tab-content" ng-include="tpl('speakers/talk-tab.html')"></div>
     </md-tab>
