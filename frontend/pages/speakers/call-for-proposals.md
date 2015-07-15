@@ -12,6 +12,8 @@ interested to submit proposals for scheduled talks or tutorials.
 
 ### [Submit A Talk Form >](/2015/speakers/submit-talk)
 
+Submission deadline is August 2nd.
+
 ## Talks
 
 Talks may be either 20 or 50 minutes, though for exceptional proposals other 
