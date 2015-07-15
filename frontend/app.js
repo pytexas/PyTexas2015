@@ -143,3 +143,18 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
 pytx.constant('angularMomentConfig', {
   timezone: 'America/Chicago'
 });
+
+pytx.filter('thumbnail', function() {
+  return function (img_url, transforms) {
+    if (img_url) {
+      img_url = 'https://pytexas.imgix.net' + img_url;
+      
+      if (transforms) {
+        img_url += '?' + transforms;
+      }
+    }
+    
+    return img_url;
+  };
+});
+

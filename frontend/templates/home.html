@@ -58,7 +58,7 @@
         <h2>{{ level.name }} Sponsors</h2>
         <div layout="row" layout-align="center center" layout-wrap>
           <a href="{{ sponsor.url }}" ng-repeat="sponsor in level.sponsors">
-            <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}">
+            <img src="{{ sponsor.logo | thumbnail:'w=250&h=250' }}" alt="{{ sponsor.name }}">
           </a>
         </div>
       </div>
