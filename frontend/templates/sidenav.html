@@ -1,7 +1,10 @@
 <ul class="menu">
   <li ng-repeat="menu_item in menu">
-    <menu-collapse ng-if="!menu_item[1].url" title="menu_item[0]" items="menu_item[1]" conf="conf"></menu-collapse>
+    <menu-collapse ng-if="!menu_item[1].url && !menu_item[1].fullurl" title="menu_item[0]" items="menu_item[1]" conf="conf"></menu-collapse>
     <md-button ng-if="menu_item[1].url" href="/{{ conf }}/{{ menu_item[1].url }}">
+      {{ menu_item[0] }}
+    </md-button>
+    <md-button ng-if="menu_item[1].fullurl" href="{{ menu_item[1].fullurl }}">
       {{ menu_item[0] }}
     </md-button>
   </li>

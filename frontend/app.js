@@ -131,6 +131,10 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
       {title: 'Diversity Statement', url: 'about/diversity-statement'},
       {title: 'Frequently Asked Questions', url: 'about/faq'}
     ]],
+    ['Community', [
+      {title: 'Chat Room', fullurl: 'https://gitter.im/pytexas/PyTexas'},
+      {title: 'Python Employers', url: 'community/employers'}
+    ]],
     ['Blog', {url: 'blog'}],
     ['My Account', [
       {title: 'My Talks', url: 'user/my-talks'},

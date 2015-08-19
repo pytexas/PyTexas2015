@@ -45,6 +45,12 @@ pytx.config(function ($routeProvider) {
         title: 'Frequently Asked Questions'
     })
     
+    .when('/community/employers', {
+        controller: 'PageCtrl',
+        templateUrl: tpl('page.html'),
+        title: 'Texas Python Employers'
+    })
+    
     .when('/venue', {
       controller:'PageCtrl',
       templateUrl: tpl('page.html'),

@@ -5,7 +5,8 @@
   <div ng-style="style">
     <ul>
       <li ng-repeat="item in items">
-        <md-button href="/{{ conf }}/{{ item.url }}">{{ item.title }}</md-button>
+        <md-button ng-if="item.url" href="/{{ conf }}/{{ item.url }}">{{ item.title }}</md-button>
+        <md-button ng-if="item.fullurl" href="{{ item.fullurl }}">{{ item.title }}</md-button>
       </li>
     </ul>
   </div>
