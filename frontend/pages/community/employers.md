@@ -18,6 +18,7 @@ To submit your additions and edits to this page, fork the [PyTexasWeb Repository
 
 - NASA
 - [Rice University](http://webservices.rice.edu/)
+- [Decisio Health, Inc](http://decisiohealth.com)
 
 ## San Antonio
 
