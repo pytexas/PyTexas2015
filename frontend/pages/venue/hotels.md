@@ -10,7 +10,7 @@ Reserve your room here: [http://www3.hilton.com/en/hotels/texas/hilton-college-s
 
 Room rate of $139/night applies to Friday and Saturday night (25th & 26th).
 
-[![Hilton group code instructions](img/hilton-2015.jpg)](img/hilton-2015.jpg)
+![Hilton group code instructions](img/hilton-2015.jpg)
 
 ### Check again for addition hotels.
 
