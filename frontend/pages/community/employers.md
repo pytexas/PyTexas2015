@@ -16,6 +16,7 @@ To submit your additions and edits to this page, fork the [PyTexasWeb Repository
 
 ## Houston
 
+- [Decisio Health, Inc](http://decisiohealth.com)
 - NASA
 - [Rice University](http://webservices.rice.edu/)
 
