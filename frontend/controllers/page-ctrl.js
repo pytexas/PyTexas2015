@@ -6,6 +6,7 @@ pytx.controller('PageCtrl', function($scope, $route, marked, $http) {
   
   $http.get($scope.page_url)
     .success(function (data) {
+      data = data.replace(/\(img\/(.*?)\)/g, "(" + CONFIG.dir + "img/$1)");
       $scope.page_source = data;
     });
 });
