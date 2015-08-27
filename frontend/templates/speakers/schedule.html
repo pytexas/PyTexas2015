@@ -22,7 +22,9 @@
                       {{ talk.user.username }}<span ng-if="talk.user.name"> ({{ talk.user.name }})</span>
                     </a>
                   </li>
-                  <li class="time">{{ talk.start|amDateFormat:'hh:mm A' }}</li>
+                  <li class="time">
+                    {{ talk.start|amDateFormat:'hh:mm A' }} - {{ talk.end|amDateFormat:'hh:mm A' }}
+                  </li>
                   <li class="room" ng-if="talk.room">Room: {{ talk.room.name }}</li>
                 </ul>
               </div>
