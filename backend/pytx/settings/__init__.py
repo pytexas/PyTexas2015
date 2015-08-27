@@ -145,5 +145,7 @@ EVENTBRITE_EVENT_ID = ''
 WEEKLY_STATS_EMAIL = 'conference@pytexas.org'
 WEEKLY_STATS_FROM_EMAIL = DEFAULT_FROM_EMAIL
 
+API_CACHE = 60 * 10
+
 from pytx.settings.local import *
 

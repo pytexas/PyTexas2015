@@ -85,6 +85,11 @@ pytx.config(function ($routeProvider) {
       templateUrl: tpl('speakers/talk-detail.html')
     })
     
+    .when('/schedule', {
+      controller:'ScheduleCtrl',
+      templateUrl: tpl('speakers/schedule.html')
+    })
+    
     .when('/user/login', {
       controller:'LoginCtrl',
       templateUrl: tpl('users/login.html')

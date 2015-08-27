@@ -113,11 +113,12 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
       {title: 'Become A Sponsor', url: 'sponsors/prospectus'},
       {title: 'Our Sponsors', url: 'sponsors'},
     ]],
-    ['Speakers', [
+    ['Schedule', {url: 'schedule'}],
+    /*['Speakers', [
       {title: 'Call For Proposals', url: 'speakers/call-for-proposals'},
       {title: 'Submit A Talk', url: 'speakers/submit-talk'},
       {title: 'Proposed Talks', url: 'speakers/proposals'},
-    ]],
+    ]],*/
     ['Venue', [
       {title: 'The Venue', url: 'venue'},
       {title: 'Hotels', url: 'venue/hotels'},
