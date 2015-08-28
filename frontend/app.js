@@ -134,6 +134,7 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
     ]],
     ['Community', [
       {title: 'Chat Room', fullurl: 'https://gitter.im/pytexas/PyTexas'},
+      {title: 'Local Python Meetups', url: 'community/meetups'},
       {title: 'Python Employers', url: 'community/employers'}
     ]],
     ['Blog', {url: 'blog'}],

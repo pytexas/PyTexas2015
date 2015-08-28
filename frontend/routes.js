@@ -45,6 +45,12 @@ pytx.config(function ($routeProvider) {
         title: 'Frequently Asked Questions'
     })
     
+    .when('/community/meetups', {
+        controller: 'PageCtrl',
+        templateUrl: tpl('page.html'),
+        title: 'Local Python Meetups'
+    })
+    
     .when('/community/employers', {
         controller: 'PageCtrl',
         templateUrl: tpl('page.html'),
