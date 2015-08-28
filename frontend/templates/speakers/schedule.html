@@ -11,8 +11,8 @@
             <div ng-repeat="room in tab.rooms" flex flex-order="{{ $index + 1 }}">{{ room }}</div>
           </div>-->
           <div layout="row" class="hour" ng-repeat="hour in tab.hours" layout-wrap>
-            <div class="room" ng-repeat="(room_key, room) in hour.rooms" flex="{{ hour.flex_pc }}" flex-order="{{ room.flex_order }}" flex-order-sm="1" flex-sm="100">
-              <div class="talk" ng-repeat="talk in room.talks" >
+            <div class="room" ng-repeat="(room_key, room) in hour.rooms" flex="{{ hour.flex_pc }}" flex-order="{{ room.flex_order }}" flex-order-sm="1" flex-sm="100" layout="column">
+              <div class="talk talk{{ talk.duration }}" ng-repeat="talk in room.talks" flex>
                 <h3>
                   <a href="/{{ conf }}/talk/{{ talk.id }}">{{ talk.name }}</a>
                 </h3>
