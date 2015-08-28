@@ -25,6 +25,22 @@
 </fieldset>
 <fieldset>
   <legend>Required for Speaking (optional otherwise)</legend>
+  <div layout layout-sm="column">
+    <md-input-container flex>
+      <label>First Name</label>
+      <input ng-model="form.first_name">
+      <div ng-messages="errors" class="error-color">
+        <div ng-message="errors.first_name">{{ errors.first_name[0] }}</div>
+      </div>
+    </md-input-container>
+    <md-input-container flex>
+      <label>Last Name</label>
+      <input ng-model="form.last_name">
+      <div ng-messages="errors" class="error-color">
+        <div ng-message="errors.last_name">{{ errors.last_name[0] }}</div>
+      </div>
+    </md-input-container>
+  </div>
   <md-input-container>
     <label>Phone</label>
     <input ng-model="form.phone">
