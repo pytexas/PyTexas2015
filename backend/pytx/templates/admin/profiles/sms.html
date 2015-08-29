@@ -1,0 +1,44 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<form action="{% url 'admin-send-sms' %}" method="post">
+  {% csrf_token %}
+  <div>
+    <fieldset>
+      <strong>To Users:</strong>
+      {% if queryset %}
+      <ul>
+        {% for item in queryset %}
+        <li>
+          {{ item.username }} - {{ item.phone }}
+          <input type="hidden" name="phone" value="{{ item.phone }}">
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </fieldset>
+    <br>
+    <hr>
+    <br>
+    <fieldset>
+      <strong>From:</strong><br>
+      <select name="from">
+        {% for f in from %}
+        <option value="{{ f }}">{{ f }}</option>
+        {% endfor %}
+      </select>
+    </fieldset>
+    <br>
+    <hr>
+    <br>
+    <fieldset>
+      <strong>Message:</strong><br>
+      <input type="text" name="message" maxlength="140" style="width: 300px;">
+    </fieldset>
+    <br>
+    <fieldset>
+      <input type="submit" value="Send" class="grp-button">
+    </fieldset>
+  </div>
+</form>
+{% endblock %}

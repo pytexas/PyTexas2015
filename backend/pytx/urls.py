@@ -3,6 +3,9 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+  url(r'^admin-sms$', 'twospaces.profiles.admin.send_sms_submit', name="admin-send-sms"),
+  url(r'^sms-sink/$', 'twospaces.profiles.admin.sms_sink', name="sms_sink"),
+  
   url(r'^grappelli/', include('grappelli.urls')),
   url(r'^admin/', include(admin.site.urls)),
   url('^markdown/', include( 'django_markdown.urls')),
