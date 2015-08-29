@@ -64,7 +64,7 @@ class Command (BaseCommand):
       script = os.path.join(deploy_dir, s)
       cat_cmd += s + " "
       
-    compressed = os.path.join(settings.FRONT_ROOT, slug, 'compressed.js')
+    compressed = os.path.join(settings.FRONT_ROOT, slug, 'app-{}'.format(rel), 'compressed.js')
     cat_cmd += " > {}".format(compressed)
     subprocess.call(cat_cmd, shell=True)
     
