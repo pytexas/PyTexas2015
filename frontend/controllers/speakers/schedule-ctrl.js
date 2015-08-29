@@ -64,8 +64,6 @@ pytx.controller('ScheduleCtrl', function($scope, $routeParams, APIFactory) {
         day.hours[j] = h;
       }
     }
-    
-    console.log($scope.schedule);
   };
   
   $scope.get_schedule = function () {
