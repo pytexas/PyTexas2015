@@ -59,15 +59,16 @@ class Command (BaseCommand):
       fh.write(html)
       fh.close()
       
+    compressed = ''
     cat_cmd = 'cat '
     for s in SCRIPTS:
-      script = os.path.join(deploy_dir, s)
-      cat_cmd += s + " "
+      with open(os.path.join(deploy_dir, s), 'r') as fh:
+        compressed += fh.read() + "\n"
+        
+    cpath = os.path.join(settings.FRONT_ROOT, slug, 'app-{}'.format(rel), 'compressed.js')
+    with open(cpath, 'w')as fh:
+      fh.write(compressed)
       
-    compressed = os.path.join(settings.FRONT_ROOT, slug, 'app-{}'.format(rel), 'compressed.js')
-    cat_cmd += " > {}".format(compressed)
-    subprocess.call(cat_cmd, shell=True)
-    
     for file in ('logo144.png', 'offline.html', 'manifest.json'):
       cp = os.path.join(settings.FRONT_ROOT, slug, file)
       subprocess.call("cp -v {} {}".format(file, cp), shell=True)
