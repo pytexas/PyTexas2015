@@ -5,6 +5,7 @@ from django.core.management.base import BaseCommand, CommandError
 from django.conf import settings
 
 from pytx.utils import index_generator
+from pytx.js import SCRIPTS
 
 class Command (BaseCommand):
   help = 'Builds front-end app'
@@ -58,6 +59,15 @@ class Command (BaseCommand):
       fh.write(html)
       fh.close()
       
+    cat_cmd = 'cat '
+    for s in SCRIPTS:
+      script = os.path.join(deploy_dir, s)
+      cat_cmd += s + " "
+      
+    compressed = os.path.join(settings.FRONT_ROOT, slug, 'compressed.js')
+    cat_cmd += " > {}".format(compressed)
+    subprocess.call(cat_cmd, shell=True)
+    
     for file in ('logo144.png', 'offline.html', 'manifest.json'):
       cp = os.path.join(settings.FRONT_ROOT, slug, file)
       subprocess.call("cp -v {} {}".format(file, cp), shell=True)
