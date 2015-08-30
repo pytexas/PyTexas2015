@@ -8,6 +8,9 @@
       {{ menu_item[0] }}
     </md-button>
   </li>
+  <li>
+    <md-button onclick="_roost.prompt();">Enable Notifications</md-button>
+  </li>
   <li ng-hide="logged_in">
     <md-button href="/{{ conf }}/user/login">
       Login
