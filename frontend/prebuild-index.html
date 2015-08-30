@@ -44,7 +44,6 @@
     
     <link rel="stylesheet" href="$base/css/pytx.css">
     
-    <script src='//cdn.goroost.com/roostjs/e5j424mqd808dcaifhv1od0gt9v9dpb6' async></script>
     <base href="/$conf/">
   </head>
   <body layout="row">
@@ -93,6 +92,16 @@
     $scripts
     
     <!--prod-->
+    <script src='//cdn.goroost.com/roostjs/e5j424mqd808dcaifhv1od0gt9v9dpb6' async></script>
+    <script>
+      var _roost = _roost || [];
+      _roost.push(['autoprompt', false]);
+      _roost.push(['onload', function(data) {
+        if (data.promptable) {
+          console.log('NARF');
+        }
+      }]);
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
