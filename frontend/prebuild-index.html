@@ -99,7 +99,7 @@
       _roost.push(['onload', function(data) {
         if (data.promptable) {
           var element = document.querySelector("#notif-button");
-          element.innerHTML = '<md-button onclick="_roost.prompt();">Enable Notifications</md-button>';
+          element.innerHTML = '<a class="md-button md-default-theme" href="#" onclick="_roost.prompt();"><span class="ng-scope">Enable Notifications</span></a>';
         }
       }]);
       _roost.push(['onresult', function(data) {
