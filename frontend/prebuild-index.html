@@ -97,6 +97,7 @@
       var _roost = _roost || [];
       _roost.push(['autoprompt', false]);
       _roost.push(['onload', function(data) {
+        console.log(data);
         if (data.promptable) {
           console.log('NARF');
         }
