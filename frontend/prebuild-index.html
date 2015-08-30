@@ -98,14 +98,14 @@
       _roost.push(['autoprompt', false]);
       _roost.push(['onload', function(data) {
         if (data.promptable) {
-          console.log('NARF');
+          var element = document.querySelector("#notif-button");
+          element.innerHTML = '<md-button onclick="_roost.prompt();">Enable Notifications</md-button>';
         }
       }]);
       _roost.push(['onresult', function(data) {
-        console.log(data);
-        
         if (data.enabled) {
-          console.log('ENABLED NARF');
+          var element = document.querySelector("#notif-button");
+          element.remove();
         }
       }]);
     </script>
