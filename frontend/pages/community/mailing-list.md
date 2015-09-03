@@ -12,9 +12,9 @@ Use the form below to subscribe to the PyTexas mailing list. We'll send you upda
 <div id="mc_embed_signup" style="max-width: 500px;">
 <form action="//pytexas.us11.list-manage.com/subscribe/post?u=93d4ab771d0c2e4facc053add&amp;id=fa6aa40a2e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="indicates-required"><span>*</span> indicates required</div>
 <div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+	<label for="mce-EMAIL">Email Address  <span>*</span>
 </label>
 	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
 </div>
