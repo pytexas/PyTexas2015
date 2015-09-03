@@ -40,21 +40,27 @@ pytx.config(function ($routeProvider) {
       title: 'Registration Info'
     })
     .when('/about/faq', {
-        controller: 'PageCtrl',
-        templateUrl: tpl('page.html'),
-        title: 'Frequently Asked Questions'
+      controller: 'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Frequently Asked Questions'
     })
     
     .when('/community/meetups', {
-        controller: 'PageCtrl',
-        templateUrl: tpl('page.html'),
-        title: 'Local Python Meetups'
+      controller: 'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Local Python Meetups'
     })
     
     .when('/community/employers', {
-        controller: 'PageCtrl',
-        templateUrl: tpl('page.html'),
-        title: 'Texas Python Employers'
+      controller: 'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Texas Python Employers'
+    })
+    
+    .when('/community/mailing-list', {
+      controller: 'PageCtrl',
+      templateUrl: tpl('page.html'),
+      title: 'Mailing List'
     })
     
     .when('/venue', {
