@@ -14,3 +14,5 @@ django-imagekit==3.2.6
 stripe==1.18.0
 requests==2.7.0
 twilio==4.5.0
+begins==0.9
+yapf==0.2.6

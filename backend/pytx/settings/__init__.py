@@ -14,53 +14,32 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(
-  os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__))
-  )
-)
+    os.path.dirname(
+        os.path.dirname(os.path.abspath(__file__))))
 
 DEBUG = False
 
-ALLOWED_HOSTS = [
-  'pytexas.org',
-  '.pytexas.org',
-]
-
+ALLOWED_HOSTS = ['pytexas.org', '.pytexas.org',]
 
 # Application definition
 
 INSTALLED_APPS = (
-  'grappelli',
-  
-  'django.contrib.admin',
-  'django.contrib.auth',
-  'django.contrib.contenttypes',
-  'django.contrib.sessions',
-  'django.contrib.messages',
-  'django.contrib.staticfiles',
-  
-  'django_markdown',
-  'rest_framework',
-  'imagekit',
-  
-  'twospaces.profiles',
-  'twospaces.conference',
-  'twospaces.blog',
-  
-  'pytx',
-)
+    'grappelli', 'django.contrib.admin', 'django.contrib.auth',
+    'django.contrib.contenttypes', 'django.contrib.sessions',
+    'django.contrib.messages', 'django.contrib.staticfiles', 'django_markdown',
+    'rest_framework', 'imagekit', 'twospaces.profiles', 'twospaces.conference',
+    'twospaces.blog', 'pytx',)
 
 MIDDLEWARE_CLASSES = (
-  'django.contrib.sessions.middleware.SessionMiddleware',
-  'django.middleware.common.CommonMiddleware',
-  'django.middleware.csrf.CsrfViewMiddleware',
-  'django.contrib.auth.middleware.AuthenticationMiddleware',
-  'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-  'django.contrib.messages.middleware.MessageMiddleware',
-  'django.middleware.clickjacking.XFrameOptionsMiddleware',
-  'django.middleware.security.SecurityMiddleware',
-  'twospaces.middleware.JsonRequest',
-)
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'twospaces.middleware.JsonRequest',)
 
 ROOT_URLCONF = 'pytx.urls'
 
@@ -84,18 +63,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pytx.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
-  'default': {
-    'ENGINE':'django.db.backends.postgresql_psycopg2',
-    'NAME': 'pytexasweb3',
-    'USER': 'postgres',
-    'HOST': 'db.internal',
-    'PORT': '5432',
-  }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'pytexasweb3',
+        'USER': 'postgres',
+        'HOST': 'db.internal',
+        'PORT': '5432',
+    }
 }
 
 SESSION_COOKIE_HTTPONLY = False
@@ -148,4 +126,3 @@ WEEKLY_STATS_FROM_EMAIL = DEFAULT_FROM_EMAIL
 API_CACHE = 60 * 10
 
 from pytx.settings.local import *
-

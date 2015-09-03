@@ -3,29 +3,30 @@ SECRET_KEY = 'super-secret-characters'
 DEBUG = True
 
 LOGGING = {
-  'version': 1,
-  'formatters': {
-    'verbose': {
-      'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+    'version': 1,
+    'formatters': {
+        'verbose': {
+            'format':
+            '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
     },
-    'simple': {
-      'format': '%(levelname)s %(message)s'
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
     },
-  },
-  'handlers': {
-    'console': {
-      'level': 'INFO',
-      'class': 'logging.StreamHandler',
-      'formatter': 'simple'
-    },
-  },
-  'loggers': {
-    'django': {
-      'handlers': ['console'],
-      'level': 'INFO',
-      'propagate': True,
-    },
-  }
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    }
 }
 
 MEDIA_URL = '/uploads/'
