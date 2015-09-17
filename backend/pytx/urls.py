@@ -1,6 +1,9 @@
 from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.views.decorators.csrf import csrf_exempt
+
+from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
     url(r'^admin-sms$',
@@ -12,6 +15,7 @@ urlpatterns = [
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url('^markdown/', include('django_markdown.urls')),
+    url(r'^api/v1/token-auth$', csrf_exempt(obtain_jwt_token)),
     url('^api/', include('twospaces.urls')),
     url('^conference/', include('twospaces.conference.urls')),
 ]

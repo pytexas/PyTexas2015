@@ -6,8 +6,8 @@
       <img src="{{ image.image }}" alt="Avatar Profile Image">
       <p>
         <form enctype="multipart/form-data" method="post" action="/api/v1/users/avatar-upload">
-          <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf }}">
           <input type="hidden" name="ret" value="/{{ conf }}{{ ret }}">
+          <input type="hidden" name="jwt" value="{{ jwt }}">
           <strong>Upload A New Image:</strong><br>
           <input type="file" name="avatar"><br><br>
           <md-button class="md-raised md-primary">
@@ -32,8 +32,8 @@
       <a href="http://gravatar.com/" target="_blank">Edit on Gravatar.com &raquo;</a>
       <br><br>
       <form enctype="multipart/form-data" method="post" action="/api/v1/users/avatar-upload">
-        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf }}">
         <input type="hidden" name="ret" value="/{{ conf }}{{ ret }}">
+        <input type="hidden" name="jwt" value="{{ jwt }}">
         <strong>or Upload a custom image:</strong><br>
         <input type="file" name="avatar"><br><br>
         <md-button class="md-raised md-primary">

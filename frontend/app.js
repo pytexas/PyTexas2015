@@ -8,28 +8,51 @@ function img_path (path) {
 
 var pytx = angular.module('pytx',
   [
-    'ngAnimate', 'ngMaterial', 'ngRoute', 'ngSanitize', 'ngCookies', 'hc.marked',
-    'angularMoment', 'angulartics', 'angulartics.google.analytics'
+    'ngAnimate', 'ngMaterial', 'ngRoute', 'ngSanitize', 'hc.marked',
+    'angularMoment', 'angulartics', 'angulartics.google.analytics', 'angular-jwt'
   ]
 );
 
-pytx.config(function ($locationProvider, $httpProvider, markedProvider) {
+pytx.config(function ($locationProvider, $httpProvider, markedProvider, jwtInterceptorProvider) {
   $locationProvider.html5Mode(true);
   
-  $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-  $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
-  
   markedProvider.setOptions({gfm: false, sanitize: true});
+  
+  jwtInterceptorProvider.authPrefix = 'JWT ';
+  jwtInterceptorProvider.tokenGetter = function (StorageService, jwtHelper) {
+    var token = StorageService.get('pytx_jwt');
+    if (token) {
+      if (jwtHelper.isTokenExpired(token)) {
+        return undefined;
+      }
+      
+      else {
+        return token;
+      }
+    }
+    
+    return undefined;
+  };
+  
+  $httpProvider.interceptors.push('jwtInterceptor');
 });
 
-pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdToast, $timeout, APIFactory) {
+pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $mdToast, $timeout, APIFactory, StorageService, jwtHelper) {
   $rootScope.tpl = tpl;
   $rootScope.img_path = img_path;
   $rootScope.title = 'PyTexas ' + CONFIG.conf;
   $rootScope.conf = CONFIG.conf;
   $rootScope.logged_in = false;
-  if ($cookies.sessionid && $cookies.angular_logged_in) {
-    $rootScope.logged_in = true;
+  
+  var token = StorageService.get('pytx_jwt');
+  if (token) {
+    if (jwtHelper.isTokenExpired(token)) {
+      StorageService.remove('pytx_jwt');
+    }
+    
+    else {
+      $rootScope.logged_in = true;
+    }
   }
   
   $rootScope.conf_data = function () {
@@ -73,22 +96,17 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $cookies, $mdTo
   };
   
   $rootScope.logout = function () {
-    var APIService = new APIFactory('v1');
-    APIService.post('users/logout')
-      .success(function () {
-        $rootScope.logged_in = false;
-        $mdToast.show(
-          $mdToast.simple()
-            .content('Logout Successful')
-            .position('bottom left')
-            .hideDelay(5000)
-        );
-        
-        $location.path('/');
-      })
-      .error(function () {
-        $rootScope.show_error('Error logging out.');
-      });
+    StorageService.remove('pytx_jwt');
+    
+    $rootScope.logged_in = false;
+    $mdToast.show(
+      $mdToast.simple()
+        .content('Logout Successful')
+        .position('bottom left')
+        .hideDelay(5000)
+    );
+    
+    $location.path('/');
   };
   
   $rootScope.show_error = function (error) {

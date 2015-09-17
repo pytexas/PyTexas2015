@@ -16,3 +16,5 @@ requests==2.7.0
 twilio==4.5.0
 begins==0.9
 yapf==0.2.6
+PyJWT==1.4.0
+djangorestframework-jwt==1.7.2

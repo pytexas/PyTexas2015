@@ -1,4 +1,4 @@
-pytx.controller('SubmitTalkCtrl', function($scope, $location, $timeout, $cookies, APIFactory) {
+pytx.controller('SubmitTalkCtrl', function($scope, $location, $timeout, APIFactory) {
   $scope.APIService = new APIFactory('v1', $scope);
   $scope.set_title('Submit A Talk');
   $scope.closed = true;
@@ -56,9 +56,10 @@ pytx.controller('SubmitTalkCtrl', function($scope, $location, $timeout, $cookies
       $location.url('/user/login?next=' + encodeURIComponent($location.path()));
     }
     
-    else if ($cookies.angular_logged_in != 'speaker') {
-      $location.url('/user/my-profile?next=' + encodeURIComponent($location.path()));
-    }
+    //todo: redo with jwt
+    //else if ($cookies.angular_logged_in != 'speaker') {
+    //  $location.url('/user/my-profile?next=' + encodeURIComponent($location.path()));
+    //}
     
     else {
       $scope.closed = false;

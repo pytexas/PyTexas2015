@@ -58,11 +58,11 @@ pytx.controller('ProfileCtrl', function($scope, $routeParams, $location, $timeou
   }
 });
 
-pytx.controller('AvatarCtrl', function($scope, $mdToast, $cookies, $location, APIFactory) {
+pytx.controller('AvatarCtrl', function($scope, $mdToast, $location, APIFactory, StorageService) {
   $scope.APIService = new APIFactory('v1', $scope);
   $scope.set_title('My Profile Image');
-  $scope.csrf = $cookies.csrftoken;
   $scope.ret = $location.path();
+  $scope.jwt = StorageService.get('pytx_jwt');
   var search_object = $location.search();
   
   $scope.get_image = function () {

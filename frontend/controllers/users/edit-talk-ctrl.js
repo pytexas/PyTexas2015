@@ -1,4 +1,4 @@
-pytx.controller('EditTalkCtrl', function($scope, $location, $routeParams, $mdToast, $cookies, APIFactory) {
+pytx.controller('EditTalkCtrl', function($scope, $location, $routeParams, $mdToast, APIFactory) {
   $scope.APIService = new APIFactory('v1', $scope);
   $scope.set_title('Edit Talk');
   $scope.id = $routeParams.id;
@@ -36,9 +36,10 @@ pytx.controller('EditTalkCtrl', function($scope, $location, $routeParams, $mdToa
     $location.url('/user/login?next=' + encodeURIComponent($location.path()));
   }
   
-  else if ($cookies.angular_logged_in != 'speaker') {
-    $location.url('/user/my-profile?next=' + encodeURIComponent($location.path()));
-  }
+  //todo: redo with jwt
+  //else if ($cookies.angular_logged_in != 'speaker') {
+  //  $location.url('/user/my-profile?next=' + encodeURIComponent($location.path()));
+  //}
   
   else {
     $scope.get_talk();

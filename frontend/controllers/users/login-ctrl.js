@@ -1,4 +1,4 @@
-pytx.controller('LoginCtrl', function($scope, $routeParams, $location, $timeout, $mdToast, $rootScope, APIFactory) {
+pytx.controller('LoginCtrl', function($scope, $routeParams, $location, $timeout, $mdToast, $rootScope, APIFactory, StorageService) {
   $scope.APIService = new APIFactory('v1', $scope);
   $scope.set_title('Login');
   $scope.form = {};
@@ -7,7 +7,7 @@ pytx.controller('LoginCtrl', function($scope, $routeParams, $location, $timeout,
   
   $scope.do_login = function () {
     if ($scope.loginForm.$valid) {
-      $scope.APIService.post_form('users/login', $scope.form).success($scope.do_next)
+      $scope.APIService.post_form('token-auth', $scope.form).success($scope.do_next)
     }
     
     else {
@@ -22,6 +22,8 @@ pytx.controller('LoginCtrl', function($scope, $routeParams, $location, $timeout,
         .position('bottom left')
         .hideDelay(5000)
     );
+    
+    StorageService.set('pytx_jwt', data.token);
     $rootScope.logged_in = true;
     
     $timeout(function () {
