@@ -10,9 +10,8 @@ SCRIPTS = (
     "bower/angular-marked/angular-marked.min.js",
     "bower/angular-moment/angular-moment.min.js",
     "bower/angulartics/dist/angulartics.min.js",
-    "bower/angulartics/dist/angulartics-ga.min.js", 
-    "bower/angular-jwt/dist/angular-jwt.min.js",
-    "app.js", "routes.js",
+    "bower/angulartics/dist/angulartics-ga.min.js",
+    "bower/angular-jwt/dist/angular-jwt.min.js", "app.js", "routes.js",
     "controllers/error-ctrl.js", "controllers/home-ctrl.js",
     "controllers/page-ctrl.js", "controllers/sponsor-ctrl.js",
     "controllers/speakers/proposed-ctrl.js",
@@ -23,7 +22,5 @@ SCRIPTS = (
     "controllers/users/talks-ctrl.js", "controllers/users/edit-talk-ctrl.js",
     "controllers/users/profile-ctrl.js", "controllers/users/verify-ctrl.js",
     "controllers/users/reset-password-ctrl.js", "controllers/blog/blog-ctrl.js",
-    "services/api-factory.js",
-    "services/storage-service.js",
-    "directives/menu-widgets.js",
-    )
+    "services/api-factory.js", "services/storage-service.js",
+    "directives/menu-widgets.js",)
