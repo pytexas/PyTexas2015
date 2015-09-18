@@ -4,10 +4,6 @@ PyTexas 2015 will be taking place in the newly renovated [Memorial Student
 Center (MSC)](http://msc.tamu.edu/) on the [Texas A&M University](http://www.tamu.edu/) 
 campus in College Station, TX.
 
-## Parking
-
-More info coming soon
-
 ## MSC
 
 Not only is the MSC a centrally located hub on the TAMU campus, but makes 

@@ -140,7 +140,7 @@ pytx.run(function ($rootScope, $location, $mdSidenav, $mdDialog, $mdToast, $time
     ['Venue', [
       {title: 'The Venue', url: 'venue'},
       {title: 'Hotels', url: 'venue/hotels'},
-      {title: 'Map', url: 'venue/map'},
+      {title: 'Map & Parking', url: 'venue/map'},
     ]],
     ['About', [
       {title: 'About The Conference', url: 'about'},
