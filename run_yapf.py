@@ -6,7 +6,7 @@ import subprocess
 
 
 @begin.start
-def run (code_dir='.', style='{based_on_style: google, indent_width: 2}', ignore_dirs='migrations,narf'):
+def run (code_dir='.', style='{based_on_style: chromium}', ignore_dirs='migrations,narf'):
   for root, dirs, files in os.walk(code_dir):
     for file in files:
       go = True

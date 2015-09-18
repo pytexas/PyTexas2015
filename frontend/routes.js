@@ -152,5 +152,10 @@ pytx.config(function ($routeProvider) {
       templateUrl: tpl('blog/index.html')
     })
     
+    .when('/prizes', {
+      controller:'PrizeCtrl',
+      templateUrl: tpl('prizes.html')
+    })
+    
     .otherwise({controller:'ErrorCtrl', templateUrl: tpl('404.html')});
 });

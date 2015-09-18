@@ -1,0 +1,12 @@
+<div class="Post content-page" ng-show="attendees">
+  <h1>
+    Prize Give Away
+  </h1>
+  <ol>
+    <li ng-repeat="peep in used track by $index">
+      <h2>{{ peep }}</h2>
+    </li>
+  </ol>
+  <hr>
+  <md-button ng-click="find_winner()" class="md-raised md-primary">Find A Winner!</md-button>
+</div>
