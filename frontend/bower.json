@@ -19,7 +19,7 @@
     "angular-route": "~1.4.4",
     "angular-sanitize": "~1.4.4",
     "angular-cookies": "~1.4.4",
-    "font-awesome": "~4.3.0",
+    "font-awesome": "~4.4.0",
     "angular-marked": "~0.0.16",
     "moment": "~2.10.3",
     "angular-moment": "~0.10.1",
