@@ -9,7 +9,7 @@ Free parking is available on Saturday and Sunday in lots 39 and 61. Paid parking
 Saturday, Sept 26th, 6:30 PM<br> 
 [Blackwater Draw Brewing Co.](http://www.blackwaterbrew.com/)<br>
 303 Boyett College Station, TX<br>
-See map below
+*See map below*
 
 [Link to Stand Alone Map](https://www.google.com/maps/d/edit?mid=z1cwgBhrJNoE.kypdK679JpFM&usp=sharing)
 
