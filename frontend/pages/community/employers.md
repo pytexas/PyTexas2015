@@ -6,6 +6,8 @@ To submit your additions and edits to this page, fork the [PyTexasWeb Repository
 
 ## Austin Area
 
+- [Atlassian](http://www.atlassian.com/careers/)
+
 ## Bryan/College Station Area
 
 - [Texas A&M University - College of Architecture](http://www.arch.tamu.edu/)
