@@ -45,6 +45,13 @@
     </div>
   </md-input-container>
   <md-input-container>
+    <label>URL to Video <sup>(optional)</sup></label>
+    <input ng-model="form.video_url">
+    <div ng-messages="errors" class="error-color">
+      <div ng-message="errors.video_url">{{ errors.video_url[0] }}</div>
+    </div>
+  </md-input-container>
+  <md-input-container>
     <label>Special Requirements <sup>(optional)</sup></label>
     <textarea ng-model="form.special_requirements"></textarea>
     <div ng-messages="errors" class="error-color">

@@ -16,6 +16,9 @@
     <div ng-if="talk.slides">
       <a href="{{ talk.slides }}">Link to Presentation &raquo;</a>
     </div>
+    <div ng-if="talk.video_url">
+      <a href="{{ talk.video_url }}">Link to Video &raquo;</a>
+    </div>
   </div>
   <hr>
   <div class="desc" marked="talk.description"></div>
