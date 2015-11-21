@@ -96,7 +96,10 @@ pytx.config(function ($routeProvider) {
       controller:'TalkDetailCtrl',
       templateUrl: tpl('speakers/talk-detail.html')
     })
-    
+    .when('/videos', {
+      controller:'VideosCtrl',
+      templateUrl: tpl('speakers/videos.html')
+    })
     .when('/schedule', {
       controller:'ScheduleCtrl',
       templateUrl: tpl('speakers/schedule.html')
