@@ -1,0 +1,24 @@
+<div class="loading" layout="row" layout-sm="column" layout-align="space-around" ng-if="APIService.loading">
+  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+<div ng-hide="APIService.loading" class="Talk content-page">
+  <h1>Videos</h1>
+  <div class="TalkList">
+    <div class="tab-content">
+      <ul>
+        <li ng-repeat="video in videos">
+          <a href="/{{ conf }}/user/{{ video.speaker.username }}">
+            <img src="{{ video.speaker.image }}" alt="">
+          </a>
+          <h3>
+            <a href="{{ video.video_url }}">{{ video.name }}</a>
+          </h3>
+          by <a href="/{{ conf }}/user/{{ video.speaker.username }}">{{ video.speaker.username }}</a>
+          &nbsp; &sdot;&nbsp; 
+          <a href="/{{ conf }}/talk/{{ video.id }}">Talk Details</a>
+          <div class="clear"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
